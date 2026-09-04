@@ -8,8 +8,10 @@
  * - SoundFont & Retro Chip Synth voice management
  */
 
-import { InstrumentChannel, NoteEvent, Pattern, DSPConfig, ProjectState } from '../types/audio';
+import { InstrumentChannel, NoteEvent, Pattern, DSPConfig, ProjectState, TimelineTrack } from '../types/audio';
 import { playChipVoice, ActiveVoice } from './RetroChipSynth';
+import { playFMVoice } from './FMSynth';
+import { playSampleVoice, SampleManager } from './SampleVoice';
 import { SoundFontManager } from './SoundFontManager';
 import { ConsoleDSPRack } from './ConsoleDSP';
 
@@ -44,6 +46,7 @@ export class AudioEngine {
 
   private activeProject: ProjectState | null = null;
   private scheduledVoices: Set<{ stop: (rel?: number) => void }> = new Set();
+  private scheduledVoicesByTrack: Map<string, Set<{ stop: (rel?: number) => void }>> = new Map();
 
   private constructor() {
     // Initialize low latency, high stability AudioContext (WASAPI shared mode on Windows)
@@ -99,9 +102,11 @@ export class AudioEngine {
   }
 
   /**
-   * Synchronize channels with the mixer graph
+   * Synchronize channels with the mixer graph (volume, pan, mute, and live solo)
    */
   public updateChannels(channels: InstrumentChannel[]) {
+    const anyChannelSolo = channels.some(c => c.solo);
+
     // Create or update channel buses
     channels.forEach(ch => {
       let bus = this.channelBuses.get(ch.id);
@@ -114,10 +119,35 @@ export class AudioEngine {
         this.channelBuses.set(ch.id, bus);
       }
 
-      // Update volume, pan, mute, solo
-      const effectiveVol = ch.mute ? 0 : ch.volume;
+      // Update volume, pan, mute, solo (instant de-zippered 10ms ramp)
+      const isMuted = ch.mute || (anyChannelSolo && !ch.solo);
+      const effectiveVol = isMuted ? 0 : ch.volume;
       bus.gain.gain.setTargetAtTime(effectiveVol, this.ctx.currentTime, 0.01);
       bus.panner.pan.setTargetAtTime(ch.pan, this.ctx.currentTime, 0.01);
+    });
+  }
+
+  /**
+   * Synchronize timeline tracks with the mixer (volume, mute, and live solo)
+   */
+  public updateTracks(tracks: TimelineTrack[]) {
+    if (this.activeProject) {
+      this.activeProject.tracks = tracks;
+    }
+
+    const anyTrackSolo = tracks.some(t => t.solo);
+    tracks.forEach(track => {
+      const isMuted = track.mute || (anyTrackSolo && !track.solo);
+      if (isMuted) {
+        // Kill currently ringing voices scheduled from this track
+        const trackVoices = this.scheduledVoicesByTrack.get(track.id);
+        if (trackVoices) {
+          trackVoices.forEach(v => {
+            try { v.stop(0.01); } catch (e) {}
+          });
+          trackVoices.clear();
+        }
+      }
     });
   }
 
@@ -137,6 +167,28 @@ export class AudioEngine {
 
     if (channel.type === 'soundfont') {
       const voice = this.soundFontManager.playNote(destination, effectiveNote, channel.preset, velocity);
+      this.activeVoices.set(voiceKey, voice);
+    } else if (channel.type === 'sample' || SampleManager.hasSample(channel.preset)) {
+      const sampleBuf = SampleManager.getSample(channel.preset);
+      if (sampleBuf) {
+        const voice = playSampleVoice(this.ctx, destination, sampleBuf, effectiveNote, {
+          velocity,
+          attack: channel.attack,
+          decay: channel.decay,
+          sustain: channel.sustain,
+          release: channel.release
+        });
+        this.activeVoices.set(voiceKey, voice);
+      }
+    } else if (channel.type === 'fm_synth' || channel.preset.startsWith('fm_')) {
+      const voice = playFMVoice(this.ctx, destination, effectiveNote, {
+        preset: channel.preset,
+        velocity,
+        attack: channel.attack,
+        decay: channel.decay,
+        sustain: channel.sustain,
+        release: channel.release
+      });
       this.activeVoices.set(voiceKey, voice);
     } else {
       // Game Boy DMG / Chip Synth
@@ -189,6 +241,8 @@ export class AudioEngine {
   public updateProject(project: ProjectState) {
     this.activeProject = project;
     this.currentBpm = project.bpm;
+    this.updateChannels(project.channels);
+    this.updateTracks(project.tracks);
   }
 
   public play(project: ProjectState, mode: 'pattern' | 'song' = 'pattern') {
@@ -198,6 +252,8 @@ export class AudioEngine {
     this.activeProject = project;
     this.playbackMode = mode;
     this.currentBpm = project.bpm;
+    this.updateChannels(project.channels);
+    this.updateTracks(project.tracks);
     this.isPlaying = true;
     this.notifyPlaybackChange(true);
 
@@ -217,6 +273,7 @@ export class AudioEngine {
       this.scheduleTimerId = null;
     }
     this.stopAllVoices();
+    this.scheduledVoicesByTrack.clear();
     this.dspRack.clearReverb(); // Instantly kill any lingering reverb/delay tail
     this.currentStep = 0;
     this.notifyStepChange(0);
@@ -306,8 +363,10 @@ export class AudioEngine {
       const pattern = this.getActivePattern();
       if (!pattern) return;
 
+      const anyChannelSolo = this.activeProject.channels.some(c => c.solo);
+
       this.activeProject.channels.forEach(channel => {
-        if (channel.mute) return;
+        if (channel.mute || (anyChannelSolo && !channel.solo)) return;
         const notes = pattern.notesByChannel[channel.id] || [];
         notes.forEach(n => {
           if (n.step === step) {
@@ -319,6 +378,7 @@ export class AudioEngine {
       // Song Arrangement Mode
       const tracks = this.activeProject.tracks;
       const anyTrackSolo = tracks.some(t => t.solo);
+      const anyChannelSolo = this.activeProject.channels.some(c => c.solo);
 
       this.activeProject.timelineClips.forEach(clip => {
         if (clip.muted) return;
@@ -326,8 +386,7 @@ export class AudioEngine {
         // Check track mute / solo
         const track = tracks[clip.trackIndex];
         if (track) {
-          if (track.mute) return;
-          if (anyTrackSolo && !track.solo) return;
+          if (track.mute || (anyTrackSolo && !track.solo)) return;
         }
 
         if (step >= clip.startStep && step < clip.startStep + clip.lengthSteps) {
@@ -337,12 +396,12 @@ export class AudioEngine {
             const internalStep = (step - clip.startStep) % patLen;
 
             this.activeProject?.channels.forEach(channel => {
-              if (channel.mute) return;
+              if (channel.mute || (anyChannelSolo && !channel.solo)) return;
               const notes = pattern.notesByChannel[channel.id] || [];
               notes.forEach(n => {
                 if (n.step === internalStep) {
                   const trackVol = track ? track.volume : 1.0;
-                  this.scheduleNotePlayback(channel, n, when, trackVol);
+                  this.scheduleNotePlayback(channel, n, when, trackVol, track?.id);
                 }
               });
             });
@@ -352,7 +411,13 @@ export class AudioEngine {
     }
   }
 
-  private scheduleNotePlayback(channel: InstrumentChannel, note: NoteEvent, when: number, volumeModifier: number = 1.0) {
+  private scheduleNotePlayback(
+    channel: InstrumentChannel,
+    note: NoteEvent,
+    when: number,
+    volumeModifier: number = 1.0,
+    trackId?: string
+  ) {
     const effectiveNote = note.note + (channel.octaveOffset * 12);
     const bus = this.channelBuses.get(channel.id);
     const destination = bus ? bus.panner : this.dspRack.inputNode;
@@ -362,6 +427,26 @@ export class AudioEngine {
     let voice: { stop: (rel?: number) => void } | null = null;
     if (channel.type === 'soundfont') {
       voice = this.soundFontManager.playNote(destination, effectiveNote, channel.preset, finalVelocity, when, durationSeconds);
+    } else if (channel.type === 'sample' || SampleManager.hasSample(channel.preset)) {
+      const sampleBuf = SampleManager.getSample(channel.preset);
+      if (sampleBuf) {
+        voice = playSampleVoice(this.ctx, destination, sampleBuf, effectiveNote, {
+          velocity: finalVelocity,
+          attack: channel.attack,
+          decay: channel.decay,
+          sustain: channel.sustain,
+          release: channel.release
+        }, when, durationSeconds);
+      }
+    } else if (channel.type === 'fm_synth' || channel.preset.startsWith('fm_')) {
+      voice = playFMVoice(this.ctx, destination, effectiveNote, {
+        preset: channel.preset,
+        velocity: finalVelocity,
+        attack: channel.attack,
+        decay: channel.decay,
+        sustain: channel.sustain,
+        release: channel.release
+      }, when, durationSeconds);
     } else {
       const waveform = (channel.preset as any) || 'pulse_50';
       voice = playChipVoice(this.ctx, destination, effectiveNote, {
@@ -379,6 +464,16 @@ export class AudioEngine {
 
     if (voice) {
       this.scheduledVoices.add(voice);
+      if (trackId) {
+        if (!this.scheduledVoicesByTrack.has(trackId)) {
+          this.scheduledVoicesByTrack.set(trackId, new Set());
+        }
+        const trackSet = this.scheduledVoicesByTrack.get(trackId)!;
+        trackSet.add(voice);
+        setTimeout(() => {
+          trackSet.delete(voice);
+        }, (durationSeconds + 1.0) * 1000);
+      }
       // Automatically prune from tracking set after note completes
       setTimeout(() => {
         if (voice) this.scheduledVoices.delete(voice);

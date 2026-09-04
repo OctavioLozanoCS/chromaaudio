@@ -9,7 +9,7 @@ export type WaveformType =
   | 'sine' 
   | 'sawtooth';
 
-export type InstrumentType = 'chip_synth' | 'soundfont' | 'sample';
+export type InstrumentType = 'chip_synth' | 'soundfont' | 'sample' | 'fm_synth';
 
 export interface NoteEvent {
   id: string;

@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
-import { NoteEvent, InstrumentChannel, DSPConfig } from '../../types/audio';
+import { NoteEvent, InstrumentChannel, DSPConfig, Pattern } from '../../types/audio';
 import { isNoteInScale, getNoteLabel, isBlackKey } from './ScaleEngine';
 import { VelocityDrawer } from './VelocityDrawer';
 import { AudioEngine } from '../../audio/AudioEngine';
-import { Sparkles, Zap, Music2, Trash2, ArrowUp, ArrowDown, Wand2 } from 'lucide-react';
+import { Sparkles, Zap, Music2, Trash2, ArrowUp, ArrowDown, Wand2, Eraser, ChevronDown } from 'lucide-react';
 import { SongwritingAssistantModal } from './SongwritingAssistantModal';
 
 // Maps relative semitones from root C of current octave to physical computer keyboard keys
@@ -20,12 +20,7 @@ const SEMITONE_TO_KEY_LABEL: Record<number, string> = {
   9: 'H',   // A
   10: 'U',  // A#
   11: 'J',  // B
-  12: 'K',  // C (+1 Oct)
-  13: 'O',  // C#
-  14: 'L',  // D
-  15: 'P',  // D#
-  16: ';',  // E
-  17: "'",  // F
+  12: 'K'   // High C
 };
 
 // Chord stamping definitions
@@ -33,8 +28,8 @@ const CHORD_DEFINITIONS: Record<string, { label: string; intervals: number[] }> 
   single: { label: 'Single Note', intervals: [0] },
   major: { label: 'Major Triad', intervals: [0, 4, 7] },
   minor: { label: 'Minor Triad', intervals: [0, 3, 7] },
-  sus2: { label: 'Sus2', intervals: [0, 2, 7] },
-  sus4: { label: 'Sus4', intervals: [0, 5, 7] },
+  sus2: { label: 'Suspended 2nd', intervals: [0, 2, 7] },
+  sus4: { label: 'Suspended 4th', intervals: [0, 5, 7] },
   maj7: { label: 'Major 7th', intervals: [0, 4, 7, 11] },
   min7: { label: 'Minor 7th', intervals: [0, 3, 7, 10] },
   dom7: { label: 'Dominant 7th', intervals: [0, 4, 7, 10] },
@@ -54,6 +49,8 @@ interface PianoRollCanvasProps {
   typingOctave?: number;
   bpm?: number;
   channels?: InstrumentChannel[];
+  patterns?: Pattern[];
+  activePatternId?: string;
   dsp?: DSPConfig;
   onChangeBpm?: (bpm: number) => void;
   onChangeScaleRoot?: (root: number) => void;
@@ -64,7 +61,13 @@ interface PianoRollCanvasProps {
   onDeleteNote: (noteId: string) => void;
   onUpdateVelocity: (noteId: string, velocity: number) => void;
   onBatchUpdateNotes?: (notes: NoteEvent[]) => void;
+  onClearChannelNotes?: (channelId: string, patternId?: string) => void;
   onApplyFullArrangement?: (notesByChannel: Record<string, NoteEvent[]>) => void;
+  onApplyMultiPatternIntroLoop?: (
+    introNotes: Record<string, NoteEvent[]>,
+    loopNotes: Record<string, NoteEvent[]>,
+    styleName: string
+  ) => void;
 }
 
 export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
@@ -78,6 +81,8 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   typingOctave = 4,
   bpm,
   channels,
+  patterns,
+  activePatternId,
   dsp,
   onChangeBpm,
   onChangeScaleRoot,
@@ -88,7 +93,9 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   onDeleteNote,
   onUpdateVelocity,
   onBatchUpdateNotes,
-  onApplyFullArrangement
+  onClearChannelNotes,
+  onApplyFullArrangement,
+  onApplyMultiPatternIntroLoop
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -97,12 +104,23 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   const pianoKeyWidth = 64;
   const rowHeight = 18;
   const [stepWidth, setStepWidth] = useState<number>(24);
-  const [scrollTop, setScrollTop] = useState<number>(18 * (96 - 65)); // Center around C5/C4
+  const [scrollTop, setScrollTop] = useState<number>(18 * (108 - 72)); // Center around C5/C4
   const [scrollLeft, setScrollLeft] = useState<number>(0);
 
   // Active Chord Stamp Mode
   const [chordType, setChordType] = useState<string>('single');
   const [isAssistantOpen, setIsAssistantOpen] = useState<boolean>(false);
+  const [isClearMenuOpen, setIsClearMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleOutsideClick = () => {
+      setIsClearMenuOpen(false);
+    };
+    if (isClearMenuOpen) {
+      window.addEventListener('click', handleOutsideClick);
+      return () => window.removeEventListener('click', handleOutsideClick);
+    }
+  }, [isClearMenuOpen]);
 
   // Live playhead step
   const [playheadStep, setPlayheadStep] = useState<number>(0);
@@ -147,8 +165,8 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
     return unsub;
   }, [audioEngine]);
 
-  const minMidi = 24; // C1
-  const maxMidi = 96; // C7
+  const minMidi = 12;  // C0
+  const maxMidi = 108; // C8 (full 88-key piano keyboard range)
   const totalRows = maxMidi - minMidi + 1;
   const totalCanvasHeight = totalRows * rowHeight;
 
@@ -562,11 +580,23 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
       // Preview note briefly on click, stops immediately on pointer release
       playMousePreview(existing.note, existing.velocity, 220);
     } else {
-      // Draw new note or chord stamp
+      // Draw new note or chord stamp (interval-preserving root adjustment)
       const intervals = CHORD_DEFINITIONS[chordType]?.intervals || [0];
+      const maxInterval = Math.max(...intervals);
+      const minInterval = Math.min(...intervals);
+
+      // Adjust root pitch if chord intervals would overflow bounds, preserving chord shape
+      let adjustedRoot = clickedMidi;
+      if (adjustedRoot + maxInterval > maxMidi) {
+        adjustedRoot = maxMidi - maxInterval;
+      }
+      if (adjustedRoot + minInterval < minMidi) {
+        adjustedRoot = minMidi - minInterval;
+      }
+
       const newNotes: NoteEvent[] = intervals.map((interval, i) => ({
         id: `note_${Date.now()}_${Math.random().toString(36).substring(2, 6)}_${i}`,
-        note: Math.max(minMidi, Math.min(maxMidi, clickedMidi + interval)),
+        note: adjustedRoot + interval,
         step: clickedStep,
         duration: snapGrid,
         velocity: 0.8
@@ -773,22 +803,66 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   }, [notes, onBatchUpdateNotes]);
 
   // Transpose by semitones (+12, -12, +1, -1)
+  // Preserves harmonic integrity of all chords. Never clamps individual notes independently!
   const handleTranspose = useCallback((semitones: number) => {
     if (notes.length === 0 || !onBatchUpdateNotes) return;
-    const transposed = notes.map(n => ({
-      ...n,
-      note: Math.max(minMidi, Math.min(maxMidi, n.note + semitones))
-    }));
+
+    const pitches = notes.map(n => n.note);
+    const highestNote = Math.max(...pitches);
+    const lowestNote = Math.min(...pitches);
+
+    let safeShift = semitones;
+
+    if (semitones > 0) {
+      if (highestNote + semitones > maxMidi) {
+        // Prevent smashing chords against the ceiling
+        if (Math.abs(semitones) === 12) {
+          return; // Disallow octave jump if it doesn't fit, preserving chord harmony
+        }
+        safeShift = Math.max(0, maxMidi - highestNote);
+      }
+    } else if (semitones < 0) {
+      if (lowestNote + semitones < minMidi) {
+        // Prevent smashing chords against the floor
+        if (Math.abs(semitones) === 12) {
+          return; // Disallow octave jump if it doesn't fit, preserving chord harmony
+        }
+        safeShift = Math.min(0, minMidi - lowestNote);
+      }
+    }
+
+    if (safeShift === 0) return;
+
+    // Deduplicate any stacked notes that were previously smashed together
+    const seen = new Set<string>();
+    const transposed: NoteEvent[] = [];
+
+    notes.forEach(n => {
+      const newPitch = n.note + safeShift;
+      const key = `${n.step}_${newPitch}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        transposed.push({
+          ...n,
+          note: newPitch
+        });
+      }
+    });
+
     onBatchUpdateNotes(transposed);
   }, [notes, minMidi, maxMidi, onBatchUpdateNotes]);
 
   // Clear all notes in channel
   const handleClearAllNotes = useCallback(() => {
-    if (notes.length === 0 || !onBatchUpdateNotes) return;
+    if (notes.length === 0) return;
     if (confirm(`Clear all ${notes.length} notes in ${channel.name}?`)) {
-      onBatchUpdateNotes([]);
+      if (onClearChannelNotes && activePatternId) {
+        onClearChannelNotes(channel.id, activePatternId);
+      } else if (onBatchUpdateNotes) {
+        onBatchUpdateNotes([]);
+      }
     }
-  }, [notes, channel.name, onBatchUpdateNotes]);
+  }, [notes, channel.name, channel.id, activePatternId, onClearChannelNotes, onBatchUpdateNotes]);
 
   // Global Keyboard Shortcuts
   useEffect(() => {
@@ -818,12 +892,18 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
       } else if (e.altKey && (e.key === 's' || e.key === 'S')) {
         e.preventDefault();
         handleStrumNotes(0.25);
+      } else if ((e.ctrlKey || e.metaKey) && (e.key === 'Delete' || e.key === 'Backspace')) {
+        e.preventDefault();
+        handleClearAllNotes();
+      } else if (e.altKey && (e.key === 'c' || e.key === 'C')) {
+        e.preventDefault();
+        handleClearAllNotes();
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleQuantizeNotes, handleTranspose, handleArpeggiateNotes, handleStrumNotes]);
+  }, [handleQuantizeNotes, handleTranspose, handleArpeggiateNotes, handleStrumNotes, handleClearAllNotes]);
 
   return (
     <div className="flex flex-col h-full w-full bg-gray-950 select-none">
@@ -932,18 +1012,89 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
             </button>
           </div>
 
-          {/* Clear Channel Notes */}
-          <button
-            onClick={handleClearAllNotes}
-            title="Clear all notes in this channel"
-            className="p-1.5 hover:bg-red-500/20 text-gray-500 hover:text-red-400 rounded-lg transition-colors ml-1"
-          >
-            <Trash2 size={13} />
-          </button>
+          {/* Clear Channel Notes Tool with Pattern Menu */}
+          <div className="relative flex items-center ml-1" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center bg-gray-950 rounded-lg border border-gray-800 font-mono text-xs shadow-inner overflow-hidden">
+              <button
+                onClick={handleClearAllNotes}
+                disabled={notes.length === 0}
+                title="Clear all notes in this channel for current pattern (Ctrl+Del or Alt+C)"
+                className={`flex items-center gap-1.5 px-2.5 py-1 transition-colors ${
+                  notes.length > 0
+                    ? 'hover:bg-red-500/20 text-gray-300 hover:text-red-400 cursor-pointer font-medium'
+                    : 'text-gray-600 cursor-not-allowed'
+                }`}
+              >
+                <Eraser size={12} className={notes.length > 0 ? 'text-red-400' : 'text-gray-600'} />
+                <span>Clear</span>
+                <span className="text-[10px] text-gray-500">({notes.length})</span>
+              </button>
 
-          <span className="text-[10px] font-mono text-gray-500 ml-1">
-            {notes.length} Notes
-          </span>
+              {patterns && patterns.length > 1 && (
+                <button
+                  onClick={() => setIsClearMenuOpen(prev => !prev)}
+                  title="Clear notes in any pattern..."
+                  className="px-1.5 py-1 hover:bg-gray-800 text-gray-400 hover:text-gray-200 border-l border-gray-800 transition-colors"
+                >
+                  <ChevronDown size={11} />
+                </button>
+              )}
+            </div>
+
+            {/* Pattern Clear Dropdown Menu */}
+            {isClearMenuOpen && patterns && (
+              <div className="absolute right-0 top-7 w-56 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50 py-1 text-xs font-mono">
+                <div className="px-2.5 py-1 text-[10px] text-gray-400 font-bold border-b border-gray-800 flex items-center justify-between bg-gray-950/60">
+                  <span>CLEAR NOTES:</span>
+                  <span className="text-indigo-400 truncate max-w-[100px]">{channel.name}</span>
+                </div>
+
+                {patterns.map(pat => {
+                  const isCurrent = pat.id === activePatternId;
+                  const count = pat.notesByChannel[channel.id]?.length || 0;
+                  return (
+                    <button
+                      key={pat.id}
+                      onClick={() => {
+                        if (onClearChannelNotes) {
+                          onClearChannelNotes(channel.id, pat.id);
+                        } else if (isCurrent && onBatchUpdateNotes) {
+                          onBatchUpdateNotes([]);
+                        }
+                        setIsClearMenuOpen(false);
+                      }}
+                      className="w-full text-left px-2.5 py-1.5 hover:bg-gray-800 flex items-center justify-between text-gray-300 hover:text-red-300 transition-colors"
+                    >
+                      <div className="flex items-center gap-1.5 truncate">
+                        <Eraser size={11} className={isCurrent ? 'text-red-400' : 'text-gray-500'} />
+                        <span className="truncate">{isCurrent ? `Current: ${pat.name}` : pat.name}</span>
+                      </div>
+                      <span className={`text-[10px] px-1 rounded ${count > 0 ? 'bg-indigo-900/60 text-indigo-300 font-semibold' : 'text-gray-500'}`}>
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+
+                <div className="border-t border-gray-800 mt-1 pt-1">
+                  <button
+                    onClick={() => {
+                      if (confirm(`Clear all notes in ALL ${patterns.length} patterns for ${channel.name}?`)) {
+                        onClearChannelNotes?.(channel.id, 'all');
+                      }
+                      setIsClearMenuOpen(false);
+                    }}
+                    className="w-full text-left px-2.5 py-1.5 hover:bg-red-500/20 flex items-center justify-between text-red-400 font-semibold transition-colors"
+                  >
+                    <div className="flex items-center gap-1.5">
+                      <Trash2 size={11} className="text-red-400" />
+                      <span>Clear All Patterns</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -992,6 +1143,7 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
           }
         }}
         onApplyFullArrangement={onApplyFullArrangement}
+        onApplyMultiPatternIntroLoop={onApplyMultiPatternIntroLoop}
         onChangeBpm={onChangeBpm}
         onChangeScaleRoot={onChangeScaleRoot}
         onChangeScaleMode={onChangeScaleMode}

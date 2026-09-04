@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
-import { Play, Square, Download, Save, FolderOpen, Volume2, Sparkles, Sliders, Music, Layers, FilePlus, Edit2 } from 'lucide-react';
+import { Play, Square, Download, Save, FolderOpen, Volume2, Sparkles, Sliders, Music, Layers, FilePlus, Edit2, Mic } from 'lucide-react';
 import { NOTE_NAMES, SCALES } from '../pianoroll/ScaleEngine';
 
 interface TopBarProps {
   isPlaying: boolean;
   bpm: number;
   playbackMode: 'pattern' | 'song';
-  activeTab: 'pianoroll' | 'timeline' | 'sfx' | 'dsp';
+  activeTab: 'pianoroll' | 'timeline' | 'sfx' | 'dsp' | 'voice';
   snapGrid: number;
   scaleRoot: number;
   scaleMode: string;
@@ -18,7 +18,7 @@ interface TopBarProps {
   onStop: () => void;
   onChangeBpm: (bpm: number) => void;
   onToggleMode: (mode: 'pattern' | 'song') => void;
-  onSelectTab: (tab: 'pianoroll' | 'timeline' | 'sfx' | 'dsp') => void;
+  onSelectTab: (tab: 'pianoroll' | 'timeline' | 'sfx' | 'dsp' | 'voice') => void;
   onChangeSnap: (snap: number) => void;
   onChangeScaleRoot: (root: number) => void;
   onChangeScaleMode: (mode: string) => void;
@@ -215,6 +215,16 @@ export const TopBar: React.FC<TopBarProps> = ({
         >
           <Sparkles size={14} />
           <span>SFX Lab</span>
+        </button>
+
+        <button
+          onClick={() => onSelectTab('voice')}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded transition-all ${
+            activeTab === 'voice' ? 'bg-indigo-600 text-white font-semibold shadow' : 'text-gray-400 hover:text-gray-200'
+          }`}
+        >
+          <Mic size={14} />
+          <span>Voice Lab</span>
         </button>
 
         <button

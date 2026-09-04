@@ -7,11 +7,12 @@
  */
 
 import { midiToFrequency } from './RetroChipSynth';
+import { SoundFontParser, ParsedSoundFontPreset, ParsedSampleZone } from './SoundFontParser';
 
 export interface SoundFontPreset {
   id: string;
   name: string;
-  category: 'keys' | 'strings' | 'brass' | 'bass' | 'lead' | 'drums';
+  category: 'keys' | 'strings' | 'brass' | 'bass' | 'lead' | 'drums' | 'custom';
 }
 
 export function createHarmonicPeriodicWave(ctx: BaseAudioContext, presetId: string): PeriodicWave {
@@ -45,10 +46,13 @@ export function createHarmonicPeriodicWave(ctx: BaseAudioContext, presetId: stri
 }
 
 export class SoundFontManager {
-  private ctx: AudioContext;
+  private ctx: BaseAudioContext;
   private sampleBuffers: Map<string, AudioBuffer> = new Map();
   private loadedSoundFonts: Map<string, ArrayBuffer> = new Map();
   private activeVoices: Set<{ stop: (rel?: number) => void }> = new Set();
+
+  public static customPresetsMap: Map<string, ParsedSoundFontPreset> = new Map();
+  private presetChangeCallbacks: Set<() => void> = new Set();
 
   // Built-in instrument definitions
   public readonly defaultPresets: SoundFontPreset[] = [
@@ -70,7 +74,7 @@ export class SoundFontManager {
     this.activeVoices.clear();
   }
 
-  constructor(ctx: AudioContext) {
+  constructor(ctx: BaseAudioContext) {
     this.ctx = ctx;
     this.initializeDefaultTimbres();
   }
@@ -133,8 +137,9 @@ export class SoundFontManager {
     const vel = Math.max(0.01, Math.min(1.0, velocity * 0.65));
 
     let voice: { stop: (rel?: number) => void };
-    // Special handling for Drum Kit
-    if (presetId === 'gm_gba_percussion') {
+    if (SoundFontManager.customPresetsMap.has(presetId)) {
+      voice = this.playCustomSampleVoice(destination, midiNote, presetId, vel, when, durationSeconds);
+    } else if (presetId === 'gm_gba_percussion') {
       voice = this.playDrumNote(destination, midiNote, vel, when);
     } else {
       // Melodic soundfont voice synthesis using multi-harmonic acoustic wavetables
@@ -315,6 +320,138 @@ export class SoundFontManager {
     };
 
     return { stop };
+  }
+
+  private playCustomSampleVoice(
+    destination: AudioNode,
+    midiNote: number,
+    presetId: string,
+    velocity: number,
+    when: number,
+    durationSeconds?: number
+  ): { stop: (rel?: number) => void } {
+    const preset = SoundFontManager.customPresetsMap.get(presetId);
+    if (!preset || preset.zones.length === 0) {
+      return { stop: () => {} };
+    }
+
+    // Find best zone for note
+    let bestZone = preset.zones.find(z => midiNote >= z.minKey && midiNote <= z.maxKey);
+    if (!bestZone) {
+      let minDiff = Infinity;
+      preset.zones.forEach(z => {
+        const diff = Math.abs(midiNote - z.rootKey);
+        if (diff < minDiff) {
+          minDiff = diff;
+          bestZone = z;
+        }
+      });
+    }
+
+    if (!bestZone || !bestZone.buffer) {
+      return { stop: () => {} };
+    }
+
+    const source = this.ctx.createBufferSource();
+    source.buffer = bestZone.buffer;
+
+    const semitones = midiNote - bestZone.rootKey;
+    const rate = Math.max(0.05, Math.pow(2, semitones / 12));
+    source.playbackRate.setValueAtTime(rate, when);
+
+    if (bestZone.isLooped && bestZone.loopStart !== undefined && bestZone.loopEnd !== undefined) {
+      source.loop = true;
+      source.loopStart = bestZone.loopStart;
+      source.loopEnd = bestZone.loopEnd;
+    }
+
+    const masterGain = this.ctx.createGain();
+    masterGain.gain.setValueAtTime(0.0001, when);
+
+    const attack = 0.005;
+    const release = 0.12;
+
+    if (durationSeconds !== undefined && durationSeconds > 0) {
+      const noteEnd = when + durationSeconds;
+      const relEnd = noteEnd + release;
+      masterGain.gain.linearRampToValueAtTime(velocity, when + attack);
+      masterGain.gain.setValueAtTime(velocity, noteEnd);
+      masterGain.gain.linearRampToValueAtTime(0.0001, relEnd);
+      try {
+        source.start(when);
+        source.stop(relEnd + 0.05);
+      } catch {}
+    } else {
+      masterGain.gain.linearRampToValueAtTime(velocity, when + attack);
+      try {
+        source.start(when);
+      } catch {}
+    }
+
+    source.connect(masterGain);
+    masterGain.connect(destination);
+
+    let stopped = false;
+    const stop = (relTime?: number) => {
+      if (stopped) return;
+      stopped = true;
+      const now = this.ctx.currentTime;
+      const r = relTime !== undefined ? relTime : 0.05;
+      masterGain.gain.cancelScheduledValues(now);
+      masterGain.gain.setValueAtTime(Math.max(0.0001, masterGain.gain.value), now);
+      masterGain.gain.linearRampToValueAtTime(0.0001, now + r);
+      try {
+        source.stop(now + r + 0.02);
+      } catch {}
+      setTimeout(() => {
+        try {
+          masterGain.disconnect();
+          source.disconnect();
+        } catch {}
+      }, (r + 0.05) * 1000);
+    };
+
+    return { stop };
+  }
+
+  /**
+   * Import SoundFont 2 (.sf2) or audio sample file (.wav)
+   */
+  public async importSoundFontFile(file: File): Promise<ParsedSoundFontPreset[]> {
+    const ext = file.name.split('.').pop()?.toLowerCase();
+    let loaded: ParsedSoundFontPreset[] = [];
+
+    if (ext === 'sf2') {
+      const buf = await file.arrayBuffer();
+      loaded = await SoundFontParser.parseSf2(buf, this.ctx);
+    } else if (ext === 'wav' || ext === 'wave' || ext === 'mp3' || ext === 'ogg') {
+      const p = await SoundFontParser.parseWavFile(file, this.ctx);
+      loaded = [p];
+    } else {
+      throw new Error(`Unsupported format: .${ext}. Please upload a .sf2 or .wav file.`);
+    }
+
+    loaded.forEach(preset => {
+      SoundFontManager.customPresetsMap.set(preset.id, preset);
+    });
+
+    this.notifyPresetsChanged();
+    return loaded;
+  }
+
+  public getCustomPresets(): ParsedSoundFontPreset[] {
+    return Array.from(SoundFontManager.customPresetsMap.values());
+  }
+
+  public onPresetsChanged(cb: () => void): () => void {
+    this.presetChangeCallbacks.add(cb);
+    return () => {
+      this.presetChangeCallbacks.delete(cb);
+    };
+  }
+
+  private notifyPresetsChanged() {
+    this.presetChangeCallbacks.forEach(cb => cb());
   }
 
   /**

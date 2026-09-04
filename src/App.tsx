@@ -8,6 +8,7 @@ import { ChannelRack } from './components/layout/ChannelRack';
 import { PianoRollCanvas } from './components/pianoroll/PianoRollCanvas';
 import { PlaylistTimeline } from './components/timeline/PlaylistTimeline';
 import { ProceduralSFXGenerator } from './components/sfx/ProceduralSFXGenerator';
+import { RetroVoiceLab } from './components/voice/RetroVoiceLab';
 import { ConsoleDSPRackView } from './components/dsp/ConsoleDSPRackView';
 import { AudioExporter } from './export/AudioExporter';
 import { ExportModal } from './components/export/ExportModal';
@@ -15,7 +16,7 @@ import { ExportModal } from './components/export/ExportModal';
 export const App: React.FC = () => {
   const [project, setProject] = useState<ProjectState>(() => createDefaultProject());
   const [activeChannelId, setActiveChannelId] = useState<string>(project.channels[0].id);
-  const [activeTab, setActiveTab] = useState<'pianoroll' | 'timeline' | 'sfx' | 'dsp'>('pianoroll');
+  const [activeTab, setActiveTab] = useState<'pianoroll' | 'timeline' | 'sfx' | 'dsp' | 'voice'>('pianoroll');
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [playbackMode, setPlaybackMode] = useState<'pattern' | 'song'>('pattern');
   const [typingOctave, setTypingOctave] = useState<number>(4);
@@ -25,10 +26,11 @@ export const App: React.FC = () => {
   const audioEngine = AudioEngine.getInstance();
   const keyboardMapperRef = useRef<TypingKeyboardMapper | null>(null);
 
-  // Sync project, channels, and DSP with the AudioEngine
+  // Sync project, channels, tracks, and DSP with the AudioEngine
   useEffect(() => {
     audioEngine.updateProject(project);
     audioEngine.updateChannels(project.channels);
+    audioEngine.updateTracks(project.tracks);
   }, [project, audioEngine]);
 
   useEffect(() => {
@@ -159,6 +161,85 @@ export const App: React.FC = () => {
     }));
   };
 
+  const handleApplyMultiPatternIntroLoop = (
+    introNotesByChannel: Record<string, NoteEvent[]>,
+    loopNotesByChannel: Record<string, NoteEvent[]>,
+    styleName: string
+  ) => {
+    const timestamp = Date.now();
+    const introPatternId = `pat_intro_${timestamp}`;
+    const loopPatternId = `pat_loop_${timestamp}`;
+
+    const introPattern: Pattern = {
+      id: introPatternId,
+      name: `${styleName} - Intro`,
+      lengthSteps: 64,
+      notesByChannel: introNotesByChannel
+    };
+
+    const loopPattern: Pattern = {
+      id: loopPatternId,
+      name: `${styleName} - Loop`,
+      lengthSteps: 64,
+      notesByChannel: loopNotesByChannel
+    };
+
+    // Track 0: Intro (0-64), Loop (64-128), Loop Repeat (128-192)
+    const clipIntro: TimelineClip = {
+      id: `clip_${timestamp}_intro`,
+      trackIndex: 0,
+      startStep: 0,
+      lengthSteps: 64,
+      patternId: introPatternId,
+      name: `${styleName} - Intro`,
+      color: '#f59e0b',
+      muted: false
+    };
+
+    const clipLoop1: TimelineClip = {
+      id: `clip_${timestamp}_loop1`,
+      trackIndex: 0,
+      startStep: 64,
+      lengthSteps: 64,
+      patternId: loopPatternId,
+      name: `${styleName} - Loop`,
+      color: '#6366f1',
+      muted: false
+    };
+
+    const clipLoop2: TimelineClip = {
+      id: `clip_${timestamp}_loop2`,
+      trackIndex: 0,
+      startStep: 128,
+      lengthSteps: 64,
+      patternId: loopPatternId,
+      name: `${styleName} - Loop (2)`,
+      color: '#818cf8',
+      muted: false
+    };
+
+    const updatedPatterns = [...project.patterns, introPattern, loopPattern];
+    const updatedClips = [...project.timelineClips, clipIntro, clipLoop1, clipLoop2];
+
+    setProject(prev => ({
+      ...prev,
+      patterns: updatedPatterns,
+      activePatternId: loopPatternId,
+      timelineClips: updatedClips,
+      loopStartStep: 64,
+      loopLengthSteps: 64
+    }));
+
+    audioEngine.updateProject({
+      ...project,
+      patterns: updatedPatterns,
+      activePatternId: loopPatternId,
+      timelineClips: updatedClips,
+      loopStartStep: 64,
+      loopLengthSteps: 64
+    });
+  };
+
   const handleUpdateNote = (updatedNote: NoteEvent) => {
     const updatedNotes = activeNotes.map(n => n.id === updatedNote.id ? updatedNote : n);
     const updatedPattern = {
@@ -204,6 +285,42 @@ export const App: React.FC = () => {
     }));
   };
 
+  const handleClearChannelNotes = (channelId: string, patternId?: string) => {
+    const targetPatternId = patternId || project.activePatternId;
+
+    setProject(prev => {
+      let updatedPatterns: Pattern[];
+      if (patternId === 'all') {
+        updatedPatterns = prev.patterns.map(p => ({
+          ...p,
+          notesByChannel: {
+            ...p.notesByChannel,
+            [channelId]: []
+          }
+        }));
+      } else {
+        updatedPatterns = prev.patterns.map(p => {
+          if (p.id !== targetPatternId) return p;
+          return {
+            ...p,
+            notesByChannel: {
+              ...p.notesByChannel,
+              [channelId]: []
+            }
+          };
+        });
+      }
+
+      const updatedProject = {
+        ...prev,
+        patterns: updatedPatterns
+      };
+
+      audioEngine.updateProject(updatedProject);
+      return updatedProject;
+    });
+  };
+
   // Channel management
   const handleUpdateChannel = (updated: InstrumentChannel) => {
     setProject(prev => ({
@@ -212,10 +329,25 @@ export const App: React.FC = () => {
     }));
   };
 
-  const handleAddChannel = () => {
-    const newId = `ch_${Date.now()}`;
+  const handleExclusiveSoloChannel = (channelId: string) => {
+    setProject(prev => {
+      const targetCh = prev.channels.find(c => c.id === channelId);
+      const isAlreadyOnlySoloed = targetCh?.solo && prev.channels.every(c => c.id === channelId || !c.solo);
+
+      return {
+        ...prev,
+        channels: prev.channels.map(c => ({
+          ...c,
+          solo: isAlreadyOnlySoloed ? false : c.id === channelId
+        }))
+      };
+    });
+  };
+
+  const handleAddChannel = (customChannel?: InstrumentChannel) => {
+    const newId = customChannel?.id || `ch_${Date.now()}`;
     const colors = ['#38bdf8', '#818cf8', '#34d399', '#fbbf24', '#f472b6', '#c084fc', '#f87171'];
-    const newChannel: InstrumentChannel = {
+    const newChannel: InstrumentChannel = customChannel || {
       id: newId,
       name: `Channel ${project.channels.length + 1}`,
       color: colors[project.channels.length % colors.length],
@@ -406,10 +538,14 @@ export const App: React.FC = () => {
         <ChannelRack
           channels={project.channels}
           activeChannelId={activeChannelId}
+          patterns={project.patterns}
+          activePatternId={project.activePatternId}
           onSelectChannel={setActiveChannelId}
           onUpdateChannel={handleUpdateChannel}
+          onExclusiveSoloChannel={handleExclusiveSoloChannel}
           onAddChannel={handleAddChannel}
           onDeleteChannel={handleDeleteChannel}
+          onClearChannelNotes={handleClearChannelNotes}
         />
 
         {/* Center / Right Panel: Active Tab View */}
@@ -426,6 +562,8 @@ export const App: React.FC = () => {
               typingOctave={typingOctave}
               bpm={project.bpm}
               channels={project.channels}
+              patterns={project.patterns}
+              activePatternId={project.activePatternId}
               dsp={project.dsp}
               onChangeBpm={(bpm) => {
                 setProject(prev => ({ ...prev, bpm }));
@@ -439,7 +577,9 @@ export const App: React.FC = () => {
               onDeleteNote={handleDeleteNote}
               onUpdateVelocity={handleUpdateVelocity}
               onBatchUpdateNotes={handleBatchUpdateNotes}
+              onClearChannelNotes={handleClearChannelNotes}
               onApplyFullArrangement={handleApplyFullArrangement}
+              onApplyMultiPatternIntroLoop={handleApplyMultiPatternIntroLoop}
             />
           )}
 
@@ -464,6 +604,10 @@ export const App: React.FC = () => {
 
           {activeTab === 'sfx' && (
             <ProceduralSFXGenerator onAddChannel={handleAddChannel} />
+          )}
+
+          {activeTab === 'voice' && (
+            <RetroVoiceLab onAddChannel={handleAddChannel} />
           )}
 
           {activeTab === 'dsp' && (

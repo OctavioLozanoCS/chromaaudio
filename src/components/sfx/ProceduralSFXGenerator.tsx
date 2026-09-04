@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Play, Download, Sparkles, Volume2, PlusCircle, Check } from 'lucide-react';
 import { AudioEngine } from '../../audio/AudioEngine';
 import { InstrumentChannel } from '../../types/audio';
+import { AudioExporter, ExportAudioFormat } from '../../export/AudioExporter';
 
 export interface SFXParams {
   waveform: 'square' | 'triangle' | 'sine' | 'noise';
@@ -30,6 +31,8 @@ export const ProceduralSFXGenerator: React.FC<ProceduralSFXGeneratorProps> = ({
     punch: 1.0
   });
 
+  const [exportFormat, setExportFormat] = useState<ExportAudioFormat>('wav');
+  const [isExporting, setIsExporting] = useState(false);
   const [addedToRack, setAddedToRack] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const audioEngine = AudioEngine.getInstance();
@@ -278,68 +281,71 @@ export const ProceduralSFXGenerator: React.FC<ProceduralSFXGeneratorProps> = ({
     playSFX(p);
   };
 
-  // Instant WAV Exporter
-  const exportWav = () => {
-    const sampleRate = 44100;
-    const numSamples = Math.floor(sampleRate * params.duration);
-    const wavBuffer = new ArrayBuffer(44 + numSamples * 2);
-    const view = new DataView(wavBuffer);
+  // Render procedural SFX with exact Web Audio parity (including dynamic lowpass filter on noise)
+  const renderSFXToAudioBuffer = async (p: SFXParams, sampleRate: number = 44100): Promise<AudioBuffer> => {
+    const totalDuration = p.duration + 0.04;
+    const totalSamples = Math.max(128, Math.ceil(totalDuration * sampleRate));
+    const offlineCtx = new OfflineAudioContext(1, totalSamples, sampleRate);
 
-    const writeString = (offset: number, str: string) => {
-      for (let i = 0; i < str.length; i++) {
-        view.setUint8(offset + i, str.charCodeAt(i));
+    const masterGain = offlineCtx.createGain();
+    masterGain.gain.setValueAtTime(0.0001, 0);
+    masterGain.gain.linearRampToValueAtTime(Math.min(1.0, p.punch * 0.8), p.attack);
+    masterGain.gain.exponentialRampToValueAtTime(0.0001, p.duration);
+    masterGain.connect(offlineCtx.destination);
+
+    if (p.waveform === 'noise') {
+      const bufferSize = Math.floor(sampleRate * p.duration);
+      const buffer = offlineCtx.createBuffer(1, bufferSize, sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = Math.random() * 2 - 1;
       }
-    };
+      const noise = offlineCtx.createBufferSource();
+      noise.buffer = buffer;
 
-    writeString(0, 'RIFF');
-    view.setUint32(4, 36 + numSamples * 2, true);
-    writeString(8, 'WAVE');
-    writeString(12, 'fmt ');
-    view.setUint32(16, 16, true);
-    view.setUint16(20, 1, true); // PCM
-    view.setUint16(22, 1, true); // Mono
-    view.setUint32(24, sampleRate, true);
-    view.setUint32(28, sampleRate * 2, true);
-    view.setUint16(32, 2, true); // Block align
-    view.setUint16(34, 16, true); // 16-bit
-    writeString(36, 'data');
-    view.setUint32(40, numSamples * 2, true);
+      const filter = offlineCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(Math.max(20, p.startFreq), 0);
+      filter.frequency.exponentialRampToValueAtTime(Math.max(20, p.endFreq), p.duration);
 
-    for (let i = 0; i < numSamples; i++) {
-      const t = i / sampleRate;
-      const progress = t / params.duration;
-      const currentFreq = params.startFreq * Math.pow(Math.max(1, params.endFreq) / Math.max(1, params.startFreq), progress);
+      noise.connect(filter);
+      filter.connect(masterGain);
+      noise.start(0);
+      noise.stop(p.duration + 0.02);
+    } else {
+      const osc = offlineCtx.createOscillator();
+      osc.type = p.waveform;
+      osc.frequency.setValueAtTime(Math.max(20, p.startFreq), 0);
+      osc.frequency.exponentialRampToValueAtTime(Math.max(20, p.endFreq), p.duration);
 
-      let val = 0;
-      if (params.waveform === 'noise') {
-        val = Math.random() * 2 - 1;
-      } else if (params.waveform === 'square') {
-        val = Math.sin(2 * Math.PI * currentFreq * t) >= 0 ? 1 : -1;
-      } else if (params.waveform === 'triangle') {
-        val = 2 * Math.abs(2 * (t * currentFreq - Math.floor(t * currentFreq + 0.5))) - 1;
-      } else {
-        val = Math.sin(2 * Math.PI * currentFreq * t);
-      }
-
-      let env = 1;
-      if (t < params.attack) {
-        env = t / Math.max(0.001, params.attack);
-      } else {
-        const decayProgress = (t - params.attack) / Math.max(0.001, params.decay);
-        env = Math.max(0, 1 - decayProgress);
-      }
-
-      const sample = Math.max(-1, Math.min(1, val * params.punch * env * 0.9));
-      view.setInt16(44 + i * 2, Math.floor(sample * 32767), true);
+      osc.connect(masterGain);
+      osc.start(0);
+      osc.stop(p.duration + 0.02);
     }
 
-    const blob = new Blob([wavBuffer], { type: 'audio/wav' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `sfx_${params.waveform}_${Date.now()}.wav`;
-    a.click();
-    URL.revokeObjectURL(url);
+    return await offlineCtx.startRendering();
+  };
+
+  // Export procedural SFX in WAV or OGG Vorbis
+  const handleExportSFX = async (format: ExportAudioFormat = exportFormat) => {
+    try {
+      setIsExporting(true);
+      const buffer = await renderSFXToAudioBuffer(params);
+      const blob = await AudioExporter.audioBufferToExportBlob(
+        buffer,
+        format,
+        0,
+        0,
+        120,
+        `SFX ${params.waveform.toUpperCase()}`,
+        0.85
+      );
+      AudioExporter.downloadBlob(blob, `sfx_${params.waveform}_${Date.now()}.${format}`);
+    } catch (err) {
+      console.error('Failed to export SFX:', err);
+    } finally {
+      setIsExporting(false);
+    }
   };
 
   // Send SFX as new channel to project rack
@@ -404,12 +410,44 @@ export const ProceduralSFXGenerator: React.FC<ProceduralSFXGeneratorProps> = ({
               <span>{addedToRack ? 'Added to Rack!' : 'Send to Channel Rack'}</span>
             </button>
           )}
+          {/* Export Format Selector and Action */}
+          <div className="flex items-center bg-gray-950 p-1 rounded-lg border border-gray-800">
+            <button
+              type="button"
+              onClick={() => setExportFormat('wav')}
+              className={`px-2.5 py-1 text-xs font-bold rounded-md transition-all ${
+                exportFormat === 'wav'
+                  ? 'bg-indigo-600 text-white shadow'
+                  : 'text-gray-400 hover:text-gray-200'
+              }`}
+            >
+              WAV
+            </button>
+            <button
+              type="button"
+              onClick={() => setExportFormat('ogg')}
+              className={`px-2.5 py-1 text-xs font-bold rounded-md transition-all ${
+                exportFormat === 'ogg'
+                  ? 'bg-indigo-600 text-white shadow'
+                  : 'text-gray-400 hover:text-gray-200'
+              }`}
+            >
+              OGG
+            </button>
+          </div>
+
           <button
-            onClick={exportWav}
-            className="flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 font-semibold text-xs rounded-lg shadow transition-colors"
+            onClick={() => handleExportSFX(exportFormat)}
+            disabled={isExporting}
+            className="flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 font-semibold text-xs rounded-lg shadow transition-colors cursor-pointer"
+            title={`Export retro sound effect as .${exportFormat}`}
           >
-            <Download size={14} />
-            Export WAV
+            {isExporting ? (
+              <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            ) : (
+              <Download size={14} />
+            )}
+            <span>{isExporting ? 'Exporting...' : `Export ${exportFormat.toUpperCase()}`}</span>
           </button>
         </div>
       </div>

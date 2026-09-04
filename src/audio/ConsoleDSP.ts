@@ -10,7 +10,7 @@
 
 import { DSPConfig } from '../types/audio';
 
-function createBitQuantizerCurve(bitDepth: number): Float32Array<ArrayBuffer> {
+export function createBitQuantizerCurve(bitDepth: number): Float32Array<ArrayBuffer> {
   const n = 65536;
   const buffer = new ArrayBuffer(n * 4);
   const curve = new Float32Array(buffer);

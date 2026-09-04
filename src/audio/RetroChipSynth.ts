@@ -143,21 +143,22 @@ export function playChipVoice(
   const sustain = Math.min(1.0, Math.max(0.05, params.sustain ?? 0.7));
   const release = Math.max(0.01, params.release ?? 0.15);
 
-  const masterVoiceGain = (ctx as AudioContext).createGain();
+  const masterVoiceGain = ctx.createGain();
   masterVoiceGain.gain.setValueAtTime(0.0001, when);
 
   let voiceSourceNode: AudioNode;
+  let lfo: OscillatorNode | null = null;
 
   if (params.waveform === 'noise') {
     const noiseBuffer = getCachedGbNoiseBuffer(ctx, midiNote > 60);
-    const bufferSource = (ctx as AudioContext).createBufferSource();
+    const bufferSource = ctx.createBufferSource();
     bufferSource.buffer = noiseBuffer;
     bufferSource.loop = true;
     bufferSource.playbackRate.value = Math.max(0.2, freq / 440);
     bufferSource.start(when);
     voiceSourceNode = bufferSource;
   } else {
-    const osc = (ctx as AudioContext).createOscillator();
+    const osc = ctx.createOscillator();
     
     if (params.waveform.startsWith('pulse_')) {
       const duty = params.waveform === 'pulse_12' ? 0.125 :
@@ -178,8 +179,8 @@ export function playChipVoice(
     }
 
     if (params.vibratoDepth && params.vibratoDepth > 0) {
-      const lfo = (ctx as AudioContext).createOscillator();
-      const lfoGain = (ctx as AudioContext).createGain();
+      lfo = ctx.createOscillator();
+      const lfoGain = ctx.createGain();
       lfo.frequency.value = params.vibratoSpeed ?? 6.0;
       lfoGain.gain.value = freq * (params.vibratoDepth * 0.05);
       lfo.connect(lfoGain);
@@ -221,6 +222,11 @@ export function playChipVoice(
         voiceSourceNode.stop(relEnd + 0.05);
       } catch {}
     }
+    if (lfo) {
+      try {
+        lfo.stop(relEnd + 0.05);
+      } catch {}
+    }
   } else {
     // Live interactive keypress (held until noteOff/stop is triggered)
     masterVoiceGain.gain.linearRampToValueAtTime(velocity, when + attack);
@@ -241,6 +247,11 @@ export function playChipVoice(
     if ('stop' in voiceSourceNode && typeof voiceSourceNode.stop === 'function') {
       try {
         voiceSourceNode.stop(now + rel + 0.02);
+      } catch {}
+    }
+    if (lfo) {
+      try {
+        lfo.stop(now + rel + 0.02);
       } catch {}
     }
 
