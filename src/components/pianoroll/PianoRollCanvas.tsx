@@ -3,7 +3,7 @@ import { NoteEvent, InstrumentChannel, DSPConfig, Pattern } from '../../types/au
 import { isNoteInScale, getNoteLabel, isBlackKey } from './ScaleEngine';
 import { VelocityDrawer } from './VelocityDrawer';
 import { AudioEngine } from '../../audio/AudioEngine';
-import { Sparkles, Zap, Music2, Trash2, ArrowUp, ArrowDown, Wand2, Eraser, ChevronDown } from 'lucide-react';
+import { Sparkles, Zap, Music2, Trash2, ArrowUp, ArrowDown, Wand2, Eraser, ChevronDown, ZoomIn, ZoomOut, Maximize2 } from 'lucide-react';
 import { SongwritingAssistantModal } from './SongwritingAssistantModal';
 
 // Maps relative semitones from root C of current octave to physical computer keyboard keys
@@ -103,7 +103,7 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   // Layout parameters
   const pianoKeyWidth = 64;
   const rowHeight = 18;
-  const [stepWidth, setStepWidth] = useState<number>(24);
+  const [stepWidth, setStepWidth] = useState<number>(18);
   const [scrollTop, setScrollTop] = useState<number>(18 * (108 - 72)); // Center around C5/C4
   const [scrollLeft, setScrollLeft] = useState<number>(0);
 
@@ -111,6 +111,16 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   const [chordType, setChordType] = useState<string>('single');
   const [isAssistantOpen, setIsAssistantOpen] = useState<boolean>(false);
   const [isClearMenuOpen, setIsClearMenuOpen] = useState<boolean>(false);
+
+  // Scrollbar and Navigation Refs
+  const scrollbarTrackRef = useRef<HTMLDivElement | null>(null);
+  const isScrollbarDragging = useRef<boolean>(false);
+  const scrollbarDragStartX = useRef<number>(0);
+  const scrollbarDragStartScroll = useRef<number>(0);
+  const hasAutoFitted = useRef<boolean>(false);
+  const panStartPos = useRef<{ clientX: number; clientY: number; startScrollLeft: number; startScrollTop: number }>({
+    clientX: 0, clientY: 0, startScrollLeft: 0, startScrollTop: 0
+  });
 
   useEffect(() => {
     const handleOutsideClick = () => {
@@ -133,7 +143,7 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
 
   // Mouse note interaction state
   const isMouseDown = useRef<boolean>(false);
-  const dragAction = useRef<'draw' | 'move' | 'resize' | null>(null);
+  const dragAction = useRef<'draw' | 'move' | 'resize' | 'pan' | null>(null);
   const activeNote = useRef<NoteEvent | null>(null);
   const dragStartPos = useRef<{ x: number; y: number; originalStep: number; originalPitch: number; originalDuration: number }>({
     x: 0, y: 0, originalStep: 0, originalPitch: 60, originalDuration: 1
@@ -165,10 +175,106 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
     return unsub;
   }, [audioEngine]);
 
+  // Layout calculations
   const minMidi = 12;  // C0
   const maxMidi = 108; // C8 (full 88-key piano keyboard range)
   const totalRows = maxMidi - minMidi + 1;
   const totalCanvasHeight = totalRows * rowHeight;
+  const totalGridWidth = lengthSteps * stepWidth;
+  const visibleGridWidth = Math.max(1, canvasSize.width - pianoKeyWidth);
+  const maxScrollLeft = Math.max(0, totalGridWidth - visibleGridWidth);
+  const maxScrollTop = Math.max(0, totalCanvasHeight - canvasSize.height);
+  const totalBars = Math.max(1, Math.ceil(lengthSteps / 16));
+  const currentStartBar = Math.floor(scrollLeft / (16 * stepWidth)) + 1;
+  const currentEndBar = Math.min(totalBars, Math.floor((scrollLeft + visibleGridWidth - 1) / (16 * stepWidth)) + 1);
+  const areAllBarsVisible = totalGridWidth <= visibleGridWidth;
+
+  // Clamp scrollLeft when zoom, lengthSteps, or viewport size changes
+  useEffect(() => {
+    setScrollLeft(prev => Math.max(0, Math.min(maxScrollLeft, prev)));
+  }, [maxScrollLeft]);
+
+  // Fit All 4 Bars (or all pattern sections) to screen
+  const handleFitAll = useCallback(() => {
+    const visibleWidth = canvasSize.width - pianoKeyWidth - 12;
+    if (visibleWidth > 0 && lengthSteps > 0) {
+      const ideal = Math.max(8, Math.min(48, Math.floor((visibleWidth / lengthSteps) * 10) / 10));
+      setStepWidth(ideal);
+      setScrollLeft(0);
+    }
+  }, [canvasSize.width, pianoKeyWidth, lengthSteps]);
+
+  // Auto-fit pattern sections on initial mount if default 24px would overflow
+  useEffect(() => {
+    if (!hasAutoFitted.current && canvasSize.width > 400) {
+      hasAutoFitted.current = true;
+      if (lengthSteps * 24 > canvasSize.width - pianoKeyWidth) {
+        handleFitAll();
+      }
+    }
+  }, [canvasSize.width, lengthSteps, handleFitAll, pianoKeyWidth]);
+
+  // Zoom and Jump Handlers
+  const handleZoomIn = useCallback(() => {
+    setStepWidth(prev => Math.min(64, Math.round(prev * 1.2 * 10) / 10));
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    setStepWidth(prev => Math.max(8, Math.round(prev * 0.8 * 10) / 10));
+  }, []);
+
+  const handleResetZoom = useCallback(() => {
+    setStepWidth(24);
+  }, []);
+
+  const handleJumpToBar = useCallback((barNum: number) => {
+    const target = (barNum - 1) * 16 * stepWidth;
+    setScrollLeft(Math.max(0, Math.min(maxScrollLeft, target)));
+  }, [maxScrollLeft, stepWidth]);
+
+  // Scrollbar Dragging Handlers
+  const handleScrollbarMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!scrollbarTrackRef.current) return;
+    const trackRect = scrollbarTrackRef.current.getBoundingClientRect();
+    const clickX = e.clientX - trackRect.left;
+    const fraction = clickX / trackRect.width;
+    const targetScroll = fraction * totalGridWidth - (visibleGridWidth / 2);
+    const clamped = Math.max(0, Math.min(maxScrollLeft, targetScroll));
+    setScrollLeft(clamped);
+
+    isScrollbarDragging.current = true;
+    scrollbarDragStartX.current = e.clientX;
+    scrollbarDragStartScroll.current = clamped;
+  };
+
+  const handleScrollbarThumbMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    isScrollbarDragging.current = true;
+    scrollbarDragStartX.current = e.clientX;
+    scrollbarDragStartScroll.current = scrollLeft;
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isScrollbarDragging.current || !scrollbarTrackRef.current) return;
+      const trackRect = scrollbarTrackRef.current.getBoundingClientRect();
+      const deltaPx = e.clientX - scrollbarDragStartX.current;
+      const deltaRatio = deltaPx / trackRect.width;
+      const deltaScroll = deltaRatio * totalGridWidth;
+      setScrollLeft(Math.max(0, Math.min(maxScrollLeft, scrollbarDragStartScroll.current + deltaScroll)));
+    };
+
+    const handleMouseUp = () => {
+      isScrollbarDragging.current = false;
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [maxScrollLeft, totalGridWidth]);
 
   // Auto-center vertically when playing notes that are outside the current view
   useEffect(() => {
@@ -257,6 +363,26 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
       ctx.moveTo(x, 0);
       ctx.lineTo(x, height);
       ctx.stroke();
+    }
+    ctx.restore();
+
+    // 2b. Draw Bar / Section Badges along the top
+    ctx.save();
+    for (let s = 0; s < lengthSteps; s += 16) {
+      const x = pianoKeyWidth + s * stepWidth - scrollLeft;
+      if (x + 50 < pianoKeyWidth || x > width) continue;
+      const barNum = Math.floor(s / 16) + 1;
+      const badgeX = Math.max(pianoKeyWidth + 2, x + 2);
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+      ctx.beginPath();
+      ctx.roundRect(badgeX, 2, 42, 14, 3);
+      ctx.fill();
+      ctx.strokeStyle = '#4338ca';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.fillStyle = '#c7d2fe';
+      ctx.font = 'bold 9px JetBrains Mono';
+      ctx.fillText(`BAR ${barNum}`, badgeX + 5, 12);
     }
     ctx.restore();
 
@@ -530,6 +656,19 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
       canvas.setPointerCapture(e.pointerId);
     } catch {}
 
+    // Hand-pan navigation: Middle-click (button 1) or Alt+Left Click
+    if (e.button === 1 || (e.altKey && e.button === 0)) {
+      e.preventDefault();
+      dragAction.current = 'pan';
+      panStartPos.current = {
+        clientX: e.clientX,
+        clientY: e.clientY,
+        startScrollLeft: scrollLeft,
+        startScrollTop: scrollTop
+      };
+      return;
+    }
+
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
@@ -630,6 +769,16 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   const handlePointerMove = (e: React.PointerEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    // Handle middle-drag pan
+    if (dragAction.current === 'pan') {
+      const deltaX = e.clientX - panStartPos.current.clientX;
+      const deltaY = e.clientY - panStartPos.current.clientY;
+      setScrollLeft(Math.max(0, Math.min(maxScrollLeft, panStartPos.current.startScrollLeft - deltaX)));
+      setScrollTop(Math.max(0, Math.min(maxScrollTop, panStartPos.current.startScrollTop - deltaY)));
+      return;
+    }
+
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
@@ -685,6 +834,12 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
       } catch {}
     }
 
+    if (dragAction.current === 'pan') {
+      dragAction.current = null;
+      isMouseDown.current = false;
+      return;
+    }
+
     stopMousePreview();
 
     isMouseDown.current = false;
@@ -692,18 +847,42 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
     activeNote.current = null;
   };
 
-  // Scroll & Zoom wheel handler
-  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    if (e.ctrlKey) {
-      const zoomFactor = e.deltaY < 0 ? 1.15 : 0.85;
-      setStepWidth(prev => Math.max(12, Math.min(80, prev * zoomFactor)));
-    } else if (e.shiftKey) {
-      setScrollLeft(prev => Math.max(0, prev + e.deltaY));
-    } else {
-      setScrollTop(prev => Math.max(0, Math.min(totalCanvasHeight - 300, prev + e.deltaY)));
-    }
-  };
+  // Non-passive Wheel listener for cursor-centered horizontal zoom & trackpad swipe navigation
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+
+      if (e.ctrlKey || e.metaKey) {
+        // Cursor-centered zoom
+        const rect = container.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left - pianoKeyWidth;
+        const currentStep = mouseX > 0 ? (mouseX + scrollLeft) / stepWidth : 0;
+        const zoomFactor = e.deltaY < 0 ? 1.15 : 0.85;
+        const newStepWidth = Math.max(8, Math.min(64, Math.round(stepWidth * zoomFactor * 10) / 10));
+        const newMaxScroll = Math.max(0, (lengthSteps * newStepWidth) - (canvasSize.width - pianoKeyWidth));
+        const newScroll = mouseX > 0
+          ? Math.max(0, Math.min(newMaxScroll, currentStep * newStepWidth - mouseX))
+          : Math.max(0, Math.min(newMaxScroll, scrollLeft));
+
+        setStepWidth(newStepWidth);
+        setScrollLeft(newScroll);
+      } else {
+        const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey;
+        if (isHorizontal) {
+          const delta = Math.abs(e.deltaX) > 0 ? e.deltaX : e.deltaY;
+          setScrollLeft(prev => Math.max(0, Math.min(maxScrollLeft, prev + delta)));
+        } else {
+          setScrollTop(prev => Math.max(0, Math.min(maxScrollTop, prev + e.deltaY)));
+        }
+      }
+    };
+
+    container.addEventListener('wheel', onWheel, { passive: false });
+    return () => container.removeEventListener('wheel', onWheel);
+  }, [scrollLeft, stepWidth, maxScrollLeft, maxScrollTop, lengthSteps, canvasSize.width, pianoKeyWidth]);
 
   // -------------------------------------------------------------
   // POWER TOOLS: Quantize, Arpeggiator, Strum, Transpose
@@ -972,6 +1151,76 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
           </button>
         </div>
 
+        {/* Center: Sections Navigation & Zoom */}
+        <div className="flex items-center gap-2">
+          {/* Quick Section / Bar Jump Buttons */}
+          <div className="flex items-center gap-1 bg-gray-950 px-2 py-1 rounded-lg border border-gray-800 font-mono text-xs shadow-inner">
+            <span className="text-gray-500 text-[10px] uppercase font-bold mr-0.5">BARS:</span>
+            <button
+              onClick={handleFitAll}
+              title="Fit all 4 bars on screen at once"
+              className={`px-1.5 py-0.5 rounded text-[10px] font-bold transition-all ${
+                areAllBarsVisible
+                  ? 'bg-emerald-600 text-white shadow-sm shadow-emerald-500/30'
+                  : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
+              }`}
+            >
+              All 4
+            </button>
+            {Array.from({ length: totalBars }).map((_, bIdx) => {
+              const barNum = bIdx + 1;
+              const isActive = !areAllBarsVisible && currentStartBar <= barNum && barNum <= currentEndBar;
+              return (
+                <button
+                  key={barNum}
+                  onClick={() => handleJumpToBar(barNum)}
+                  title={`Scroll to Bar ${barNum} (Steps ${bIdx * 16}–${(bIdx + 1) * 16 - 1})`}
+                  className={`px-1.5 py-0.5 rounded text-[10px] font-bold transition-colors ${
+                    isActive
+                      ? 'bg-indigo-600 text-white shadow-sm'
+                      : 'bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-gray-200'
+                  }`}
+                >
+                  {barNum}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Zoom In/Out & Fit All Toolbar Buttons */}
+          <div className="hidden lg:flex items-center bg-gray-950 rounded-lg border border-gray-800 font-mono text-xs shadow-inner">
+            <button
+              onClick={handleZoomOut}
+              title="Zoom Out (Ctrl + Wheel Down)"
+              className="p-1 hover:bg-gray-800 text-gray-400 hover:text-gray-200 border-r border-gray-800 transition-colors"
+            >
+              <ZoomOut size={12} />
+            </button>
+            <button
+              onClick={handleResetZoom}
+              title="Reset Zoom (100% / 24px)"
+              className="px-1.5 py-0.5 hover:bg-gray-800 text-[10px] text-gray-300 hover:text-white transition-colors"
+            >
+              {Math.round((stepWidth / 24) * 100)}%
+            </button>
+            <button
+              onClick={handleZoomIn}
+              title="Zoom In (Ctrl + Wheel Up)"
+              className="p-1 hover:bg-gray-800 text-gray-400 hover:text-gray-200 border-r border-gray-800 transition-colors"
+            >
+              <ZoomIn size={12} />
+            </button>
+            <button
+              onClick={handleFitAll}
+              title="Fit All 4 Bars to Viewport"
+              className="flex items-center gap-1 px-2 py-0.5 text-[10px] text-indigo-400 hover:text-white hover:bg-indigo-900/40 font-bold transition-colors"
+            >
+              <Maximize2 size={11} />
+              <span>Fit 4 Bars</span>
+            </button>
+          </div>
+        </div>
+
         {/* Right: Transpose & Clean */}
         <div className="flex items-center gap-2">
           {/* Octave Transpose */}
@@ -1102,19 +1351,107 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
       <div 
         ref={containerRef}
         className="flex-1 relative overflow-hidden bg-gray-950"
-        onWheel={handleWheel}
       >
         <canvas
           ref={canvasRef}
           width={canvasSize.width}
           height={canvasSize.height}
-          className="w-full h-full cursor-pointer block"
+          className={`w-full h-full block select-none ${dragAction.current === 'pan' ? 'cursor-grabbing' : 'cursor-pointer'}`}
           onContextMenu={(e) => e.preventDefault()}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
           onPointerLeave={handlePointerUp}
         />
+      </div>
+
+      {/* Horizontal Scrollbar & Section Mini-Map */}
+      <div className="flex items-center h-6 bg-gray-950 border-t border-b border-gray-800 text-[10px] font-mono select-none">
+        {/* Left Spacer aligned with Piano Key column */}
+        <div className="w-[64px] shrink-0 flex items-center justify-center border-r border-gray-800 text-gray-500 font-bold text-[9px] tracking-tighter">
+          NAV
+        </div>
+
+        {/* Draggable Track */}
+        <div
+          ref={scrollbarTrackRef}
+          onMouseDown={handleScrollbarMouseDown}
+          className="flex-1 h-full relative bg-gray-900/90 cursor-pointer overflow-hidden group"
+          title="Click or drag to scroll horizontally across pattern sections"
+        >
+          {/* Measure Ticks & Bar Labels */}
+          <div className="absolute inset-0 flex pointer-events-none">
+            {Array.from({ length: totalBars }).map((_, bIdx) => (
+              <div
+                key={bIdx}
+                className="flex-1 border-r border-gray-800/80 flex items-center px-2 text-gray-500 text-[9px] font-bold"
+              >
+                Bar {bIdx + 1}
+              </div>
+            ))}
+          </div>
+
+          {/* Real-time Playhead Indicator */}
+          <div
+            className="absolute top-0 bottom-0 w-0.5 bg-red-500 pointer-events-none z-10"
+            style={{
+              left: `${(playheadStep / lengthSteps) * 100}%`
+            }}
+          />
+
+          {/* Draggable Scroll Thumb */}
+          <div
+            onMouseDown={handleScrollbarThumbMouseDown}
+            className="absolute top-0.5 bottom-0.5 bg-indigo-600/80 hover:bg-indigo-500 rounded cursor-grab active:cursor-grabbing border border-indigo-400/50 transition-colors flex items-center justify-center shadow"
+            style={{
+              left: `${totalGridWidth > visibleGridWidth ? (scrollLeft / totalGridWidth) * 100 : 0}%`,
+              width: `${Math.max(6, Math.min(100, (visibleGridWidth / totalGridWidth) * 100))}%`
+            }}
+          >
+            <div className="w-3 h-0.5 bg-white/60 rounded-full" />
+          </div>
+        </div>
+
+        {/* Right Status & Zoom Readout */}
+        <div className="px-2 flex items-center gap-2 border-l border-gray-800 bg-gray-950 shrink-0 text-gray-400">
+          <span className="font-semibold text-gray-300">
+            {areAllBarsVisible ? (
+              <span className="text-emerald-400 font-bold">ALL 4 BARS VISIBLE</span>
+            ) : (
+              <span>BAR {currentStartBar}–{currentEndBar} of {totalBars}</span>
+            )}
+          </span>
+          <div className="h-3 w-px bg-gray-800" />
+          <button
+            onClick={handleZoomOut}
+            title="Zoom Out (-)"
+            className="p-0.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white transition-colors"
+          >
+            <ZoomOut size={11} />
+          </button>
+          <button
+            onClick={handleResetZoom}
+            title="Reset Zoom (100% / 24px)"
+            className="px-1 py-0.5 hover:bg-gray-800 rounded text-[9px] text-gray-300 hover:text-white transition-colors"
+          >
+            {Math.round((stepWidth / 24) * 100)}%
+          </button>
+          <button
+            onClick={handleZoomIn}
+            title="Zoom In (+)"
+            className="p-0.5 hover:bg-gray-800 rounded text-gray-400 hover:text-white transition-colors"
+          >
+            <ZoomIn size={11} />
+          </button>
+          <button
+            onClick={handleFitAll}
+            title="Fit All 4 Bars to Screen"
+            className="flex items-center gap-0.5 px-1.5 py-0.5 bg-indigo-900/60 hover:bg-indigo-800/80 text-indigo-300 hover:text-white rounded border border-indigo-700/50 text-[9px] font-bold transition-colors"
+          >
+            <Maximize2 size={10} />
+            <span>FIT ALL</span>
+          </button>
+        </div>
       </div>
 
       {/* Per-Note Velocity Automation Drawer */}

@@ -22,7 +22,7 @@ export const VelocityDrawer: React.FC<VelocityDrawerProps> = ({
   const [canvasWidth, setCanvasWidth] = useState<number>(1200);
 
   const height = 70;
-  const pianoKeyWidth = 60;
+  const pianoKeyWidth = 64;
 
   useEffect(() => {
     const container = containerRef.current;

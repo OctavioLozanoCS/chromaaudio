@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { InstrumentChannel, Pattern } from '../../types/audio';
+import { InstrumentChannel, Pattern, InstrumentType } from '../../types/audio';
 import { Plus, Volume2, VolumeX, Trash2, Upload, Music, Sparkles, Eraser } from 'lucide-react';
 import { AudioEngine } from '../../audio/AudioEngine';
 import { ParsedSoundFontPreset } from '../../audio/SoundFontParser';
@@ -54,6 +54,36 @@ export const ChannelRack: React.FC<ChannelRackProps> = ({
     return unsub;
   }, [audioEngine]);
 
+  const handlePresetChange = (channel: InstrumentChannel, newPreset: string) => {
+    const type: InstrumentType = (newPreset.startsWith('gm_') || newPreset.startsWith('sf2_') || newPreset.startsWith('custom_wav_'))
+      ? 'soundfont'
+      : (newPreset.startsWith('fm_') ? 'fm_synth' : 'chip_synth');
+
+    const updatedChannel: InstrumentChannel = {
+      ...channel,
+      preset: newPreset,
+      type
+    };
+
+    // 1. Select this channel as the active channel
+    onSelectChannel(channel.id);
+
+    // 2. Update channel in project state
+    onUpdateChannel(updatedChannel);
+
+    // 3. Immediately stop ringing voices and update audio engine channels
+    audioEngine.stopAllVoices();
+    audioEngine.updateChannels(channels.map(c => c.id === channel.id ? updatedChannel : c));
+
+    // 4. Play an instant audition preview note (C4 = 60) for 350ms
+    try {
+      audioEngine.triggerNoteOn(updatedChannel, 60, 0.85);
+      setTimeout(() => {
+        audioEngine.triggerNoteOff(updatedChannel, 60, 0.08);
+      }, 350);
+    } catch {}
+  };
+
   const handleSoundFontImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -63,11 +93,11 @@ export const ChannelRack: React.FC<ChannelRackProps> = ({
       setImportMessage(`Loaded ${loaded.length} instrument(s) from ${file.name}!`);
       setTimeout(() => setImportMessage(null), 3500);
 
-      // Auto-assign first imported instrument to currently selected channel
+      // Auto-assign first imported instrument to currently selected channel and audition it
       if (loaded.length > 0) {
-        const activeCh = channels.find(c => c.id === activeChannelId);
+        const activeCh = channels.find(c => c.id === activeChannelId) || channels[0];
         if (activeCh) {
-          onUpdateChannel({ ...activeCh, preset: loaded[0].id, type: 'soundfont' });
+          handlePresetChange(activeCh, loaded[0].id);
         }
       }
     } catch (err: any) {
@@ -292,20 +322,14 @@ export const ChannelRack: React.FC<ChannelRackProps> = ({
               <div className="mt-2" onClick={(e) => e.stopPropagation()}>
                 <select
                   value={channel.preset}
-                  onChange={(e) => {
-                    const preset = e.target.value;
-                    const type = (preset.startsWith('gm_') || preset.startsWith('sf2_') || preset.startsWith('custom_wav_'))
-                      ? 'soundfont'
-                      : (preset.startsWith('fm_') ? 'fm_synth' : 'chip_synth');
-                    onUpdateChannel({ ...channel, preset, type });
-                  }}
+                  onChange={(e) => handlePresetChange(channel, e.target.value)}
                   className="w-full text-[11px] font-mono bg-gray-900 border border-gray-800 rounded px-2 py-1 text-gray-300 focus:outline-none focus:border-indigo-500 cursor-pointer"
                 >
                   {customPresets.length > 0 && (
-                    <optgroup label="📦 Imported SoundFonts & Samples">
+                    <optgroup label={`📦 Imported Instruments (${customPresets.length})`}>
                       {customPresets.map((cp) => (
                         <option key={cp.id} value={cp.id}>
-                          {cp.name} ({cp.bankName})
+                          {cp.name}
                         </option>
                       ))}
                     </optgroup>

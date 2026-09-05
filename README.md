@@ -75,8 +75,19 @@ ChromaAudio is designed from the ground up for **100% computer mouse and typing 
 ## 🎮 Game Engine Integration (GameMaker & Godot)
 
 ### Seamless Looping Music Metadata
-When you click **Export WAV**, ChromaAudio automatically encodes:
-1. Standard 16-bit 44.1 kHz PCM audio.
-2. RIFF **`smpl`** loop markers containing **`LOOPSTART`** and **`LOOPLENGTH`** sample indices.
+When you click **Export WAV** or **Export OGG**, ChromaAudio automatically encodes:
+1. Standard 16-bit 44.1 kHz PCM audio or high-quality Vorbis compression.
+2. RIFF **`smpl`** loop markers and OGG Vorbis comment tags (`LOOPSTART` and `LOOPLENGTH` sample indices).
 
-GameMaker's audio engine reads these tags natively, allowing your music to loop seamlessly in-game with zero audible gaps or clicks.
+GameMaker and Godot read these tags natively, allowing your music to loop seamlessly in-game with zero audible gaps or clicks.
+
+---
+
+## 🗺️ Roadmap & Planned Features
+See [**`ROADMAP.md`**](file:///C:/Users/lozan106/chromaaudio/ROADMAP.md) for in-depth details on completed milestones and upcoming features inspired by **Ableton Live**, **Sony ACID Pro**, **Sony Sound Forge**, and **Vintage Trackers**:
+* **Hardware 60Hz Fast Arp Tables** (Authentic monophonic NES/GB chord cycling)
+* **Retrospective Jam Capture** ("Capture MIDI" style typing keyboard buffer)
+* **Note Trigger Probability & Velocity Randomization** (Generative non-repetitive loops)
+* **1-Click Batch SFX Variation Generator** (Multi-variation sound effects for game engines)
+* **Playlist Clip Transposition & ACIDized Key Conformity**
+

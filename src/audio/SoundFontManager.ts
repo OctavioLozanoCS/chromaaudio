@@ -355,7 +355,8 @@ export class SoundFontManager {
     const source = this.ctx.createBufferSource();
     source.buffer = bestZone.buffer;
 
-    const semitones = midiNote - bestZone.rootKey;
+    const correctionCents = bestZone.correction || 0;
+    const semitones = midiNote - bestZone.rootKey - (correctionCents / 100.0);
     const rate = Math.max(0.05, Math.pow(2, semitones / 12));
     source.playbackRate.setValueAtTime(rate, when);
 
@@ -423,6 +424,7 @@ export class SoundFontManager {
 
     if (ext === 'sf2') {
       const buf = await file.arrayBuffer();
+      this.loadedSoundFonts.set(file.name, buf);
       loaded = await SoundFontParser.parseSf2(buf, this.ctx);
     } else if (ext === 'wav' || ext === 'wave' || ext === 'mp3' || ext === 'ogg') {
       const p = await SoundFontParser.parseWavFile(file, this.ctx);
