@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
-import { NoteEvent, InstrumentChannel, DSPConfig, Pattern } from '../../types/audio';
+import { NoteEvent, InstrumentChannel, DSPConfig, Pattern, GeneratedSongSection } from '../../types/audio';
 import { isNoteInScale, getNoteLabel, isBlackKey } from './ScaleEngine';
 import { VelocityDrawer } from './VelocityDrawer';
 import { AudioEngine } from '../../audio/AudioEngine';
@@ -68,6 +68,18 @@ interface PianoRollCanvasProps {
     loopNotes: Record<string, NoteEvent[]>,
     styleName: string
   ) => void;
+  onApplyMultiPartSong?: (
+    sections: GeneratedSongSection[],
+    songName: string,
+    options?: {
+      bpm?: number;
+      scaleRoot?: number;
+      scaleMode?: string;
+      dsp?: Partial<DSPConfig>;
+      loopStartStep?: number;
+      loopLengthSteps?: number;
+    }
+  ) => void;
 }
 
 export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
@@ -95,7 +107,8 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
   onBatchUpdateNotes,
   onClearChannelNotes,
   onApplyFullArrangement,
-  onApplyMultiPatternIntroLoop
+  onApplyMultiPatternIntroLoop,
+  onApplyMultiPartSong
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -1481,6 +1494,7 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
         }}
         onApplyFullArrangement={onApplyFullArrangement}
         onApplyMultiPatternIntroLoop={onApplyMultiPatternIntroLoop}
+        onApplyMultiPartSong={onApplyMultiPartSong}
         onChangeBpm={onChangeBpm}
         onChangeScaleRoot={onChangeScaleRoot}
         onChangeScaleMode={onChangeScaleMode}

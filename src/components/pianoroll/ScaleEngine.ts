@@ -37,6 +37,16 @@ export const SCALES: Record<string, ScaleDefinition> = {
     name: 'Phrygian (Dark Boss Theme)',
     intervals: [0, 1, 3, 5, 7, 8, 10]
   },
+  locrian: {
+    id: 'locrian',
+    name: 'Locrian (Dissonant / Dread)',
+    intervals: [0, 1, 3, 5, 6, 8, 10]
+  },
+  diminished: {
+    id: 'diminished',
+    name: 'Diminished (Horror & Tension)',
+    intervals: [0, 2, 3, 5, 6, 8, 9, 11]
+  },
   lydian: {
     id: 'lydian',
     name: 'Lydian (Dreamy Ethereal)',

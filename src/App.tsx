@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ProjectState, InstrumentChannel, NoteEvent, TimelineTrack, TimelineClip, Pattern, DSPConfig } from './types/audio';
+import { ProjectState, InstrumentChannel, NoteEvent, TimelineTrack, TimelineClip, Pattern, DSPConfig, GeneratedSongSection } from './types/audio';
 import { createDefaultProject } from './audio/defaultProject';
 import { AudioEngine } from './audio/AudioEngine';
 import { TypingKeyboardMapper } from './components/pianoroll/TypingKeyboardMapper';
@@ -238,6 +238,92 @@ export const App: React.FC = () => {
       loopStartStep: 64,
       loopLengthSteps: 64
     });
+  };
+
+  const handleApplyMultiPartSong = (
+    sections: GeneratedSongSection[],
+    songName: string,
+    options?: {
+      bpm?: number;
+      scaleRoot?: number;
+      scaleMode?: string;
+      dsp?: Partial<DSPConfig>;
+      loopStartStep?: number;
+      loopLengthSteps?: number;
+    }
+  ) => {
+    const timestamp = Date.now();
+    const newPatterns: Pattern[] = [];
+    const newClips: TimelineClip[] = [];
+    let currentTimelineStep = 0;
+
+    sections.forEach((sec) => {
+      const patternId = `pat_${sec.id}_${timestamp}`;
+      const pattern: Pattern = {
+        id: patternId,
+        name: `${songName} - ${sec.name}`,
+        lengthSteps: sec.lengthSteps,
+        notesByChannel: sec.notesByChannel
+      };
+      newPatterns.push(pattern);
+
+      const repeats = sec.repeatInTimeline || 1;
+      for (let r = 0; r < repeats; r++) {
+        newClips.push({
+          id: `clip_${timestamp}_${sec.id}_${r}`,
+          trackIndex: 0,
+          startStep: currentTimelineStep,
+          lengthSteps: sec.lengthSteps,
+          patternId: patternId,
+          name: repeats > 1 ? `${sec.name} (${r + 1})` : sec.name,
+          color: sec.color,
+          muted: false
+        });
+        currentTimelineStep += sec.lengthSteps;
+      }
+    });
+
+    const updatedPatterns = [...project.patterns, ...newPatterns];
+    const updatedClips = [...project.timelineClips, ...newClips];
+
+    // Pick active pattern: prefer Verse / Theme / first non-intro pattern
+    const activePatId = newPatterns.find(p => p.name.includes('Verse') || p.name.includes('Theme') || p.name.includes('Chorus'))?.id 
+      || newPatterns[0]?.id 
+      || project.activePatternId;
+
+    let loopStart = options?.loopStartStep;
+    let loopLen = options?.loopLengthSteps;
+    if (loopStart === undefined || loopLen === undefined) {
+      if (sections.length > 1 && sections[0].id === 'intro') {
+        loopStart = sections[0].lengthSteps; // start loop after intro
+        loopLen = Math.min(128, Math.max(64, currentTimelineStep - loopStart));
+      } else {
+        loopStart = 0;
+        loopLen = Math.min(128, Math.max(64, currentTimelineStep));
+      }
+    }
+
+    const updatedProject: ProjectState = {
+      ...project,
+      bpm: options?.bpm !== undefined ? options.bpm : project.bpm,
+      scaleRoot: options?.scaleRoot !== undefined ? options.scaleRoot : project.scaleRoot,
+      scaleMode: options?.scaleMode !== undefined ? options.scaleMode : project.scaleMode,
+      dsp: options?.dsp ? { ...project.dsp, ...options.dsp } : project.dsp,
+      patterns: updatedPatterns,
+      activePatternId: activePatId,
+      timelineClips: updatedClips,
+      loopStartStep: loopStart,
+      loopLengthSteps: loopLen
+    };
+
+    setProject(updatedProject);
+    audioEngine.updateProject(updatedProject);
+    if (options?.bpm !== undefined) {
+      audioEngine.currentBpm = options.bpm;
+    }
+    if (options?.dsp) {
+      audioEngine.dspRack.updateConfig(updatedProject.dsp);
+    }
   };
 
   const handleUpdateNote = (updatedNote: NoteEvent) => {
@@ -580,6 +666,7 @@ export const App: React.FC = () => {
               onClearChannelNotes={handleClearChannelNotes}
               onApplyFullArrangement={handleApplyFullArrangement}
               onApplyMultiPatternIntroLoop={handleApplyMultiPatternIntroLoop}
+              onApplyMultiPartSong={handleApplyMultiPartSong}
             />
           )}
 

@@ -81,6 +81,15 @@ export interface DSPConfig {
   filterResonance: number; // 0 - 20
 }
 
+export interface GeneratedSongSection {
+  id: string; // e.g. "intro", "verse", "chorus", "bridge", "outro"
+  name: string; // e.g. "Intro", "Verse (Part A)", "Chorus (Part B)"
+  lengthSteps: number;
+  notesByChannel: Record<string, NoteEvent[]>;
+  color: string;
+  repeatInTimeline?: number;
+}
+
 export interface ProjectState {
   version: string;
   name: string;
@@ -97,3 +106,4 @@ export interface ProjectState {
   scaleRoot: number; // 0 = C, 1 = C#, ... 11 = B
   scaleMode: string; // 'major', 'minor', 'dorian', 'phrygian', 'pentatonic', etc.
 }
+
