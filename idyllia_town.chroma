@@ -1,0 +1,2924 @@
+{
+  "version": 1,
+  "name": "Idyllia Town - The City Where Nothing Ever Happens",
+  "bpm": 88,
+  "snapGrid": "1/16",
+  "activePatternId": "pat_verse_1789256600986",
+  "channels": [
+    {
+      "id": "ch_lead_flute",
+      "name": "🪈 Littleroot Flute / Whistle",
+      "color": "#38bdf8",
+      "type": "soundfont",
+      "preset": "gm_flute",
+      "volume": 0.78,
+      "pan": -0.1,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.02,
+      "decay": 0.2,
+      "sustain": 0.7,
+      "release": 0.25
+    },
+    {
+      "id": "ch_acoustic_gtr",
+      "name": "🎸 Folk Acoustic Guitar",
+      "color": "#fbbf24",
+      "type": "soundfont",
+      "preset": "gm_acoustic_guitar_nylon",
+      "volume": 0.72,
+      "pan": 0.25,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.01,
+      "decay": 0.4,
+      "sustain": 0.4,
+      "release": 0.3
+    },
+    {
+      "id": "ch_pulse_oboe",
+      "name": "👾 Warm Pulse / Oboe",
+      "color": "#818cf8",
+      "type": "soundfont",
+      "preset": "sf2_roland_sc_88_b0_p2_piano_strings",
+      "volume": 0.65,
+      "pan": 0.15,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.015,
+      "decay": 0.3,
+      "sustain": 0.6,
+      "release": 0.3
+    },
+    {
+      "id": "ch_warm_bass",
+      "name": "🔊 4-Bit Woody Bass",
+      "color": "#34d399",
+      "type": "chip_synth",
+      "preset": "triangle",
+      "volume": 0.75,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": -1,
+      "attack": 0.01,
+      "decay": 0.25,
+      "sustain": 0.65,
+      "release": 0.15
+    },
+    {
+      "id": "ch_gentle_perc",
+      "name": "🥁 Forest Percussion & Shaker",
+      "color": "#f59e0b",
+      "type": "chip_synth",
+      "preset": "noise",
+      "volume": 0.42,
+      "pan": -0.2,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 0.08,
+      "sustain": 0.05,
+      "release": 0.06
+    },
+    {
+      "id": "ch_sleepy_glock",
+      "name": "✨ Sleepy Music Box / Glockenspiel",
+      "color": "#c084fc",
+      "type": "soundfont",
+      "preset": "gm_music_box",
+      "volume": 0.6,
+      "pan": -0.25,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 0.6,
+      "sustain": 0.2,
+      "release": 0.4
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pat_intro_1789256600986",
+      "name": "Idyllia Town - 1. Morning Dew (Intro)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_sleepy_glock": [
+          {
+            "id": "in_mb_0",
+            "note": 77,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_mb_4",
+            "note": 84,
+            "step": 4,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_mb_10",
+            "note": 81,
+            "step": 10,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_mb_14",
+            "note": 79,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_mb_16",
+            "note": 76,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_mb_22",
+            "note": 77,
+            "step": 22,
+            "duration": 3.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_mb_26",
+            "note": 72,
+            "step": 26,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_mb_32",
+            "note": 77,
+            "step": 32,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_mb_36",
+            "note": 84,
+            "step": 36,
+            "duration": 3.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_mb_40",
+            "note": 81,
+            "step": 40,
+            "duration": 2.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_mb_44",
+            "note": 86,
+            "step": 44,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_mb_48",
+            "note": 84,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_mb_56",
+            "note": 81,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_mb_60",
+            "note": 79,
+            "step": 60,
+            "duration": 3,
+            "velocity": 0.65
+          }
+        ],
+        "ch_acoustic_gtr": [
+          {
+            "id": "in_gt_0",
+            "note": 53,
+            "step": 0,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gt_2",
+            "note": 60,
+            "step": 2,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_4",
+            "note": 64,
+            "step": 4,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_6",
+            "note": 69,
+            "step": 6,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_8",
+            "note": 64,
+            "step": 8,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_10",
+            "note": 60,
+            "step": 10,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_12",
+            "note": 69,
+            "step": 12,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_14",
+            "note": 64,
+            "step": 14,
+            "duration": 1.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_gt_16",
+            "note": 58,
+            "step": 16,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gt_18",
+            "note": 65,
+            "step": 18,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_20",
+            "note": 69,
+            "step": 20,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_22",
+            "note": 74,
+            "step": 22,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_24",
+            "note": 69,
+            "step": 24,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_26",
+            "note": 65,
+            "step": 26,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_28",
+            "note": 74,
+            "step": 28,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_30",
+            "note": 69,
+            "step": 30,
+            "duration": 1.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_gt_32",
+            "note": 57,
+            "step": 32,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gt_34",
+            "note": 60,
+            "step": 34,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_36",
+            "note": 65,
+            "step": 36,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_38",
+            "note": 72,
+            "step": 38,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_40",
+            "note": 65,
+            "step": 40,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_42",
+            "note": 60,
+            "step": 42,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_44",
+            "note": 72,
+            "step": 44,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_46",
+            "note": 65,
+            "step": 46,
+            "duration": 1.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_gt_48",
+            "note": 60,
+            "step": 48,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gt_50",
+            "note": 65,
+            "step": 50,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_52",
+            "note": 70,
+            "step": 52,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_54",
+            "note": 72,
+            "step": 54,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gt_56",
+            "note": 64,
+            "step": 56,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_58",
+            "note": 67,
+            "step": 58,
+            "duration": 1.8,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gt_60",
+            "note": 72,
+            "step": 60,
+            "duration": 2.8,
+            "velocity": 0.7
+          }
+        ],
+        "ch_warm_bass": [
+          {
+            "id": "in_bs_0",
+            "note": 41,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_bs_16",
+            "note": 46,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_bs_32",
+            "note": 45,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_bs_48",
+            "note": 48,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.75
+          }
+        ],
+        "ch_gentle_perc": [
+          {
+            "id": "in_pc_32",
+            "note": 58,
+            "step": 32,
+            "duration": 0.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "in_pc_40",
+            "note": 58,
+            "step": 40,
+            "duration": 0.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "in_pc_48",
+            "note": 58,
+            "step": 48,
+            "duration": 0.8,
+            "velocity": 0.4
+          },
+          {
+            "id": "in_pc_56",
+            "note": 58,
+            "step": 56,
+            "duration": 0.8,
+            "velocity": 0.4
+          },
+          {
+            "id": "in_pc_60",
+            "note": 58,
+            "step": 60,
+            "duration": 0.8,
+            "velocity": 0.45
+          },
+          {
+            "id": "in_pc_62",
+            "note": 58,
+            "step": 62,
+            "duration": 0.8,
+            "velocity": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_verse_1789256600986",
+      "name": "Idyllia Town - 2. Where Nothing Happens (Verse)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_flute": [
+          {
+            "id": "v_fl_0",
+            "note": 65,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_4",
+            "note": 72,
+            "step": 4,
+            "duration": 5.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "v_fl_10",
+            "note": 77,
+            "step": 10,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_14",
+            "note": 76,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_16",
+            "note": 74,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_20",
+            "note": 72,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_24",
+            "note": 70,
+            "step": 24,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_28",
+            "note": 69,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "v_fl_30",
+            "note": 67,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "v_fl_32",
+            "note": 65,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_36",
+            "note": 67,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_38",
+            "note": 69,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_40",
+            "note": 72,
+            "step": 40,
+            "duration": 4.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "v_fl_46",
+            "note": 74,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_48",
+            "note": 72,
+            "step": 48,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_52",
+            "note": 69,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_56",
+            "note": 67,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "v_fl_60",
+            "note": 65,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 0.85
+          }
+        ],
+        "ch_acoustic_gtr": [
+          {
+            "id": "v_gt_0",
+            "note": 53,
+            "step": 0,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_2",
+            "note": 60,
+            "step": 2,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_4",
+            "note": 64,
+            "step": 4,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_6",
+            "note": 69,
+            "step": 6,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_8",
+            "note": 57,
+            "step": 8,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_10",
+            "note": 60,
+            "step": 10,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_12",
+            "note": 65,
+            "step": 12,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_14",
+            "note": 69,
+            "step": 14,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_16",
+            "note": 58,
+            "step": 16,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_18",
+            "note": 62,
+            "step": 18,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_20",
+            "note": 65,
+            "step": 20,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_22",
+            "note": 69,
+            "step": 22,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_24",
+            "note": 55,
+            "step": 24,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_26",
+            "note": 62,
+            "step": 26,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_28",
+            "note": 67,
+            "step": 28,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_30",
+            "note": 70,
+            "step": 30,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_32",
+            "note": 53,
+            "step": 32,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_34",
+            "note": 60,
+            "step": 34,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_36",
+            "note": 65,
+            "step": 36,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_38",
+            "note": 69,
+            "step": 38,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_40",
+            "note": 57,
+            "step": 40,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_42",
+            "note": 64,
+            "step": 42,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_44",
+            "note": 69,
+            "step": 44,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_46",
+            "note": 72,
+            "step": 46,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_48",
+            "note": 48,
+            "step": 48,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_50",
+            "note": 58,
+            "step": 50,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_52",
+            "note": 64,
+            "step": 52,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_54",
+            "note": 67,
+            "step": 54,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_56",
+            "note": 53,
+            "step": 56,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_58",
+            "note": 60,
+            "step": 58,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_60",
+            "note": 65,
+            "step": 60,
+            "duration": 2.5,
+            "velocity": 0.7
+          }
+        ],
+        "ch_warm_bass": [
+          {
+            "id": "v_bs_0",
+            "note": 41,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_8",
+            "note": 48,
+            "step": 8,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_bs_16",
+            "note": 46,
+            "step": 16,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_24",
+            "note": 43,
+            "step": 24,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_bs_32",
+            "note": 41,
+            "step": 32,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_40",
+            "note": 45,
+            "step": 40,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_bs_48",
+            "note": 48,
+            "step": 48,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_56",
+            "note": 41,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.8
+          }
+        ],
+        "ch_pulse_oboe": [
+          {
+            "id": "v_ob_16",
+            "note": 62,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_20",
+            "note": 65,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_24",
+            "note": 67,
+            "step": 24,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_28",
+            "note": 65,
+            "step": 28,
+            "duration": 3,
+            "velocity": 0.6
+          },
+          {
+            "id": "v_ob_48",
+            "note": 64,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_56",
+            "note": 60,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.6
+          }
+        ],
+        "ch_sleepy_glock": [
+          {
+            "id": "v_mb_12",
+            "note": 84,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_mb_28",
+            "note": 81,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_mb_44",
+            "note": 86,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_mb_60",
+            "note": 89,
+            "step": 60,
+            "duration": 2.5,
+            "velocity": 0.75
+          }
+        ],
+        "ch_gentle_perc": [
+          {
+            "id": "v_pc_4",
+            "note": 58,
+            "step": 4,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_12",
+            "note": 58,
+            "step": 12,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_20",
+            "note": 58,
+            "step": 20,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_28",
+            "note": 58,
+            "step": 28,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_36",
+            "note": 58,
+            "step": 36,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_44",
+            "note": 58,
+            "step": 44,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_52",
+            "note": 58,
+            "step": 52,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_60",
+            "note": 58,
+            "step": 60,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_0",
+            "note": 48,
+            "step": 0,
+            "duration": 1.2,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_16",
+            "note": 48,
+            "step": 16,
+            "duration": 1.2,
+            "velocity": 0.5
+          },
+          {
+            "id": "v_pc_32",
+            "note": 48,
+            "step": 32,
+            "duration": 1.2,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_48",
+            "note": 48,
+            "step": 48,
+            "duration": 1.2,
+            "velocity": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_chorus_1789256600986",
+      "name": "Idyllia Town - 3. Sunlit Canopy (Theme B)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_flute": [
+          {
+            "id": "ch_fl_0",
+            "note": 82,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "ch_fl_4",
+            "note": 86,
+            "step": 4,
+            "duration": 3.5,
+            "velocity": 1
+          },
+          {
+            "id": "ch_fl_8",
+            "note": 84,
+            "step": 8,
+            "duration": 4.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "ch_fl_14",
+            "note": 81,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "ch_fl_16",
+            "note": 77,
+            "step": 16,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "ch_fl_20",
+            "note": 79,
+            "step": 20,
+            "duration": 2.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "ch_fl_24",
+            "note": 81,
+            "step": 24,
+            "duration": 5,
+            "velocity": 0.95
+          },
+          {
+            "id": "ch_fl_30",
+            "note": 77,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "ch_fl_32",
+            "note": 77,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.95
+          },
+          {
+            "id": "ch_fl_36",
+            "note": 84,
+            "step": 36,
+            "duration": 4,
+            "velocity": 1
+          },
+          {
+            "id": "ch_fl_42",
+            "note": 89,
+            "step": 42,
+            "duration": 5,
+            "velocity": 1
+          },
+          {
+            "id": "ch_fl_46",
+            "note": 86,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ch_fl_48",
+            "note": 84,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "ch_fl_52",
+            "note": 81,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "ch_fl_56",
+            "note": 79,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "ch_fl_60",
+            "note": 77,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.95
+          }
+        ],
+        "ch_pulse_oboe": [
+          {
+            "id": "ch_ob_0",
+            "note": 74,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_ob_4",
+            "note": 77,
+            "step": 4,
+            "duration": 3.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_ob_8",
+            "note": 77,
+            "step": 8,
+            "duration": 4.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_ob_16",
+            "note": 69,
+            "step": 16,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_ob_20",
+            "note": 72,
+            "step": 20,
+            "duration": 2.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_ob_24",
+            "note": 74,
+            "step": 24,
+            "duration": 5,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_ob_32",
+            "note": 69,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_ob_36",
+            "note": 77,
+            "step": 36,
+            "duration": 4,
+            "velocity": 0.85
+          },
+          {
+            "id": "ch_ob_42",
+            "note": 81,
+            "step": 42,
+            "duration": 5,
+            "velocity": 0.85
+          },
+          {
+            "id": "ch_ob_48",
+            "note": 76,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_ob_56",
+            "note": 72,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_ob_60",
+            "note": 69,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.8
+          }
+        ],
+        "ch_acoustic_gtr": [
+          {
+            "id": "ch_gt_0",
+            "note": 58,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_gt_2",
+            "note": 65,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_4",
+            "note": 69,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_6",
+            "note": 74,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_8",
+            "note": 69,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_10",
+            "note": 65,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_12",
+            "note": 74,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_14",
+            "note": 69,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_16",
+            "note": 53,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_gt_18",
+            "note": 60,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_20",
+            "note": 64,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_22",
+            "note": 69,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_24",
+            "note": 64,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_26",
+            "note": 60,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_28",
+            "note": 69,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_30",
+            "note": 64,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_32",
+            "note": 55,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_gt_34",
+            "note": 62,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_36",
+            "note": 65,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_38",
+            "note": 70,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_40",
+            "note": 65,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_42",
+            "note": 62,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_44",
+            "note": 70,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_46",
+            "note": 65,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_48",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_gt_50",
+            "note": 58,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_52",
+            "note": 64,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_54",
+            "note": 67,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_gt_56",
+            "note": 53,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_gt_58",
+            "note": 60,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "ch_gt_60",
+            "note": 65,
+            "step": 60,
+            "duration": 3,
+            "velocity": 0.75
+          }
+        ],
+        "ch_warm_bass": [
+          {
+            "id": "ch_bs_0",
+            "note": 46,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "ch_bs_8",
+            "note": 48,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_bs_16",
+            "note": 41,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "ch_bs_24",
+            "note": 45,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_bs_32",
+            "note": 43,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "ch_bs_40",
+            "note": 46,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_bs_48",
+            "note": 48,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "ch_bs_56",
+            "note": 41,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.85
+          }
+        ],
+        "ch_sleepy_glock": [
+          {
+            "id": "ch_mb_0",
+            "note": 86,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_mb_8",
+            "note": 84,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_mb_16",
+            "note": 81,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_mb_24",
+            "note": 86,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_mb_32",
+            "note": 89,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_mb_40",
+            "note": 84,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "ch_mb_48",
+            "note": 84,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "ch_mb_56",
+            "note": 81,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.7
+          }
+        ],
+        "ch_gentle_perc": [
+          {
+            "id": "ch_pc_0",
+            "note": 48,
+            "step": 0,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ch_pc_4",
+            "note": 58,
+            "step": 4,
+            "duration": 0.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "ch_pc_8",
+            "note": 48,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "ch_pc_12",
+            "note": 58,
+            "step": 12,
+            "duration": 0.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "ch_pc_16",
+            "note": 48,
+            "step": 16,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ch_pc_20",
+            "note": 58,
+            "step": 20,
+            "duration": 0.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "ch_pc_24",
+            "note": 48,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "ch_pc_28",
+            "note": 58,
+            "step": 28,
+            "duration": 0.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "ch_pc_32",
+            "note": 48,
+            "step": 32,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ch_pc_36",
+            "note": 58,
+            "step": 36,
+            "duration": 0.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "ch_pc_40",
+            "note": 48,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "ch_pc_44",
+            "note": 58,
+            "step": 44,
+            "duration": 0.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "ch_pc_48",
+            "note": 48,
+            "step": 48,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ch_pc_52",
+            "note": 58,
+            "step": 52,
+            "duration": 0.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "ch_pc_56",
+            "note": 48,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "ch_pc_60",
+            "note": 58,
+            "step": 60,
+            "duration": 0.8,
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_bridge_1789256600986",
+      "name": "Idyllia Town - 4. Edge of the Woods (Bridge)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_pulse_oboe": [
+          {
+            "id": "br_ob_0",
+            "note": 69,
+            "step": 0,
+            "duration": 6,
+            "velocity": 0.8
+          },
+          {
+            "id": "br_ob_8",
+            "note": 74,
+            "step": 8,
+            "duration": 6,
+            "velocity": 0.85
+          },
+          {
+            "id": "br_ob_16",
+            "note": 72,
+            "step": 16,
+            "duration": 6,
+            "velocity": 0.8
+          },
+          {
+            "id": "br_ob_24",
+            "note": 69,
+            "step": 24,
+            "duration": 6,
+            "velocity": 0.75
+          },
+          {
+            "id": "br_ob_32",
+            "note": 70,
+            "step": 32,
+            "duration": 6,
+            "velocity": 0.85
+          },
+          {
+            "id": "br_ob_40",
+            "note": 74,
+            "step": 40,
+            "duration": 6,
+            "velocity": 0.85
+          },
+          {
+            "id": "br_ob_48",
+            "note": 72,
+            "step": 48,
+            "duration": 8,
+            "velocity": 0.9
+          },
+          {
+            "id": "br_ob_58",
+            "note": 71,
+            "step": 58,
+            "duration": 4,
+            "velocity": 0.8
+          }
+        ],
+        "ch_sleepy_glock": [
+          {
+            "id": "br_mb_4",
+            "note": 81,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_mb_12",
+            "note": 77,
+            "step": 12,
+            "duration": 3,
+            "velocity": 0.6
+          },
+          {
+            "id": "br_mb_20",
+            "note": 76,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_mb_36",
+            "note": 82,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_mb_44",
+            "note": 86,
+            "step": 44,
+            "duration": 3,
+            "velocity": 0.7
+          },
+          {
+            "id": "br_mb_52",
+            "note": 84,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.75
+          }
+        ],
+        "ch_acoustic_gtr": [
+          {
+            "id": "br_gt_0",
+            "note": 50,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "br_gt_4",
+            "note": 57,
+            "step": 4,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_8",
+            "note": 62,
+            "step": 8,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_12",
+            "note": 65,
+            "step": 12,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_16",
+            "note": 57,
+            "step": 16,
+            "duration": 3.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "br_gt_20",
+            "note": 60,
+            "step": 20,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_24",
+            "note": 64,
+            "step": 24,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_28",
+            "note": 69,
+            "step": 28,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_32",
+            "note": 58,
+            "step": 32,
+            "duration": 3.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "br_gt_36",
+            "note": 62,
+            "step": 36,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_40",
+            "note": 65,
+            "step": 40,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_44",
+            "note": 70,
+            "step": 44,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_48",
+            "note": 48,
+            "step": 48,
+            "duration": 3.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "br_gt_52",
+            "note": 55,
+            "step": 52,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_56",
+            "note": 60,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "br_gt_60",
+            "note": 64,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 0.65
+          }
+        ],
+        "ch_warm_bass": [
+          {
+            "id": "br_bs_0",
+            "note": 38,
+            "step": 0,
+            "duration": 15.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "br_bs_16",
+            "note": 45,
+            "step": 16,
+            "duration": 15.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "br_bs_32",
+            "note": 46,
+            "step": 32,
+            "duration": 15.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "br_bs_48",
+            "note": 48,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.85
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_verse_rep_1789256600986",
+      "name": "Idyllia Town - 5. Town Center (Reprise)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_flute": [
+          {
+            "id": "v_fl_0",
+            "note": 65,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_4",
+            "note": 72,
+            "step": 4,
+            "duration": 5.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "v_fl_10",
+            "note": 77,
+            "step": 10,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_14",
+            "note": 76,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_16",
+            "note": 74,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_20",
+            "note": 72,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_24",
+            "note": 70,
+            "step": 24,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_28",
+            "note": 69,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "v_fl_30",
+            "note": 67,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "v_fl_32",
+            "note": 65,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_36",
+            "note": 67,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_38",
+            "note": 69,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_40",
+            "note": 72,
+            "step": 40,
+            "duration": 4.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "v_fl_46",
+            "note": 74,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_48",
+            "note": 72,
+            "step": 48,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "v_fl_52",
+            "note": 69,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_fl_56",
+            "note": 67,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "v_fl_60",
+            "note": 65,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 0.85
+          }
+        ],
+        "ch_acoustic_gtr": [
+          {
+            "id": "v_gt_0",
+            "note": 53,
+            "step": 0,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_2",
+            "note": 60,
+            "step": 2,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_4",
+            "note": 64,
+            "step": 4,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_6",
+            "note": 69,
+            "step": 6,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_8",
+            "note": 57,
+            "step": 8,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_10",
+            "note": 60,
+            "step": 10,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_12",
+            "note": 65,
+            "step": 12,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_14",
+            "note": 69,
+            "step": 14,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_16",
+            "note": 58,
+            "step": 16,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_18",
+            "note": 62,
+            "step": 18,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_20",
+            "note": 65,
+            "step": 20,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_22",
+            "note": 69,
+            "step": 22,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_24",
+            "note": 55,
+            "step": 24,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_26",
+            "note": 62,
+            "step": 26,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_28",
+            "note": 67,
+            "step": 28,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_30",
+            "note": 70,
+            "step": 30,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_32",
+            "note": 53,
+            "step": 32,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_34",
+            "note": 60,
+            "step": 34,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_36",
+            "note": 65,
+            "step": 36,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_38",
+            "note": 69,
+            "step": 38,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_40",
+            "note": 57,
+            "step": 40,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_42",
+            "note": 64,
+            "step": 42,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_44",
+            "note": 69,
+            "step": 44,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_46",
+            "note": 72,
+            "step": 46,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_48",
+            "note": 48,
+            "step": 48,
+            "duration": 1.8,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_gt_50",
+            "note": 58,
+            "step": 50,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_52",
+            "note": 64,
+            "step": 52,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_54",
+            "note": 67,
+            "step": 54,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_56",
+            "note": 53,
+            "step": 56,
+            "duration": 1.8,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_gt_58",
+            "note": 60,
+            "step": 58,
+            "duration": 1.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_gt_60",
+            "note": 65,
+            "step": 60,
+            "duration": 2.5,
+            "velocity": 0.7
+          }
+        ],
+        "ch_warm_bass": [
+          {
+            "id": "v_bs_0",
+            "note": 41,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_8",
+            "note": 48,
+            "step": 8,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_bs_16",
+            "note": 46,
+            "step": 16,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_24",
+            "note": 43,
+            "step": 24,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_bs_32",
+            "note": 41,
+            "step": 32,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_40",
+            "note": 45,
+            "step": 40,
+            "duration": 3.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_bs_48",
+            "note": 48,
+            "step": 48,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "v_bs_56",
+            "note": 41,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.8
+          }
+        ],
+        "ch_pulse_oboe": [
+          {
+            "id": "v_ob_16",
+            "note": 62,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_20",
+            "note": 65,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_24",
+            "note": 67,
+            "step": 24,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_28",
+            "note": 65,
+            "step": 28,
+            "duration": 3,
+            "velocity": 0.6
+          },
+          {
+            "id": "v_ob_48",
+            "note": 64,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "v_ob_56",
+            "note": 60,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.6
+          }
+        ],
+        "ch_sleepy_glock": [
+          {
+            "id": "v_mb_12",
+            "note": 84,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_mb_28",
+            "note": 81,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "v_mb_44",
+            "note": 86,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "v_mb_60",
+            "note": 89,
+            "step": 60,
+            "duration": 2.5,
+            "velocity": 0.75
+          }
+        ],
+        "ch_gentle_perc": [
+          {
+            "id": "v_pc_4",
+            "note": 58,
+            "step": 4,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_12",
+            "note": 58,
+            "step": 12,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_20",
+            "note": 58,
+            "step": 20,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_28",
+            "note": 58,
+            "step": 28,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_36",
+            "note": 58,
+            "step": 36,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_44",
+            "note": 58,
+            "step": 44,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_52",
+            "note": 58,
+            "step": 52,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_60",
+            "note": 58,
+            "step": 60,
+            "duration": 0.8,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_0",
+            "note": 48,
+            "step": 0,
+            "duration": 1.2,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_16",
+            "note": 48,
+            "step": 16,
+            "duration": 1.2,
+            "velocity": 0.5
+          },
+          {
+            "id": "v_pc_32",
+            "note": 48,
+            "step": 32,
+            "duration": 1.2,
+            "velocity": 0.55
+          },
+          {
+            "id": "v_pc_48",
+            "note": 48,
+            "step": 48,
+            "duration": 1.2,
+            "velocity": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_outro_1789256600986",
+      "name": "Idyllia Town - 6. Peaceful Dusk (Outro)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_flute": [
+          {
+            "id": "ot_fl_0",
+            "note": 65,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "ot_fl_4",
+            "note": 72,
+            "step": 4,
+            "duration": 4.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "ot_fl_10",
+            "note": 77,
+            "step": 10,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "ot_fl_16",
+            "note": 72,
+            "step": 16,
+            "duration": 6,
+            "velocity": 0.75
+          },
+          {
+            "id": "ot_fl_24",
+            "note": 69,
+            "step": 24,
+            "duration": 5,
+            "velocity": 0.7
+          },
+          {
+            "id": "ot_fl_32",
+            "note": 65,
+            "step": 32,
+            "duration": 8,
+            "velocity": 0.65
+          }
+        ],
+        "ch_sleepy_glock": [
+          {
+            "id": "ot_mb_32",
+            "note": 77,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "ot_mb_36",
+            "note": 84,
+            "step": 36,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "ot_mb_42",
+            "note": 81,
+            "step": 42,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_mb_48",
+            "note": 89,
+            "step": 48,
+            "duration": 12,
+            "velocity": 0.7
+          }
+        ],
+        "ch_acoustic_gtr": [
+          {
+            "id": "ot_gt_0",
+            "note": 53,
+            "step": 0,
+            "duration": 3.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "ot_gt_4",
+            "note": 60,
+            "step": 4,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_8",
+            "note": 65,
+            "step": 8,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_12",
+            "note": 69,
+            "step": 12,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_16",
+            "note": 58,
+            "step": 16,
+            "duration": 3.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "ot_gt_20",
+            "note": 65,
+            "step": 20,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_24",
+            "note": 69,
+            "step": 24,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_28",
+            "note": 72,
+            "step": 28,
+            "duration": 3.5,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_32",
+            "note": 53,
+            "step": 32,
+            "duration": 6,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_36",
+            "note": 60,
+            "step": 36,
+            "duration": 6,
+            "velocity": 0.6
+          },
+          {
+            "id": "ot_gt_40",
+            "note": 65,
+            "step": 40,
+            "duration": 6,
+            "velocity": 0.6
+          },
+          {
+            "id": "ot_gt_44",
+            "note": 69,
+            "step": 44,
+            "duration": 6,
+            "velocity": 0.6
+          },
+          {
+            "id": "ot_gt_48",
+            "note": 41,
+            "step": 48,
+            "duration": 15,
+            "velocity": 0.7
+          },
+          {
+            "id": "ot_gt_49",
+            "note": 53,
+            "step": 48,
+            "duration": 15,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_50",
+            "note": 60,
+            "step": 48,
+            "duration": 15,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_51",
+            "note": 64,
+            "step": 48,
+            "duration": 15,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_gt_52",
+            "note": 69,
+            "step": 48,
+            "duration": 15,
+            "velocity": 0.65
+          }
+        ],
+        "ch_warm_bass": [
+          {
+            "id": "ot_bs_0",
+            "note": 41,
+            "step": 0,
+            "duration": 15,
+            "velocity": 0.75
+          },
+          {
+            "id": "ot_bs_16",
+            "note": 46,
+            "step": 16,
+            "duration": 15,
+            "velocity": 0.7
+          },
+          {
+            "id": "ot_bs_32",
+            "note": 41,
+            "step": 32,
+            "duration": 15,
+            "velocity": 0.65
+          },
+          {
+            "id": "ot_bs_48",
+            "note": 29,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.65
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_1",
+      "name": "Track 1 (Lead Melody)",
+      "color": "#38bdf8",
+      "volume": 0.85,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_2",
+      "name": "Track 2 (Acoustic Arp)",
+      "color": "#fbbf24",
+      "volume": 0.8,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_3",
+      "name": "Track 3 (Warm Bass)",
+      "color": "#34d399",
+      "volume": 0.85,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_4",
+      "name": "Track 4 (Soft Shaker)",
+      "color": "#f59e0b",
+      "volume": 0.55,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_5",
+      "name": "Track 5 (Harmony Counter)",
+      "color": "#818cf8",
+      "volume": 0.75,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_6",
+      "name": "Track 6 (Music Box)",
+      "color": "#c084fc",
+      "volume": 0.7,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    }
+  ],
+  "timelineClips": [
+    {
+      "id": "clip_1789256600986_intro",
+      "trackIndex": 0,
+      "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_intro_1789256600986",
+      "name": "Intro: Morning Dew",
+      "color": "#f59e0b",
+      "muted": false
+    },
+    {
+      "id": "clip_1789256600986_verse",
+      "trackIndex": 0,
+      "startStep": 64,
+      "lengthSteps": 64,
+      "patternId": "pat_verse_1789256600986",
+      "name": "Verse: Where Nothing Happens",
+      "color": "#38bdf8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789256600986_chorus",
+      "trackIndex": 0,
+      "startStep": 128,
+      "lengthSteps": 64,
+      "patternId": "pat_chorus_1789256600986",
+      "name": "Theme B: Sunlit Canopy",
+      "color": "#ec4899",
+      "muted": false
+    },
+    {
+      "id": "clip_1789256600986_bridge",
+      "trackIndex": 0,
+      "startStep": 192,
+      "lengthSteps": 64,
+      "patternId": "pat_bridge_1789256600986",
+      "name": "Bridge: Edge of the Woods",
+      "color": "#8b5cf6",
+      "muted": false
+    },
+    {
+      "id": "clip_1789256600986_verse_rep",
+      "trackIndex": 0,
+      "startStep": 256,
+      "lengthSteps": 64,
+      "patternId": "pat_verse_rep_1789256600986",
+      "name": "Reprise: Town Center",
+      "color": "#38bdf8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789256600986_outro",
+      "trackIndex": 0,
+      "startStep": 320,
+      "lengthSteps": 64,
+      "patternId": "pat_outro_1789256600986",
+      "name": "Outro: Peaceful Dusk",
+      "color": "#10b981",
+      "muted": false
+    }
+  ],
+  "dsp": {
+    "enabled": true,
+    "resampleRate": 22050,
+    "bitDepth": 12,
+    "reverbEnabled": true,
+    "reverbDecay": 2.2,
+    "reverbWet": 0.28,
+    "filterCutoff": 16000,
+    "filterResonance": 0.6
+  },
+  "loopStartStep": 64,
+  "loopLengthSteps": 256,
+  "scaleRoot": 5,
+  "scaleMode": "major"
+}

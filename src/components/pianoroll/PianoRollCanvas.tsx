@@ -817,10 +817,12 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
       const rawSteps = Math.max(snapGrid, Math.round(((x - dragStartPos.current.x) / stepWidth) / snapGrid) * snapGrid);
       const newDuration = Math.max(snapGrid, dragStartPos.current.originalDuration + rawSteps);
       if (newDuration !== activeNote.current.duration) {
-        onUpdateNote({
+        const updated = {
           ...activeNote.current,
           duration: newDuration
-        });
+        };
+        activeNote.current = updated;
+        onUpdateNote(updated);
       }
     } else if (dragAction.current === 'move') {
       const stepDelta = Math.round(((x - dragStartPos.current.x) / stepWidth) / snapGrid) * snapGrid;
@@ -829,13 +831,15 @@ export const PianoRollCanvas: React.FC<PianoRollCanvasProps> = ({
 
       if (newStep !== activeNote.current.step || newPitch !== activeNote.current.note) {
         if (newPitch !== activeNote.current.note) {
-          playMousePreview(newPitch, activeNote.current.velocity, 180);
+          playMousePreview(newPitch, activeNote.current.velocity, 150);
         }
-        onUpdateNote({
+        const updated = {
           ...activeNote.current,
           step: newStep,
           note: newPitch
-        });
+        };
+        activeNote.current = updated;
+        onUpdateNote(updated);
       }
     }
   };

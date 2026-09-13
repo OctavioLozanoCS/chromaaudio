@@ -21,6 +21,15 @@ export function createHarmonicPeriodicWave(ctx: BaseAudioContext, presetId: stri
     case 'gm_grand_piano':
       harmonics = [1.0, 0.6, 0.4, 0.25, 0.15, 0.08, 0.04];
       break;
+    case 'gm_music_box':
+      harmonics = [1.0, 0.8, 0.1, 0.6, 0.05, 0.3, 0.02, 0.15];
+      break;
+    case 'gm_flute':
+      harmonics = [1.0, 0.1, 0.35, 0.05, 0.1, 0.02];
+      break;
+    case 'gm_acoustic_guitar_nylon':
+      harmonics = [1.0, 0.7, 0.45, 0.3, 0.2, 0.1, 0.05];
+      break;
     case 'gm_romantic_strings':
       harmonics = [1.0, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2];
       break;
@@ -57,6 +66,9 @@ export class SoundFontManager {
   // Built-in instrument definitions
   public readonly defaultPresets: SoundFontPreset[] = [
     { id: 'gm_grand_piano', name: '🎹 GBA Grand Piano', category: 'keys' },
+    { id: 'gm_music_box', name: '✨ Sleepy Music Box', category: 'keys' },
+    { id: 'gm_flute', name: '🪈 Forest Wooden Flute', category: 'lead' },
+    { id: 'gm_acoustic_guitar_nylon', name: '🎸 Nylon Acoustic Guitar', category: 'strings' },
     { id: 'gm_romantic_strings', name: '🎻 Touhou Romantic Strings', category: 'strings' },
     { id: 'gm_slap_bass', name: '🎸 Funk Slap Bass', category: 'bass' },
     { id: 'gm_bright_brass', name: '🎺 Toby Fox Bright Brass', category: 'brass' },
@@ -215,6 +227,24 @@ export class SoundFontManager {
         sustain = 0.2;
         release = 0.25;
         break;
+      case 'gm_music_box':
+        attack = 0.004;
+        decay = 1.5;
+        sustain = 0.15;
+        release = 0.8;
+        break;
+      case 'gm_flute':
+        attack = 0.04;
+        decay = 0.2;
+        sustain = 0.8;
+        release = 0.18;
+        break;
+      case 'gm_acoustic_guitar_nylon':
+        attack = 0.006;
+        decay = 0.8;
+        sustain = 0.25;
+        release = 0.3;
+        break;
       case 'gm_romantic_strings':
         attack = 0.08;
         decay = 0.4;
@@ -302,21 +332,25 @@ export class SoundFontManager {
     const stop = (relTime?: number) => {
       if (stopped) return;
       stopped = true;
-      const now = this.ctx.currentTime;
-      const r = relTime !== undefined ? relTime : Math.min(0.08, release);
-      masterGain.gain.cancelScheduledValues(now);
-      masterGain.gain.setValueAtTime(Math.max(0.0001, masterGain.gain.value), now);
-      masterGain.gain.linearRampToValueAtTime(0.0001, now + r);
-
       try {
-        osc.stop(now + r + 0.02);
-      } catch {}
+        const now = this.ctx.currentTime;
+        const r = relTime !== undefined ? relTime : Math.min(0.08, release);
+        masterGain.gain.cancelScheduledValues(now);
+        const curVal = Number.isFinite(masterGain.gain.value) && masterGain.gain.value > 0 ? masterGain.gain.value : 0.0001;
+        masterGain.gain.setValueAtTime(curVal, now);
+        masterGain.gain.linearRampToValueAtTime(0.0001, now + r);
 
-      setTimeout(() => {
         try {
-          masterGain.disconnect();
+          osc.stop(now + r + 0.02);
         } catch {}
-      }, (r + 0.05) * 1000);
+
+        setTimeout(() => {
+          try {
+            masterGain.disconnect();
+            osc.disconnect();
+          } catch {}
+        }, (r + 0.05) * 1000);
+      } catch {}
     };
 
     return { stop };
@@ -396,20 +430,23 @@ export class SoundFontManager {
     const stop = (relTime?: number) => {
       if (stopped) return;
       stopped = true;
-      const now = this.ctx.currentTime;
-      const r = relTime !== undefined ? relTime : 0.05;
-      masterGain.gain.cancelScheduledValues(now);
-      masterGain.gain.setValueAtTime(Math.max(0.0001, masterGain.gain.value), now);
-      masterGain.gain.linearRampToValueAtTime(0.0001, now + r);
       try {
-        source.stop(now + r + 0.02);
-      } catch {}
-      setTimeout(() => {
+        const now = this.ctx.currentTime;
+        const r = relTime !== undefined ? relTime : 0.05;
+        masterGain.gain.cancelScheduledValues(now);
+        const curVal = Number.isFinite(masterGain.gain.value) && masterGain.gain.value > 0 ? masterGain.gain.value : 0.0001;
+        masterGain.gain.setValueAtTime(curVal, now);
+        masterGain.gain.linearRampToValueAtTime(0.0001, now + r);
         try {
-          masterGain.disconnect();
-          source.disconnect();
+          source.stop(now + r + 0.02);
         } catch {}
-      }, (r + 0.05) * 1000);
+        setTimeout(() => {
+          try {
+            masterGain.disconnect();
+            source.disconnect();
+          } catch {}
+        }, (r + 0.05) * 1000);
+      } catch {}
     };
 
     return { stop };
