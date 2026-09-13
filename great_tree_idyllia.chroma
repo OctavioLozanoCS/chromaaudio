@@ -205,32 +205,60 @@
         "ch_wood_mallet": [],
         "ch_glass_spores": [
           {
-            "id": "in_glass_0",
-            "note": 82,
-            "step": 16,
+            "id": "in_chime_0",
+            "note": 83,
+            "step": 0,
             "duration": 8,
-            "velocity": 0.6
+            "velocity": 0.55
           },
           {
-            "id": "in_glass_1",
+            "id": "in_chime_1",
+            "note": 80,
+            "step": 8,
+            "duration": 8,
+            "velocity": 0.5
+          },
+          {
+            "id": "in_chime_2",
+            "note": 88,
+            "step": 16,
+            "duration": 8,
+            "velocity": 0.58
+          },
+          {
+            "id": "in_chime_3",
             "note": 83,
             "step": 24,
             "duration": 8,
-            "velocity": 0.65
+            "velocity": 0.52
           },
           {
-            "id": "in_glass_2",
-            "note": 88,
-            "step": 48,
-            "duration": 12,
-            "velocity": 0.7
-          },
-          {
-            "id": "in_glass_3",
-            "note": 82,
-            "step": 56,
+            "id": "in_chime_4",
+            "note": 78,
+            "step": 32,
             "duration": 8,
             "velocity": 0.55
+          },
+          {
+            "id": "in_chime_5",
+            "note": 80,
+            "step": 40,
+            "duration": 8,
+            "velocity": 0.5
+          },
+          {
+            "id": "in_chime_6",
+            "note": 83,
+            "step": 48,
+            "duration": 8,
+            "velocity": 0.58
+          },
+          {
+            "id": "in_chime_7",
+            "note": 88,
+            "step": 56,
+            "duration": 8,
+            "velocity": 0.6
           }
         ],
         "ch_deep_root": [
@@ -840,39 +868,109 @@
         ],
         "ch_glass_spores": [
           {
-            "id": "cl_glass_0",
+            "id": "cl_chime_0",
+            "note": 83,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.58
+          },
+          {
+            "id": "cl_chime_1",
+            "note": 80,
+            "step": 4,
+            "duration": 4,
+            "velocity": 0.52
+          },
+          {
+            "id": "cl_chime_2",
+            "note": 88,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "cl_chime_3",
             "note": 83,
             "step": 12,
             "duration": 4,
+            "velocity": 0.55
+          },
+          {
+            "id": "cl_chime_4",
+            "note": 78,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.58
+          },
+          {
+            "id": "cl_chime_5",
+            "note": 82,
+            "step": 20,
+            "duration": 4,
+            "velocity": 0.55
+          },
+          {
+            "id": "cl_chime_6",
+            "note": 83,
+            "step": 24,
+            "duration": 4,
             "velocity": 0.6
           },
           {
-            "id": "cl_glass_1",
-            "note": 82,
+            "id": "cl_chime_7",
+            "note": 80,
             "step": 28,
             "duration": 4,
-            "velocity": 0.65
+            "velocity": 0.52
           },
           {
-            "id": "cl_glass_2",
-            "note": 94,
+            "id": "cl_chime_8",
+            "note": 80,
             "step": 32,
-            "duration": 6,
-            "velocity": 0.7
+            "duration": 4,
+            "velocity": 0.58
           },
           {
-            "id": "cl_glass_3",
-            "note": 87,
+            "id": "cl_chime_9",
+            "note": 83,
+            "step": 36,
+            "duration": 4,
+            "velocity": 0.55
+          },
+          {
+            "id": "cl_chime_10",
+            "note": 88,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "cl_chime_11",
+            "note": 83,
             "step": 44,
             "duration": 4,
-            "velocity": 0.6
+            "velocity": 0.55
           },
           {
-            "id": "cl_glass_4",
-            "note": 83,
-            "step": 60,
+            "id": "cl_chime_12",
+            "note": 80,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.58
+          },
+          {
+            "id": "cl_chime_13",
+            "note": 78,
+            "step": 54,
             "duration": 4,
-            "velocity": 0.65
+            "velocity": 0.52
+          },
+          {
+            "id": "cl_chime_14",
+            "note": 83,
+            "step": 58,
+            "duration": 6,
+            "velocity": 0.6
           }
         ],
         "ch_deep_root": [
@@ -1433,39 +1531,60 @@
         ],
         "ch_glass_spores": [
           {
-            "id": "wi_glass_0",
-            "note": 88,
-            "step": 10,
-            "duration": 6,
+            "id": "wi_chime_0",
+            "note": 83,
+            "step": 0,
+            "duration": 8,
+            "velocity": 0.55
+          },
+          {
+            "id": "wi_chime_1",
+            "note": 79,
+            "step": 8,
+            "duration": 8,
+            "velocity": 0.5
+          },
+          {
+            "id": "wi_chime_2",
+            "note": 84,
+            "step": 16,
+            "duration": 8,
             "velocity": 0.58
           },
           {
-            "id": "wi_glass_1",
-            "note": 84,
-            "step": 20,
-            "duration": 6,
-            "velocity": 0.6
-          },
-          {
-            "id": "wi_glass_2",
+            "id": "wi_chime_3",
             "note": 83,
-            "step": 34,
-            "duration": 6,
-            "velocity": 0.65
-          },
-          {
-            "id": "wi_glass_3",
-            "note": 77,
-            "step": 42,
+            "step": 24,
             "duration": 8,
-            "velocity": 0.7
+            "velocity": 0.52
           },
           {
-            "id": "wi_glass_4",
-            "note": 76,
-            "step": 52,
-            "duration": 10,
+            "id": "wi_chime_4",
+            "note": 79,
+            "step": 32,
+            "duration": 8,
             "velocity": 0.55
+          },
+          {
+            "id": "wi_chime_5",
+            "note": 78,
+            "step": 40,
+            "duration": 8,
+            "velocity": 0.52
+          },
+          {
+            "id": "wi_chime_6",
+            "note": 76,
+            "step": 48,
+            "duration": 8,
+            "velocity": 0.58
+          },
+          {
+            "id": "wi_chime_7",
+            "note": 83,
+            "step": 56,
+            "duration": 8,
+            "velocity": 0.5
           }
         ],
         "ch_deep_root": [
