@@ -104,6 +104,375 @@
   ],
   "patterns": [
     {
+      "id": "pat_forest_gate_1789278147248",
+      "name": "Idyllia Woods - 0. Forest Gate (Intro)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_forest_pipe": [
+          {
+            "id": "in_pipe_0",
+            "note": 69,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_pipe_1",
+            "note": 71,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.78
+          },
+          {
+            "id": "in_pipe_2",
+            "note": 72,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.82
+          },
+          {
+            "id": "in_pipe_3",
+            "note": 74,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.85
+          }
+        ],
+        "ch_nylon_rhythm": [
+          {
+            "id": "in_gtr_0",
+            "note": 57,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_1",
+            "note": 64,
+            "step": 4,
+            "duration": 4,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_gtr_2",
+            "note": 69,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "in_gtr_3",
+            "note": 71,
+            "step": 12,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "in_gtr_4",
+            "note": 54,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_5",
+            "note": 62,
+            "step": 20,
+            "duration": 4,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_gtr_6",
+            "note": 69,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "in_gtr_7",
+            "note": 72,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_8",
+            "note": 52,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "in_gtr_9",
+            "note": 59,
+            "step": 36,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "in_gtr_10",
+            "note": 64,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_11",
+            "note": 67,
+            "step": 44,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gtr_12",
+            "note": 57,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_gtr_13",
+            "note": 64,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "in_gtr_14",
+            "note": 69,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gtr_15",
+            "note": 71,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.78
+          }
+        ],
+        "ch_woodblock_marimba": [
+          {
+            "id": "in_wb_0",
+            "note": 74,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "in_wb_1",
+            "note": 79,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "in_wb_2",
+            "note": 74,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.48
+          },
+          {
+            "id": "in_wb_3",
+            "note": 74,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.55
+          },
+          {
+            "id": "in_wb_4",
+            "note": 79,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "in_wb_5",
+            "note": 74,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.58
+          },
+          {
+            "id": "in_wb_6",
+            "note": 79,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "in_wb_7",
+            "note": 74,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_wb_8",
+            "note": 79,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.55
+          },
+          {
+            "id": "in_wb_9",
+            "note": 74,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_wb_10",
+            "note": 79,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.6
+          }
+        ],
+        "ch_bouncing_bass": [
+          {
+            "id": "in_bass_0",
+            "note": 45,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_bass_1",
+            "note": 45,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_bass_2",
+            "note": 45,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_bass_3",
+            "note": 52,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_bass_4",
+            "note": 55,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.82
+          }
+        ],
+        "ch_forest_drums": [
+          {
+            "id": "in_hat_32",
+            "note": 74,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_36",
+            "note": 74,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_40",
+            "note": 74,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_44",
+            "note": 74,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_48",
+            "note": 74,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_52",
+            "note": 74,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_56",
+            "note": 74,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_snare_fill_1",
+            "note": 62,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_snare_fill_2",
+            "note": 62,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_snare_fill_3",
+            "note": 62,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.82
+          }
+        ],
+        "ch_glade_chimes": [
+          {
+            "id": "in_chime_0",
+            "note": 81,
+            "step": 0,
+            "duration": 8,
+            "velocity": 0.55
+          },
+          {
+            "id": "in_chime_1",
+            "note": 78,
+            "step": 16,
+            "duration": 8,
+            "velocity": 0.58
+          },
+          {
+            "id": "in_chime_2",
+            "note": 88,
+            "step": 32,
+            "duration": 8,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_chime_3",
+            "note": 81,
+            "step": 48,
+            "duration": 8,
+            "velocity": 0.62
+          }
+        ]
+      }
+    },
+    {
       "id": "pat_winding_trail_1789276672526",
       "name": "Idyllia Woods - 1. The Winding Trail (March)",
       "lengthSteps": 64,
@@ -215,32 +584,32 @@
             "velocity": 0.9
           },
           {
-            "id": "p1_pipe_15",
+            "id": "p1_pipe_bridge_1",
             "note": 81,
             "step": 48,
-            "duration": 6,
-            "velocity": 0.92
+            "duration": 4,
+            "velocity": 0.88
           },
           {
-            "id": "p1_pipe_16",
-            "note": 78,
-            "step": 54,
-            "duration": 2,
-            "velocity": 0.8
+            "id": "p1_pipe_bridge_2",
+            "note": 79,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.82
           },
           {
-            "id": "p1_pipe_17",
+            "id": "p1_pipe_bridge_3",
             "note": 76,
             "step": 56,
             "duration": 4,
-            "velocity": 0.85
+            "velocity": 0.8
           },
           {
-            "id": "p1_pipe_18",
-            "note": 71,
+            "id": "p1_pipe_bridge_4",
+            "note": 74,
             "step": 60,
             "duration": 4,
-            "velocity": 0.78
+            "velocity": 0.82
           }
         ],
         "ch_nylon_rhythm": [
@@ -893,32 +1262,32 @@
             "velocity": 0.75
           },
           {
-            "id": "p1_bass_12",
+            "id": "p1_bass_bridge_1",
             "note": 45,
             "step": 48,
             "duration": 3,
-            "velocity": 0.88
+            "velocity": 0.85
           },
           {
-            "id": "p1_bass_13",
-            "note": 52,
+            "id": "p1_bass_bridge_2",
+            "note": 43,
             "step": 52,
             "duration": 2,
-            "velocity": 0.72
+            "velocity": 0.78
           },
           {
-            "id": "p1_bass_14",
-            "note": 45,
+            "id": "p1_bass_bridge_3",
+            "note": 40,
             "step": 56,
             "duration": 2,
             "velocity": 0.8
           },
           {
-            "id": "p1_bass_15",
-            "note": 47,
+            "id": "p1_bass_bridge_4",
+            "note": 45,
             "step": 60,
             "duration": 2,
-            "velocity": 0.75
+            "velocity": 0.82
           }
         ],
         "ch_forest_drums": [
@@ -1218,21 +1587,21 @@
             "note": 74,
             "step": 0,
             "duration": 2,
-            "velocity": 0.88
+            "velocity": 0.7744
           },
           {
             "id": "p2_pipe_1",
             "note": 78,
             "step": 2,
             "duration": 2,
-            "velocity": 0.9
+            "velocity": 0.78
           },
           {
             "id": "p2_pipe_2",
             "note": 79,
             "step": 4,
             "duration": 3,
-            "velocity": 0.92
+            "velocity": 0.78
           },
           {
             "id": "p2_pipe_3",
@@ -1854,7 +2223,7 @@
             "note": 50,
             "step": 0,
             "duration": 2,
-            "velocity": 0.88
+            "velocity": 0.8
           },
           {
             "id": "p2_bass_1",
@@ -2363,9 +2732,19 @@
   ],
   "timelineClips": [
     {
-      "id": "clip_1789276672526_p1_1",
+      "id": "clip_1789278147248_intro",
       "trackIndex": 0,
       "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_forest_gate_1789278147248",
+      "name": "0. Forest Gate (Intro)",
+      "color": "#818cf8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789278147248_trail_1",
+      "trackIndex": 0,
+      "startStep": 64,
       "lengthSteps": 64,
       "patternId": "pat_winding_trail_1789276672526",
       "name": "1. The Winding Trail",
@@ -2373,9 +2752,9 @@
       "muted": false
     },
     {
-      "id": "clip_1789276672526_p2_1",
+      "id": "clip_1789278147248_canopy_1",
       "trackIndex": 0,
-      "startStep": 64,
+      "startStep": 128,
       "lengthSteps": 64,
       "patternId": "pat_canopy_hook_1789276672526",
       "name": "2. Heart of the Canopy",
@@ -2383,9 +2762,9 @@
       "muted": false
     },
     {
-      "id": "clip_1789276672526_p1_2",
+      "id": "clip_1789278147248_trail_2",
       "trackIndex": 0,
-      "startStep": 128,
+      "startStep": 192,
       "lengthSteps": 64,
       "patternId": "pat_winding_trail_1789276672526",
       "name": "1. The Winding Trail (Reprise)",
@@ -2393,9 +2772,9 @@
       "muted": false
     },
     {
-      "id": "clip_1789276672526_p2_2",
+      "id": "clip_1789278147248_canopy_2",
       "trackIndex": 0,
-      "startStep": 192,
+      "startStep": 256,
       "lengthSteps": 64,
       "patternId": "pat_canopy_hook_1789276672526",
       "name": "2. Heart of the Canopy (Reprise)",
@@ -2413,7 +2792,7 @@
     "filterCutoff": 16500,
     "filterResonance": 0.7
   },
-  "loopStartStep": 0,
+  "loopStartStep": 64,
   "loopLengthSteps": 256,
   "scaleRoot": 9,
   "scaleMode": "dorian"
