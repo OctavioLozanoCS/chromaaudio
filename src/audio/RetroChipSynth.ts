@@ -237,29 +237,32 @@ export function playChipVoice(
   const stop = (releaseTime?: number) => {
     if (stopped) return;
     stopped = true;
-    const now = ctx.currentTime;
-    const rel = releaseTime !== undefined ? releaseTime : Math.min(0.08, release);
-    
-    masterVoiceGain.gain.cancelScheduledValues(now);
-    masterVoiceGain.gain.setValueAtTime(Math.max(0.0001, masterVoiceGain.gain.value), now);
-    masterVoiceGain.gain.linearRampToValueAtTime(0.0001, now + rel);
+    try {
+      const now = ctx.currentTime;
+      const rel = releaseTime !== undefined ? releaseTime : Math.min(0.08, release);
+      
+      masterVoiceGain.gain.cancelScheduledValues(now);
+      const curVal = Number.isFinite(masterVoiceGain.gain.value) && masterVoiceGain.gain.value > 0 ? masterVoiceGain.gain.value : 0.0001;
+      masterVoiceGain.gain.setValueAtTime(curVal, now);
+      masterVoiceGain.gain.linearRampToValueAtTime(0.0001, now + rel);
 
-    if ('stop' in voiceSourceNode && typeof voiceSourceNode.stop === 'function') {
-      try {
-        voiceSourceNode.stop(now + rel + 0.02);
-      } catch {}
-    }
-    if (lfo) {
-      try {
-        lfo.stop(now + rel + 0.02);
-      } catch {}
-    }
+      if ('stop' in voiceSourceNode && typeof voiceSourceNode.stop === 'function') {
+        try {
+          voiceSourceNode.stop(now + rel + 0.02);
+        } catch {}
+      }
+      if (lfo) {
+        try {
+          lfo.stop(now + rel + 0.02);
+        } catch {}
+      }
 
-    setTimeout(() => {
-      try {
-        masterVoiceGain.disconnect();
-      } catch {}
-    }, (rel + 0.05) * 1000);
+      setTimeout(() => {
+        try {
+          masterVoiceGain.disconnect();
+        } catch {}
+      }, (rel + 0.05) * 1000);
+    } catch {}
   };
 
   return { stop, gainNode: masterVoiceGain };

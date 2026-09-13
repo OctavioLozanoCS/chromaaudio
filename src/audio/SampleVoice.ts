@@ -74,12 +74,17 @@ export function playSampleVoice(
 
   return {
     stop: (rel?: number) => {
-      const r = rel !== undefined ? rel : release;
-      const stopNow = ctx.currentTime;
-      gain.gain.cancelScheduledValues(stopNow);
-      gain.gain.setValueAtTime(gain.gain.value, stopNow);
-      gain.gain.exponentialRampToValueAtTime(0.0001, stopNow + r);
-      source.stop(stopNow + r + 0.05);
+      try {
+        const r = rel !== undefined ? rel : release;
+        const stopNow = ctx.currentTime;
+        gain.gain.cancelScheduledValues(stopNow);
+        const curVal = Number.isFinite(gain.gain.value) && gain.gain.value > 0 ? gain.gain.value : 0.0001;
+        gain.gain.setValueAtTime(curVal, stopNow);
+        gain.gain.exponentialRampToValueAtTime(0.0001, stopNow + r);
+        try {
+          source.stop(stopNow + r + 0.05);
+        } catch {}
+      } catch {}
     }
   };
 }

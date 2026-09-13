@@ -926,11 +926,39 @@ export class AudioExporter {
    */
   public static async loadProjectFile(file: File): Promise<ProjectState> {
     const text = await file.text();
-    const data = JSON.parse(text) as ProjectState;
+    const data = JSON.parse(text) as any;
     if (!data.version || !data.channels || !data.patterns) {
       throw new Error('Invalid .chroma project file format: missing required properties');
     }
-    return data;
+
+    // Sanitize snapGrid (convert fractional strings like '1/16' or undefined to numbers)
+    let snap: number = 1;
+    if (typeof data.snapGrid === 'number' && !isNaN(data.snapGrid) && data.snapGrid > 0) {
+      snap = data.snapGrid;
+    } else if (typeof data.snapGrid === 'string') {
+      if (data.snapGrid === '1/4') snap = 4;
+      else if (data.snapGrid === '1/8') snap = 2;
+      else if (data.snapGrid === '1/16') snap = 1;
+      else if (data.snapGrid === '1/32') snap = 0.5;
+    }
+    data.snapGrid = snap;
+
+    // Ensure all patterns have notesByChannel initialized for every channel
+    const channelIds = data.channels.map((c: any) => c.id);
+    data.patterns = data.patterns.map((p: any) => {
+      const notesByChannel: Record<string, NoteEvent[]> = { ...(p.notesByChannel || {}) };
+      channelIds.forEach((chId: string) => {
+        if (!Array.isArray(notesByChannel[chId])) {
+          notesByChannel[chId] = [];
+        }
+      });
+      return {
+        ...p,
+        notesByChannel
+      };
+    });
+
+    return data as ProjectState;
   }
 
   /**

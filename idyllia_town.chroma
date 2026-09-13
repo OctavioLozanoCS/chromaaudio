@@ -2,7 +2,7 @@
   "version": 1,
   "name": "Idyllia Town - The City Where Nothing Ever Happens",
   "bpm": 88,
-  "snapGrid": "1/16",
+  "snapGrid": 1,
   "activePatternId": "pat_verse_1789256600986",
   "channels": [
     {
@@ -41,8 +41,8 @@
       "id": "ch_pulse_oboe",
       "name": "👾 Warm Pulse / Oboe",
       "color": "#818cf8",
-      "type": "soundfont",
-      "preset": "sf2_roland_sc_88_b0_p2_piano_strings",
+      "type": "chip_synth",
+      "preset": "pulse_50",
       "volume": 0.65,
       "pan": 0.15,
       "mute": false,
