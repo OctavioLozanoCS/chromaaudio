@@ -1,0 +1,1169 @@
+{
+  "version": "1.0.0",
+  "name": "Red's Hallway (Afternoon Daze)",
+  "bpm": 58,
+  "snapGrid": 1,
+  "activePatternId": "pat_hallway_stretch_1789282528193",
+  "channels": [
+    {
+      "id": "ch_warped_mb",
+      "name": "✨ Sleepy Warped Music Box",
+      "color": "#c084fc",
+      "type": "soundfont",
+      "preset": "gm_music_box",
+      "volume": 0.72,
+      "pan": -0.2,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 1.4,
+      "sustain": 0.18,
+      "release": 0.8
+    },
+    {
+      "id": "ch_drowsy_oboe",
+      "name": "👾 Drowsy Pulse Oboe",
+      "color": "#38bdf8",
+      "type": "chip_synth",
+      "preset": "pulse_50",
+      "volume": 0.65,
+      "pan": 0.15,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.04,
+      "decay": 0.25,
+      "sustain": 0.75,
+      "release": 0.35,
+      "vibratoDepth": 3,
+      "vibratoSpeed": 3
+    },
+    {
+      "id": "ch_dream_strings",
+      "name": "🎻 Memory Fog Strings",
+      "color": "#818cf8",
+      "type": "soundfont",
+      "preset": "gm_romantic_strings",
+      "volume": 0.52,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.12,
+      "decay": 0.6,
+      "sustain": 0.85,
+      "release": 0.5
+    },
+    {
+      "id": "ch_hallway_creak",
+      "name": "🪵 Hallway Floorboard / Clock",
+      "color": "#fbbf24",
+      "type": "chip_synth",
+      "preset": "triangle",
+      "volume": 0.55,
+      "pan": -0.25,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.003,
+      "decay": 0.12,
+      "sustain": 0.05,
+      "release": 0.08
+    },
+    {
+      "id": "ch_sub_pulse",
+      "name": "🔊 Low Stomach / Sub Pulse",
+      "color": "#34d399",
+      "type": "chip_synth",
+      "preset": "triangle",
+      "volume": 0.75,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": -1,
+      "attack": 0.02,
+      "decay": 0.4,
+      "sustain": 0.8,
+      "release": 0.3
+    },
+    {
+      "id": "ch_room_hum",
+      "name": "💧 Refrigerator Hum / Dripping Tap",
+      "color": "#94a3b8",
+      "type": "chip_synth",
+      "preset": "noise",
+      "volume": 0.28,
+      "pan": 0.25,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 0.08,
+      "sustain": 0.02,
+      "release": 0.06
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pat_waking_nap_1789282581467",
+      "name": "Red's Hallway - 0. Waking From The Nap (Intro)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_warped_mb": [
+          {
+            "id": "in_mb_0",
+            "note": 65,
+            "step": 20,
+            "duration": 6,
+            "velocity": 0.55
+          },
+          {
+            "id": "in_mb_1",
+            "note": 72,
+            "step": 28,
+            "duration": 8,
+            "velocity": 0.58
+          },
+          {
+            "id": "in_mb_2",
+            "note": 65,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_mb_3",
+            "note": 72,
+            "step": 58,
+            "duration": 4,
+            "velocity": 0.68
+          }
+        ],
+        "ch_drowsy_oboe": [],
+        "ch_dream_strings": [
+          {
+            "id": "in_str_0_0",
+            "note": 53,
+            "step": 32,
+            "duration": 16,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_str_0_1",
+            "note": 60,
+            "step": 32,
+            "duration": 16,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_str_0_2",
+            "note": 64,
+            "step": 32,
+            "duration": 16,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_str_0_3",
+            "note": 69,
+            "step": 32,
+            "duration": 16,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_str_1_0",
+            "note": 53,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.42
+          },
+          {
+            "id": "in_str_1_1",
+            "note": 60,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.42
+          },
+          {
+            "id": "in_str_1_2",
+            "note": 67,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.42
+          },
+          {
+            "id": "in_str_1_3",
+            "note": 69,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.42
+          }
+        ],
+        "ch_hallway_creak": [
+          {
+            "id": "in_creak_0",
+            "note": 67,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.35
+          },
+          {
+            "id": "in_creak_1",
+            "note": 72,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.4
+          },
+          {
+            "id": "in_creak_2",
+            "note": 67,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "in_creak_3",
+            "note": 72,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "in_creak_4",
+            "note": 67,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.48
+          },
+          {
+            "id": "in_creak_5",
+            "note": 72,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "in_creak_6",
+            "note": 67,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.52
+          }
+        ],
+        "ch_sub_pulse": [
+          {
+            "id": "in_sub_0",
+            "note": 41,
+            "step": 16,
+            "duration": 10,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_sub_1",
+            "note": 41,
+            "step": 48,
+            "duration": 12,
+            "velocity": 0.72
+          }
+        ],
+        "ch_room_hum": [
+          {
+            "id": "in_drip_0",
+            "note": 76,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.22
+          },
+          {
+            "id": "in_drip_1",
+            "note": 78,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.22
+          },
+          {
+            "id": "in_drip_2",
+            "note": 80,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.22
+          },
+          {
+            "id": "in_drip_3",
+            "note": 82,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.22
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_hallway_stretch_1789282528193",
+      "name": "Red's Hallway - 1. The Stretched Hallway (Theme A)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_warped_mb": [
+          {
+            "id": "p1_mb_0",
+            "note": 65,
+            "step": 0,
+            "duration": 6,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_mb_1",
+            "note": 72,
+            "step": 8,
+            "duration": 7,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_mb_2",
+            "note": 77,
+            "step": 16,
+            "duration": 6,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_mb_3",
+            "note": 78,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_mb_4",
+            "note": 77,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_mb_5",
+            "note": 79,
+            "step": 32,
+            "duration": 5,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_mb_6",
+            "note": 71,
+            "step": 40,
+            "duration": 6,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_mb_7",
+            "note": 69,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_mb_8",
+            "note": 67,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_mb_9",
+            "note": 65,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.7
+          }
+        ],
+        "ch_drowsy_oboe": [
+          {
+            "id": "p1_oboe_0",
+            "note": 60,
+            "step": 4,
+            "duration": 4,
+            "velocity": 0.6
+          },
+          {
+            "id": "p1_oboe_1",
+            "note": 65,
+            "step": 12,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_oboe_2",
+            "note": 69,
+            "step": 20,
+            "duration": 6,
+            "velocity": 0.68
+          },
+          {
+            "id": "p1_oboe_3",
+            "note": 72,
+            "step": 36,
+            "duration": 6,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_oboe_4",
+            "note": 71,
+            "step": 44,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "p1_oboe_5",
+            "note": 69,
+            "step": 52,
+            "duration": 6,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_oboe_6",
+            "note": 64,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.6
+          }
+        ],
+        "ch_dream_strings": [
+          {
+            "id": "p1_str_0_0",
+            "note": 53,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p1_str_0_1",
+            "note": 60,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p1_str_0_2",
+            "note": 64,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p1_str_0_3",
+            "note": 69,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p1_str_1_0",
+            "note": 54,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p1_str_1_1",
+            "note": 60,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p1_str_1_2",
+            "note": 64,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p1_str_1_3",
+            "note": 67,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p1_str_2_0",
+            "note": 58,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_str_2_1",
+            "note": 62,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_str_2_2",
+            "note": 65,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_str_2_3",
+            "note": 69,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_str_3_0",
+            "note": 53,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p1_str_3_1",
+            "note": 60,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p1_str_3_2",
+            "note": 67,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p1_str_3_3",
+            "note": 69,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.48
+          }
+        ],
+        "ch_hallway_creak": [
+          {
+            "id": "p1_tick_0",
+            "note": 72,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_tick_8",
+            "note": 67,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.4
+          },
+          {
+            "id": "p1_tick_16",
+            "note": 72,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_tick_24",
+            "note": 67,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.4
+          },
+          {
+            "id": "p1_tick_32",
+            "note": 72,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_tick_40",
+            "note": 67,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.4
+          },
+          {
+            "id": "p1_tick_48",
+            "note": 72,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_tick_56",
+            "note": 67,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.4
+          }
+        ],
+        "ch_sub_pulse": [
+          {
+            "id": "p1_sub_0",
+            "note": 41,
+            "step": 0,
+            "duration": 12,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_sub_1",
+            "note": 42,
+            "step": 16,
+            "duration": 12,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_sub_2",
+            "note": 39,
+            "step": 32,
+            "duration": 12,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_sub_3",
+            "note": 41,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.78
+          }
+        ],
+        "ch_room_hum": [
+          {
+            "id": "p1_drop_0",
+            "note": 77,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.25
+          },
+          {
+            "id": "p1_drop_1",
+            "note": 79,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.25
+          },
+          {
+            "id": "p1_drop_2",
+            "note": 81,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.25
+          },
+          {
+            "id": "p1_drop_3",
+            "note": 83,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_endless_kitchen_1789282528193",
+      "name": "Red's Hallway - 2. Endless Kitchen (Theme B)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_warped_mb": [
+          {
+            "id": "p2_mb_0",
+            "note": 77,
+            "step": 6,
+            "duration": 4,
+            "velocity": 0.58
+          },
+          {
+            "id": "p2_mb_1",
+            "note": 84,
+            "step": 12,
+            "duration": 6,
+            "velocity": 0.62
+          },
+          {
+            "id": "p2_mb_2",
+            "note": 81,
+            "step": 22,
+            "duration": 4,
+            "velocity": 0.55
+          },
+          {
+            "id": "p2_mb_3",
+            "note": 79,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.58
+          },
+          {
+            "id": "p2_mb_4",
+            "note": 83,
+            "step": 36,
+            "duration": 6,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_mb_5",
+            "note": 81,
+            "step": 44,
+            "duration": 4,
+            "velocity": 0.55
+          },
+          {
+            "id": "p2_mb_6",
+            "note": 76,
+            "step": 50,
+            "duration": 6,
+            "velocity": 0.58
+          },
+          {
+            "id": "p2_mb_7",
+            "note": 72,
+            "step": 58,
+            "duration": 6,
+            "velocity": 0.6
+          }
+        ],
+        "ch_drowsy_oboe": [
+          {
+            "id": "p2_oboe_0",
+            "note": 65,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.72
+          },
+          {
+            "id": "p2_oboe_1",
+            "note": 72,
+            "step": 4,
+            "duration": 6,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_oboe_2",
+            "note": 76,
+            "step": 10,
+            "duration": 5,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_oboe_3",
+            "note": 77,
+            "step": 16,
+            "duration": 6,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_oboe_4",
+            "note": 74,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "p2_oboe_5",
+            "note": 72,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "p2_oboe_6",
+            "note": 71,
+            "step": 32,
+            "duration": 5,
+            "velocity": 0.72
+          },
+          {
+            "id": "p2_oboe_7",
+            "note": 70,
+            "step": 38,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_oboe_8",
+            "note": 69,
+            "step": 42,
+            "duration": 5,
+            "velocity": 0.7
+          },
+          {
+            "id": "p2_oboe_9",
+            "note": 67,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.68
+          },
+          {
+            "id": "p2_oboe_10",
+            "note": 65,
+            "step": 54,
+            "duration": 6,
+            "velocity": 0.72
+          },
+          {
+            "id": "p2_oboe_11",
+            "note": 60,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.65
+          }
+        ],
+        "ch_dream_strings": [
+          {
+            "id": "p2_str_0_0",
+            "note": 58,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p2_str_0_1",
+            "note": 61,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p2_str_0_2",
+            "note": 65,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p2_str_0_3",
+            "note": 68,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.48
+          },
+          {
+            "id": "p2_str_1_0",
+            "note": 57,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_str_1_1",
+            "note": 60,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_str_1_2",
+            "note": 64,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_str_1_3",
+            "note": 67,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_str_2_0",
+            "note": 55,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_str_2_1",
+            "note": 58,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_str_2_2",
+            "note": 62,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_str_2_3",
+            "note": 65,
+            "step": 32,
+            "duration": 14,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_str_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.46
+          },
+          {
+            "id": "p2_str_3_1",
+            "note": 53,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.46
+          },
+          {
+            "id": "p2_str_3_2",
+            "note": 55,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.46
+          },
+          {
+            "id": "p2_str_3_3",
+            "note": 58,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.46
+          }
+        ],
+        "ch_hallway_creak": [
+          {
+            "id": "p2_creak_0",
+            "note": 65,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.42
+          },
+          {
+            "id": "p2_creak_1",
+            "note": 67,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.38
+          },
+          {
+            "id": "p2_creak_2",
+            "note": 65,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_creak_3",
+            "note": 64,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.4
+          },
+          {
+            "id": "p2_creak_4",
+            "note": 71,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.48
+          },
+          {
+            "id": "p2_creak_5",
+            "note": 69,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.42
+          },
+          {
+            "id": "p2_creak_6",
+            "note": 67,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.38
+          },
+          {
+            "id": "p2_creak_7",
+            "note": 65,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.45
+          }
+        ],
+        "ch_sub_pulse": [
+          {
+            "id": "p2_sub_0",
+            "note": 34,
+            "step": 0,
+            "duration": 12,
+            "velocity": 0.72
+          },
+          {
+            "id": "p2_sub_1",
+            "note": 33,
+            "step": 16,
+            "duration": 12,
+            "velocity": 0.7
+          },
+          {
+            "id": "p2_sub_2",
+            "note": 31,
+            "step": 32,
+            "duration": 12,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_sub_3",
+            "note": 36,
+            "step": 48,
+            "duration": 14,
+            "velocity": 0.78
+          }
+        ],
+        "ch_room_hum": [
+          {
+            "id": "p2_drop_8",
+            "note": 73.5,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.24
+          },
+          {
+            "id": "p2_drop_24",
+            "note": 76.5,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.24
+          },
+          {
+            "id": "p2_drop_40",
+            "note": 79.5,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.24
+          },
+          {
+            "id": "p2_drop_56",
+            "note": 73.5,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.24
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_mb",
+      "name": "Track 1 (Warped Music Box)",
+      "color": "#c084fc",
+      "volume": 0.85,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_oboe",
+      "name": "Track 2 (Drowsy Oboe)",
+      "color": "#38bdf8",
+      "volume": 0.8,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_strings",
+      "name": "Track 3 (Memory Fog Strings)",
+      "color": "#818cf8",
+      "volume": 0.7,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_creak",
+      "name": "Track 4 (Floorboard Creak)",
+      "color": "#fbbf24",
+      "volume": 0.65,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_sub",
+      "name": "Track 5 (Sub Pulse)",
+      "color": "#34d399",
+      "volume": 0.82,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_hum",
+      "name": "Track 6 (Room Hum & Drip)",
+      "color": "#94a3b8",
+      "volume": 0.45,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    }
+  ],
+  "timelineClips": [
+    {
+      "id": "clip_1789282581467_intro",
+      "trackIndex": 0,
+      "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_waking_nap_1789282581467",
+      "name": "0. Waking From The Nap (Intro)",
+      "color": "#94a3b8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789282581467_p1_1",
+      "trackIndex": 0,
+      "startStep": 64,
+      "lengthSteps": 64,
+      "patternId": "pat_hallway_stretch_1789282528193",
+      "name": "1. The Stretched Hallway",
+      "color": "#c084fc",
+      "muted": false
+    },
+    {
+      "id": "clip_1789282581467_p2_1",
+      "trackIndex": 0,
+      "startStep": 128,
+      "lengthSteps": 64,
+      "patternId": "pat_endless_kitchen_1789282528193",
+      "name": "2. Endless Kitchen",
+      "color": "#38bdf8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789282581467_p1_2",
+      "trackIndex": 0,
+      "startStep": 192,
+      "lengthSteps": 64,
+      "patternId": "pat_hallway_stretch_1789282528193",
+      "name": "1. The Stretched Hallway (Reprise)",
+      "color": "#c084fc",
+      "muted": false
+    },
+    {
+      "id": "clip_1789282581467_p2_2",
+      "trackIndex": 0,
+      "startStep": 256,
+      "lengthSteps": 64,
+      "patternId": "pat_endless_kitchen_1789282528193",
+      "name": "2. Endless Kitchen (Reprise)",
+      "color": "#38bdf8",
+      "muted": false
+    }
+  ],
+  "dsp": {
+    "enabled": true,
+    "resampleRate": 22050,
+    "bitDepth": 12,
+    "reverbEnabled": true,
+    "reverbDecay": 3.2,
+    "reverbWet": 0.35,
+    "filterCutoff": 14000,
+    "filterResonance": 0.6
+  },
+  "loopStartStep": 64,
+  "loopLengthSteps": 256,
+  "scaleRoot": 5,
+  "scaleMode": "lydian"
+}

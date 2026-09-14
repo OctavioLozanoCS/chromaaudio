@@ -1,0 +1,2426 @@
+{
+  "version": "1.0.0",
+  "name": "Sunburst Knock! (Yellow's Theme)",
+  "bpm": 132,
+  "snapGrid": 1,
+  "activePatternId": "pat_check_it_out_1789288565334",
+  "channels": [
+    {
+      "id": "ch_yellow_brass",
+      "name": "🎺 Toby Fox Bright Brass",
+      "color": "#fbbf24",
+      "type": "soundfont",
+      "preset": "gm_bright_brass",
+      "volume": 0.85,
+      "pan": -0.15,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.02,
+      "decay": 0.25,
+      "sustain": 0.8,
+      "release": 0.18
+    },
+    {
+      "id": "ch_nylon_rhythm",
+      "name": "🎸 Bouncy Acoustic Rhythm",
+      "color": "#f59e0b",
+      "type": "soundfont",
+      "preset": "gm_acoustic_guitar_nylon",
+      "volume": 0.74,
+      "pan": 0.22,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.006,
+      "decay": 0.35,
+      "sustain": 0.18,
+      "release": 0.22
+    },
+    {
+      "id": "ch_wood_xylophone",
+      "name": "🪵 Perky Marimba / Woodblock",
+      "color": "#34d399",
+      "type": "chip_synth",
+      "preset": "triangle",
+      "volume": 0.7,
+      "pan": -0.2,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.004,
+      "decay": 0.15,
+      "sustain": 0.08,
+      "release": 0.12
+    },
+    {
+      "id": "ch_pop_bass",
+      "name": "🔊 Walking Pop / Slap Bass",
+      "color": "#a78bfa",
+      "type": "soundfont",
+      "preset": "gm_slap_bass",
+      "volume": 0.82,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": -1,
+      "attack": 0.005,
+      "decay": 0.22,
+      "sustain": 0.45,
+      "release": 0.14
+    },
+    {
+      "id": "ch_sunny_perc",
+      "name": "🥁 Energetic Snappy Drums",
+      "color": "#f97316",
+      "type": "chip_synth",
+      "preset": "noise",
+      "volume": 0.52,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.002,
+      "decay": 0.08,
+      "sustain": 0.02,
+      "release": 0.05
+    },
+    {
+      "id": "ch_sun_glock",
+      "name": "✨ Sunny Sparkle Glockenspiel",
+      "color": "#38bdf8",
+      "type": "soundfont",
+      "preset": "gm_music_box",
+      "volume": 0.65,
+      "pan": 0.25,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 1,
+      "sustain": 0.15,
+      "release": 0.55
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pat_loud_bang_1789288565334",
+      "name": "Yellow's Theme - 0. The Loud Bang on the Door! (Intro)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_yellow_brass": [
+          {
+            "id": "in_brass_0",
+            "note": 62,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_brass_1",
+            "note": 64,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "in_brass_2",
+            "note": 66,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_brass_3",
+            "note": 67,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "in_brass_4",
+            "note": 69,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "in_brass_5",
+            "note": 71,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.92
+          },
+          {
+            "id": "in_brass_6",
+            "note": 72,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_brass_7",
+            "note": 74,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.98
+          }
+        ],
+        "ch_nylon_rhythm": [
+          {
+            "id": "in_gtr_0_0",
+            "note": 67,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gtr_0_1",
+            "note": 71,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gtr_0_2",
+            "note": 74,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gtr_1_0",
+            "note": 69,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_gtr_1_1",
+            "note": 72,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_gtr_1_2",
+            "note": 76,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_gtr_2_0",
+            "note": 71,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.78
+          },
+          {
+            "id": "in_gtr_2_1",
+            "note": 74,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.78
+          },
+          {
+            "id": "in_gtr_2_2",
+            "note": 79,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.78
+          },
+          {
+            "id": "in_gtr_3_0",
+            "note": 69,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_gtr_3_1",
+            "note": 74,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_gtr_3_2",
+            "note": 78,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.85
+          }
+        ],
+        "ch_wood_xylophone": [
+          {
+            "id": "in_knock_w_0",
+            "note": 62,
+            "step": 0,
+            "duration": 1.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_knock_w_1",
+            "note": 62,
+            "step": 4,
+            "duration": 1.5,
+            "velocity": 0.92
+          },
+          {
+            "id": "in_knock_w_2",
+            "note": 62,
+            "step": 8,
+            "duration": 1.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_knock_w_3",
+            "note": 62,
+            "step": 12,
+            "duration": 1.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "in_knock_w_4",
+            "note": 62,
+            "step": 14,
+            "duration": 1.5,
+            "velocity": 0.98
+          },
+          {
+            "id": "in_knock2_w_0",
+            "note": 62,
+            "step": 20,
+            "duration": 1.5,
+            "velocity": 0.92
+          },
+          {
+            "id": "in_knock2_w_1",
+            "note": 62,
+            "step": 24,
+            "duration": 1.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_knock2_w_2",
+            "note": 62,
+            "step": 26,
+            "duration": 1.5,
+            "velocity": 0.98
+          }
+        ],
+        "ch_pop_bass": [],
+        "ch_sunny_perc": [
+          {
+            "id": "in_knock_p_0",
+            "note": 58,
+            "step": 0,
+            "duration": 1.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_knock_p_1",
+            "note": 58,
+            "step": 4,
+            "duration": 1.5,
+            "velocity": 0.92
+          },
+          {
+            "id": "in_knock_p_2",
+            "note": 58,
+            "step": 8,
+            "duration": 1.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_knock_p_3",
+            "note": 58,
+            "step": 12,
+            "duration": 1.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "in_knock_p_4",
+            "note": 58,
+            "step": 14,
+            "duration": 1.5,
+            "velocity": 0.98
+          },
+          {
+            "id": "in_knock2_p_0",
+            "note": 58,
+            "step": 20,
+            "duration": 1.5,
+            "velocity": 0.92
+          },
+          {
+            "id": "in_knock2_p_1",
+            "note": 58,
+            "step": 24,
+            "duration": 1.5,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_knock2_p_2",
+            "note": 58,
+            "step": 26,
+            "duration": 1.5,
+            "velocity": 0.98
+          },
+          {
+            "id": "in_snare_0",
+            "note": 62,
+            "step": 48,
+            "duration": 1.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_snare_1",
+            "note": 62,
+            "step": 52,
+            "duration": 1.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_snare_2",
+            "note": 62,
+            "step": 56,
+            "duration": 1.5,
+            "velocity": 0.7999999999999999
+          },
+          {
+            "id": "in_snare_3",
+            "note": 62,
+            "step": 58,
+            "duration": 1.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_snare_4",
+            "note": 62,
+            "step": 60,
+            "duration": 1.5,
+            "velocity": 0.8999999999999999
+          },
+          {
+            "id": "in_snare_5",
+            "note": 62,
+            "step": 62,
+            "duration": 1.5,
+            "velocity": 0.95
+          }
+        ],
+        "ch_sun_glock": []
+      }
+    },
+    {
+      "id": "pat_check_it_out_1789288565334",
+      "name": "Yellow's Theme - 1. Check It Out! (The Sunburst Hop)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_yellow_brass": [
+          {
+            "id": "p1_brass_0",
+            "note": 62,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_brass_1",
+            "note": 67,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_brass_2",
+            "note": 71,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.92
+          },
+          {
+            "id": "p1_brass_3",
+            "note": 74,
+            "step": 6,
+            "duration": 3,
+            "velocity": 0.95
+          },
+          {
+            "id": "p1_brass_4",
+            "note": 76,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.92
+          },
+          {
+            "id": "p1_brass_5",
+            "note": 74,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_brass_6",
+            "note": 71,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_brass_7",
+            "note": 69,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_brass_8",
+            "note": 72,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.92
+          },
+          {
+            "id": "p1_brass_9",
+            "note": 71,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_brass_10",
+            "note": 67,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_brass_11",
+            "note": 62,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_brass_12",
+            "note": 67,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_brass_13",
+            "note": 71,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.92
+          },
+          {
+            "id": "p1_brass_14",
+            "note": 74,
+            "step": 38,
+            "duration": 3,
+            "velocity": 0.95
+          },
+          {
+            "id": "p1_brass_15",
+            "note": 78,
+            "step": 42,
+            "duration": 4,
+            "velocity": 0.98
+          },
+          {
+            "id": "p1_brass_16",
+            "note": 76,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_brass_17",
+            "note": 74,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_brass_18",
+            "note": 71,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_brass_19",
+            "note": 69,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_brass_20",
+            "note": 67,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.9
+          }
+        ],
+        "ch_nylon_rhythm": [
+          {
+            "id": "p1_gtr_0_0_0",
+            "note": 67,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_0_1",
+            "note": 71,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_0_2",
+            "note": 74,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_1_0",
+            "note": 67,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_0_1_1",
+            "note": 71,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_0_1_2",
+            "note": 74,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_0_2_0",
+            "note": 67,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_2_1",
+            "note": 71,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_2_2",
+            "note": 74,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_3_0",
+            "note": 67,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_0_3_1",
+            "note": 71,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_0_3_2",
+            "note": 74,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_1_0_0",
+            "note": 69,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_0_1",
+            "note": 72,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_0_2",
+            "note": 76,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_1_0",
+            "note": 69,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_1_1_1",
+            "note": 72,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_1_1_2",
+            "note": 76,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_1_2_0",
+            "note": 69,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_2_1",
+            "note": 72,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_2_2",
+            "note": 76,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_3_0",
+            "note": 69,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_1_3_1",
+            "note": 72,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_1_3_2",
+            "note": 76,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_2_0_0",
+            "note": 67,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_0_1",
+            "note": 71,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_0_2",
+            "note": 74,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_1_0",
+            "note": 67,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_2_1_1",
+            "note": 71,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_2_1_2",
+            "note": 74,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_2_2_0",
+            "note": 67,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_2_1",
+            "note": 71,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_2_2",
+            "note": 74,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_3_0",
+            "note": 67,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_2_3_1",
+            "note": 71,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_2_3_2",
+            "note": 74,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_3_0_0",
+            "note": 69,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_0_1",
+            "note": 74,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_0_2",
+            "note": 78,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_1_0",
+            "note": 69,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_3_1_1",
+            "note": 74,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_3_1_2",
+            "note": 78,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_3_2_0",
+            "note": 69,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_2_1",
+            "note": 74,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_2_2",
+            "note": 78,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_3_0",
+            "note": 69,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_3_3_1",
+            "note": 74,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_gtr_3_3_2",
+            "note": 78,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.75
+          }
+        ],
+        "ch_wood_xylophone": [
+          {
+            "id": "p1_wood_0",
+            "note": 74,
+            "step": 8,
+            "duration": 1.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_wood_1",
+            "note": 76,
+            "step": 10,
+            "duration": 1.5,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_wood_2",
+            "note": 79,
+            "step": 24,
+            "duration": 1.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_wood_3",
+            "note": 78,
+            "step": 26,
+            "duration": 1.5,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_wood_4",
+            "note": 74,
+            "step": 40,
+            "duration": 1.5,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_wood_5",
+            "note": 76,
+            "step": 42,
+            "duration": 1.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_wood_6",
+            "note": 79,
+            "step": 56,
+            "duration": 1.5,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_wood_7",
+            "note": 81,
+            "step": 58,
+            "duration": 1.5,
+            "velocity": 0.8
+          }
+        ],
+        "ch_pop_bass": [
+          {
+            "id": "p1_bass_0",
+            "note": 43,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_bass_1",
+            "note": 47,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_bass_2",
+            "note": 50,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_3",
+            "note": 52,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_bass_4",
+            "note": 45,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_bass_5",
+            "note": 48,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_bass_6",
+            "note": 50,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_7",
+            "note": 42,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_bass_8",
+            "note": 43,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_bass_9",
+            "note": 55,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_bass_10",
+            "note": 47,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_11",
+            "note": 50,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_bass_12",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_bass_13",
+            "note": 50,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_14",
+            "note": 43,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_bass_15",
+            "note": 50,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.82
+          }
+        ],
+        "ch_sunny_perc": [
+          {
+            "id": "p1_snare_0_0",
+            "note": 62,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_snare_0_1",
+            "note": 62,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_kick_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_kick_0_1",
+            "note": 48,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_kick_0_2",
+            "note": 48,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_hat_0_2",
+            "note": 74,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_0_6",
+            "note": 74,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_0_10",
+            "note": 74,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_0_14",
+            "note": 74,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_snare_1_0",
+            "note": 62,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_snare_1_1",
+            "note": 62,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_kick_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_kick_1_1",
+            "note": 48,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_kick_1_2",
+            "note": 48,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_hat_1_2",
+            "note": 74,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_1_6",
+            "note": 74,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_1_10",
+            "note": 74,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_1_14",
+            "note": 74,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_snare_2_0",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_snare_2_1",
+            "note": 62,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_kick_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_kick_2_1",
+            "note": 48,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_kick_2_2",
+            "note": 48,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_hat_2_2",
+            "note": 74,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_2_6",
+            "note": 74,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_2_10",
+            "note": 74,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_2_14",
+            "note": 74,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_snare_3_0",
+            "note": 62,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_snare_3_1",
+            "note": 62,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_kick_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_kick_3_1",
+            "note": 48,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_kick_3_2",
+            "note": 48,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_hat_3_2",
+            "note": 74,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_3_6",
+            "note": 74,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_3_10",
+            "note": 74,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p1_hat_3_14",
+            "note": 74,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.5
+          }
+        ],
+        "ch_sun_glock": [
+          {
+            "id": "p1_glock_0",
+            "note": 86,
+            "step": 6,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_glock_1",
+            "note": 84,
+            "step": 20,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_glock_2",
+            "note": 86,
+            "step": 38,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_glock_3",
+            "note": 90,
+            "step": 42,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_glock_4",
+            "note": 79,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_plus_one_1789288565334",
+      "name": "Yellow's Theme - 2. You're My Plus One! (Theme B)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_yellow_brass": [
+          {
+            "id": "p2_brass_0",
+            "note": 72,
+            "step": 0,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_brass_1",
+            "note": 71,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_brass_2",
+            "note": 69,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_brass_3",
+            "note": 67,
+            "step": 12,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_brass_4",
+            "note": 64,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_brass_5",
+            "note": 67,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_brass_6",
+            "note": 69,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_brass_7",
+            "note": 74,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.95
+          },
+          {
+            "id": "p2_brass_8",
+            "note": 76,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.98
+          },
+          {
+            "id": "p2_brass_9",
+            "note": 74,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_brass_10",
+            "note": 71,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_brass_11",
+            "note": 67,
+            "step": 44,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_brass_12",
+            "note": 69,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_brass_13",
+            "note": 71,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_brass_14",
+            "note": 72,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.92
+          },
+          {
+            "id": "p2_brass_15",
+            "note": 74,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.95
+          }
+        ],
+        "ch_nylon_rhythm": [
+          {
+            "id": "p2_gtr_0_0_0",
+            "note": 60,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_0_1",
+            "note": 64,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_0_2",
+            "note": 67,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_1_0",
+            "note": 60,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_1_1",
+            "note": 64,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_1_2",
+            "note": 67,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_2_0",
+            "note": 60,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_2_1",
+            "note": 64,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_2_2",
+            "note": 67,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_3_0",
+            "note": 60,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_3_1",
+            "note": 64,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_3_2",
+            "note": 67,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_0_0",
+            "note": 55,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_0_1",
+            "note": 59,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_0_2",
+            "note": 62,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_1_0",
+            "note": 55,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_1_1",
+            "note": 59,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_1_2",
+            "note": 62,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_2_0",
+            "note": 55,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_2_1",
+            "note": 59,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_2_2",
+            "note": 62,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_3_0",
+            "note": 55,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_3_1",
+            "note": 59,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_3_2",
+            "note": 62,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_0_0",
+            "note": 60,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_0_1",
+            "note": 64,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_0_2",
+            "note": 67,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_1_0",
+            "note": 60,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_1_1",
+            "note": 64,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_1_2",
+            "note": 67,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_2_0",
+            "note": 60,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_2_1",
+            "note": 64,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_2_2",
+            "note": 67,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_3_0",
+            "note": 60,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_3_1",
+            "note": 64,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_3_2",
+            "note": 67,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_0_0",
+            "note": 57,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_0_1",
+            "note": 62,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_0_2",
+            "note": 66,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_1_0",
+            "note": 57,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_1_1",
+            "note": 62,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_1_2",
+            "note": 66,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_2_0",
+            "note": 57,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_2_1",
+            "note": 62,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_2_2",
+            "note": 66,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_3_0",
+            "note": 57,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_3_1",
+            "note": 62,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_3_2",
+            "note": 66,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.75
+          }
+        ],
+        "ch_wood_xylophone": [
+          {
+            "id": "p2_wood_0",
+            "note": 79,
+            "step": 14,
+            "duration": 1.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_wood_1",
+            "note": 83,
+            "step": 16,
+            "duration": 1.5,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_wood_2",
+            "note": 86,
+            "step": 28,
+            "duration": 1.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_wood_3",
+            "note": 88,
+            "step": 30,
+            "duration": 1.5,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_wood_4",
+            "note": 79,
+            "step": 44,
+            "duration": 1.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_wood_5",
+            "note": 83,
+            "step": 46,
+            "duration": 1.5,
+            "velocity": 0.78
+          }
+        ],
+        "ch_pop_bass": [
+          {
+            "id": "p2_bass_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_bass_1",
+            "note": 52,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_bass_2",
+            "note": 55,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_3",
+            "note": 57,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_bass_4",
+            "note": 43,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_bass_5",
+            "note": 47,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_bass_6",
+            "note": 50,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_7",
+            "note": 55,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_bass_8",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_bass_9",
+            "note": 50,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_10",
+            "note": 54,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_bass_11",
+            "note": 57,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_bass_12",
+            "note": 43,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_bass_13",
+            "note": 47,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_bass_14",
+            "note": 50,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_15",
+            "note": 43,
+            "step": 60,
+            "duration": 3,
+            "velocity": 0.88
+          }
+        ],
+        "ch_sunny_perc": [
+          {
+            "id": "p2_snare_0_0",
+            "note": 62,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_snare_0_1",
+            "note": 62,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_kick_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_0_1",
+            "note": 48,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_0_2",
+            "note": 48,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_0_3",
+            "note": 48,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_hat_0_2",
+            "note": 74,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_0_6",
+            "note": 74,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_0_10",
+            "note": 74,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_0_14",
+            "note": 74,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_snare_1_0",
+            "note": 62,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_snare_1_1",
+            "note": 62,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_kick_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_1_1",
+            "note": 48,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_1_2",
+            "note": 48,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_1_3",
+            "note": 48,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_hat_1_2",
+            "note": 74,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_1_6",
+            "note": 74,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_1_10",
+            "note": 74,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_1_14",
+            "note": 74,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_snare_2_0",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_snare_2_1",
+            "note": 62,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_kick_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_2_1",
+            "note": 48,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_2_2",
+            "note": 48,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_2_3",
+            "note": 48,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_hat_2_2",
+            "note": 74,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_2_6",
+            "note": 74,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_2_10",
+            "note": 74,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_2_14",
+            "note": 74,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_snare_3_0",
+            "note": 62,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_snare_3_1",
+            "note": 62,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_kick_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_3_1",
+            "note": 48,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_3_2",
+            "note": 48,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_kick_3_3",
+            "note": 48,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_hat_3_2",
+            "note": 74,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_3_6",
+            "note": 74,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_3_10",
+            "note": 74,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "p2_hat_3_14",
+            "note": 74,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.5
+          }
+        ],
+        "ch_sun_glock": [
+          {
+            "id": "p2_glock_0",
+            "note": 84,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "p2_glock_1",
+            "note": 79,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "p2_glock_2",
+            "note": 88,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_glock_3",
+            "note": 86,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.72
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_brass",
+      "name": "Track 1 (Yellow Brass)",
+      "color": "#fbbf24",
+      "volume": 0.88,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_gtr",
+      "name": "Track 2 (Bouncy Guitar)",
+      "color": "#f59e0b",
+      "volume": 0.78,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_wood",
+      "name": "Track 3 (Marimba & Knocks)",
+      "color": "#34d399",
+      "volume": 0.72,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_bass",
+      "name": "Track 4 (Pop Walking Bass)",
+      "color": "#a78bfa",
+      "volume": 0.82,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_drums",
+      "name": "Track 5 (Snappy Drums)",
+      "color": "#f97316",
+      "volume": 0.7,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_glock",
+      "name": "Track 6 (Sunny Glock)",
+      "color": "#38bdf8",
+      "volume": 0.65,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    }
+  ],
+  "timelineClips": [
+    {
+      "id": "clip_1789288565334_intro",
+      "trackIndex": 0,
+      "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_loud_bang_1789288565334",
+      "name": "0. The Loud Bang on the Door!",
+      "color": "#f59e0b",
+      "muted": false
+    },
+    {
+      "id": "clip_1789288565334_p1_1",
+      "trackIndex": 0,
+      "startStep": 64,
+      "lengthSteps": 64,
+      "patternId": "pat_check_it_out_1789288565334",
+      "name": "1. Check It Out! (Sunburst Hop)",
+      "color": "#fbbf24",
+      "muted": false
+    },
+    {
+      "id": "clip_1789288565334_p2_1",
+      "trackIndex": 0,
+      "startStep": 128,
+      "lengthSteps": 64,
+      "patternId": "pat_plus_one_1789288565334",
+      "name": "2. You're My Plus One!",
+      "color": "#34d399",
+      "muted": false
+    },
+    {
+      "id": "clip_1789288565334_p1_2",
+      "trackIndex": 0,
+      "startStep": 192,
+      "lengthSteps": 64,
+      "patternId": "pat_check_it_out_1789288565334",
+      "name": "1. Check It Out! (Reprise)",
+      "color": "#fbbf24",
+      "muted": false
+    },
+    {
+      "id": "clip_1789288565334_p2_2",
+      "trackIndex": 0,
+      "startStep": 256,
+      "lengthSteps": 64,
+      "patternId": "pat_plus_one_1789288565334",
+      "name": "2. You're My Plus One! (Reprise)",
+      "color": "#34d399",
+      "muted": false
+    }
+  ],
+  "dsp": {
+    "enabled": true,
+    "resampleRate": 22050,
+    "bitDepth": 12,
+    "reverbEnabled": true,
+    "reverbDecay": 1.6,
+    "reverbWet": 0.18,
+    "filterCutoff": 17500,
+    "filterResonance": 0.7
+  },
+  "loopStartStep": 64,
+  "loopLengthSteps": 256,
+  "scaleRoot": 7,
+  "scaleMode": "major"
+}

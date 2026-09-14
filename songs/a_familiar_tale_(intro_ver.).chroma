@@ -1,0 +1,6078 @@
+{
+  "version": "1.0.0",
+  "name": "A Familiar Tale (Intro Ver.)",
+  "bpm": 82,
+  "snapGrid": 1,
+  "activePatternId": "pat_verse_1788845950242",
+  "channels": [
+    {
+      "id": "ch_lead_gb",
+      "name": "👾 GB Pulse Lead",
+      "color": "#38bdf8",
+      "type": "soundfont",
+      "preset": "sf2_roland_sc_88_b0_p2_piano_strings",
+      "volume": 0.7,
+      "pan": -0.15,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 0.12,
+      "sustain": 0.65,
+      "release": 0.15
+    },
+    {
+      "id": "ch_harm_gb",
+      "name": "⚡ GB Pulse Arp",
+      "color": "#818cf8",
+      "type": "soundfont",
+      "preset": "sf2_roland_sc_88_b0_p48_strings_1",
+      "volume": 0.6,
+      "pan": 0.2,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.01,
+      "decay": 0.15,
+      "sustain": 0.5,
+      "release": 0.2
+    },
+    {
+      "id": "ch_bass_gb",
+      "name": "🔊 4-Bit Wave Bass",
+      "color": "#34d399",
+      "type": "soundfont",
+      "preset": "sf2_roland_sc_88_b0_p37_slapbass_2",
+      "volume": 0.7,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": -1,
+      "attack": 0.005,
+      "decay": 0.2,
+      "sustain": 0.7,
+      "release": 0.1
+    },
+    {
+      "id": "ch_drums_gb",
+      "name": "🥁 LFSR Noise Perc",
+      "color": "#fbbf24",
+      "type": "chip_synth",
+      "preset": "noise",
+      "volume": 0.6,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.002,
+      "decay": 0.12,
+      "sustain": 0.1,
+      "release": 0.08
+    },
+    {
+      "id": "ch_piano_sf",
+      "name": "🎹 GBA Grand Piano",
+      "color": "#f472b6",
+      "type": "soundfont",
+      "preset": "gm_grand_piano",
+      "volume": 0.7,
+      "pan": -0.1,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.01,
+      "decay": 0.8,
+      "sustain": 0.3,
+      "release": 0.2
+    },
+    {
+      "id": "ch_strings_sf",
+      "name": "🎻 Touhou Strings",
+      "color": "#c084fc",
+      "type": "soundfont",
+      "preset": "gm_romantic_strings",
+      "volume": 0.65,
+      "pan": 0.15,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.08,
+      "decay": 0.5,
+      "sustain": 0.85,
+      "release": 0.4
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pat_1",
+      "name": "Pattern 1",
+      "lengthSteps": 64,
+      "notesByChannel": {}
+    },
+    {
+      "id": "pat_intro_1788845950242",
+      "name": "Cinematic Story Prologue - Intro",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "intro_swell_0",
+            "note": 81,
+            "step": 0,
+            "duration": 14,
+            "velocity": 0.9
+          },
+          {
+            "id": "intro_swell_16",
+            "note": 88,
+            "step": 16,
+            "duration": 14,
+            "velocity": 0.85
+          },
+          {
+            "id": "intro_swell_32",
+            "note": 84,
+            "step": 32,
+            "duration": 6,
+            "velocity": 0.85
+          },
+          {
+            "id": "intro_swell_40",
+            "note": 76,
+            "step": 40,
+            "duration": 6,
+            "velocity": 0.8
+          },
+          {
+            "id": "intro_swell_48",
+            "note": 69,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "intro_swell_52",
+            "note": 71,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "intro_swell_56",
+            "note": 72,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "intro_swell_60",
+            "note": 76,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 1
+          }
+        ],
+        "ch_harm_gb": [
+          {
+            "id": "intro_arp_4",
+            "note": 81,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "intro_arp_12",
+            "note": 88,
+            "step": 12,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "intro_arp_20",
+            "note": 85,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "intro_arp_28",
+            "note": 93,
+            "step": 28,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "intro_arp_36",
+            "note": 88,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "intro_arp_44",
+            "note": 92,
+            "step": 44,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "intro_arp_52",
+            "note": 95,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "intro_arp_60",
+            "note": 93,
+            "step": 60,
+            "duration": 3,
+            "velocity": 0.65
+          }
+        ],
+        "ch_bass_gb": [
+          {
+            "id": "intro_bass_0",
+            "note": 33,
+            "step": 0,
+            "duration": 15.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "intro_bass_16",
+            "note": 41,
+            "step": 16,
+            "duration": 15.5,
+            "velocity": 0.81
+          },
+          {
+            "id": "intro_bass_32",
+            "note": 38,
+            "step": 32,
+            "duration": 15.5,
+            "velocity": 0.87
+          },
+          {
+            "id": "intro_bass_48",
+            "note": 40,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.9299999999999999
+          }
+        ],
+        "ch_drums_gb": [
+          {
+            "id": "intro_drum_0",
+            "note": 54,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.6
+          },
+          {
+            "id": "intro_drum_8",
+            "note": 54,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.6
+          },
+          {
+            "id": "intro_drum_16",
+            "note": 54,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.6
+          },
+          {
+            "id": "intro_drum_24",
+            "note": 54,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.6
+          },
+          {
+            "id": "intro_drum_32",
+            "note": 54,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.6
+          },
+          {
+            "id": "intro_drum_40",
+            "note": 54,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.6
+          },
+          {
+            "id": "intro_drum_swell_48",
+            "note": 48,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "intro_drum_48",
+            "note": 58,
+            "step": 48,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "intro_drum_50",
+            "note": 58,
+            "step": 50,
+            "duration": 1.5,
+            "velocity": 0.55625
+          },
+          {
+            "id": "intro_drum_52",
+            "note": 58,
+            "step": 52,
+            "duration": 1.5,
+            "velocity": 0.6125
+          },
+          {
+            "id": "intro_drum_54",
+            "note": 58,
+            "step": 54,
+            "duration": 1.5,
+            "velocity": 0.66875
+          },
+          {
+            "id": "intro_drum_56",
+            "note": 58,
+            "step": 56,
+            "duration": 1.5,
+            "velocity": 0.725
+          },
+          {
+            "id": "intro_drum_58",
+            "note": 58,
+            "step": 58,
+            "duration": 1.5,
+            "velocity": 0.78125
+          },
+          {
+            "id": "intro_drum_60",
+            "note": 58,
+            "step": 60,
+            "duration": 1.5,
+            "velocity": 0.8375
+          },
+          {
+            "id": "intro_drum_62",
+            "note": 58,
+            "step": 62,
+            "duration": 1.5,
+            "velocity": 0.89375
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_verse_1788845950242",
+      "name": "Cinematic Story Prologue - Verse (Theme A)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "lead_0_0",
+            "note": 69,
+            "step": 0,
+            "duration": 6,
+            "velocity": 0.9
+          },
+          {
+            "id": "lead_0_10",
+            "note": 81,
+            "step": 10,
+            "duration": 6,
+            "velocity": 0.95
+          },
+          {
+            "id": "lead_1_5",
+            "note": 79,
+            "step": 21,
+            "duration": 4.800000000000001,
+            "velocity": 0.8
+          },
+          {
+            "id": "lead_2_0",
+            "note": 86,
+            "step": 32,
+            "duration": 4.800000000000001,
+            "velocity": 0.95
+          },
+          {
+            "id": "lead_2_8",
+            "note": 82,
+            "step": 40,
+            "duration": 5.6000000000000005,
+            "velocity": 0.95
+          },
+          {
+            "id": "lead_3_2",
+            "note": 80,
+            "step": 50,
+            "duration": 5.6000000000000005,
+            "velocity": 0.85
+          },
+          {
+            "id": "lead_3_10",
+            "note": 86,
+            "step": 58,
+            "duration": 4,
+            "velocity": 0.9
+          }
+        ],
+        "ch_harm_gb": [
+          {
+            "id": "arp_0_0",
+            "note": 69,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_1",
+            "note": 72,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_2",
+            "note": 76,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_3",
+            "note": 72,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_4",
+            "note": 69,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_5",
+            "note": 72,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_6",
+            "note": 76,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_7",
+            "note": 72,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_8",
+            "note": 69,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_9",
+            "note": 72,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_10",
+            "note": 76,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_11",
+            "note": 72,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_12",
+            "note": 69,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_13",
+            "note": 72,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_14",
+            "note": 76,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_15",
+            "note": 72,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_0",
+            "note": 77,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_1",
+            "note": 81,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_2",
+            "note": 84,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_3",
+            "note": 88,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_4",
+            "note": 84,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_5",
+            "note": 81,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_6",
+            "note": 77,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_7",
+            "note": 81,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_8",
+            "note": 84,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_9",
+            "note": 88,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_10",
+            "note": 84,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_11",
+            "note": 81,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_12",
+            "note": 77,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_13",
+            "note": 81,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_14",
+            "note": 84,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_15",
+            "note": 88,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_0",
+            "note": 74,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_1",
+            "note": 77,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_2",
+            "note": 81,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_3",
+            "note": 77,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_4",
+            "note": 74,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_5",
+            "note": 77,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_6",
+            "note": 81,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_7",
+            "note": 77,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_8",
+            "note": 74,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_9",
+            "note": 77,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_10",
+            "note": 81,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_11",
+            "note": 77,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_12",
+            "note": 74,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_13",
+            "note": 77,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_14",
+            "note": 81,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_15",
+            "note": 77,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_0",
+            "note": 76,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_1",
+            "note": 80,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_2",
+            "note": 83,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_3",
+            "note": 86,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_4",
+            "note": 83,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_5",
+            "note": 80,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_6",
+            "note": 76,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_7",
+            "note": 80,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_8",
+            "note": 83,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_9",
+            "note": 86,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_10",
+            "note": 83,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_11",
+            "note": 80,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_12",
+            "note": 76,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_13",
+            "note": 80,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_14",
+            "note": 83,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_15",
+            "note": 86,
+            "step": 63,
+            "duration": 1,
+            "velocity": 0.6
+          }
+        ],
+        "ch_bass_gb": [
+          {
+            "id": "bass_0_0",
+            "note": 45,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_0_2",
+            "note": 52,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_0_4",
+            "note": 57,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_0_6",
+            "note": 52,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_0_8",
+            "note": 45,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_0_10",
+            "note": 52,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_0_12",
+            "note": 57,
+            "step": 12,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_1_0",
+            "note": 53,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_1_2",
+            "note": 60,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_1_4",
+            "note": 65,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_1_6",
+            "note": 60,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_1_8",
+            "note": 53,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_1_10",
+            "note": 60,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_1_12",
+            "note": 65,
+            "step": 28,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_2_0",
+            "note": 50,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_2_2",
+            "note": 57,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_2_4",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_2_6",
+            "note": 57,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_2_8",
+            "note": 50,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_2_10",
+            "note": 57,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_2_12",
+            "note": 62,
+            "step": 44,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_3_0",
+            "note": 52,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_3_2",
+            "note": 59,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_3_4",
+            "note": 64,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_3_6",
+            "note": 59,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_3_8",
+            "note": 52,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_3_10",
+            "note": 59,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_3_12",
+            "note": 64,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 0.9
+          }
+        ],
+        "ch_drums_gb": [
+          {
+            "id": "dk_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_0_6",
+            "note": 48,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_0_10",
+            "note": 48,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_0_4",
+            "note": 50,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_0_12",
+            "note": 50,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_0_0",
+            "note": 54,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_1",
+            "note": 54,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_2",
+            "note": 58,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_3",
+            "note": 54,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_4",
+            "note": 54,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_5",
+            "note": 54,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_6",
+            "note": 58,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_7",
+            "note": 54,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_8",
+            "note": 54,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_9",
+            "note": 54,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_10",
+            "note": 58,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_11",
+            "note": 54,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_12",
+            "note": 54,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_13",
+            "note": 54,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_14",
+            "note": 58,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_15",
+            "note": 54,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dk_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_1_6",
+            "note": 48,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_1_10",
+            "note": 48,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_1_4",
+            "note": 50,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_1_12",
+            "note": 50,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_1_0",
+            "note": 54,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_1",
+            "note": 54,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_2",
+            "note": 58,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_3",
+            "note": 54,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_4",
+            "note": 54,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_5",
+            "note": 54,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_6",
+            "note": 58,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_7",
+            "note": 54,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_8",
+            "note": 54,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_9",
+            "note": 54,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_10",
+            "note": 58,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_11",
+            "note": 54,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_12",
+            "note": 54,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_13",
+            "note": 54,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_14",
+            "note": 58,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_15",
+            "note": 54,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dk_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_2_6",
+            "note": 48,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_2_10",
+            "note": 48,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_2_4",
+            "note": 50,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_2_12",
+            "note": 50,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_2_0",
+            "note": 54,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_1",
+            "note": 54,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_2",
+            "note": 58,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_3",
+            "note": 54,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_4",
+            "note": 54,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_5",
+            "note": 54,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_6",
+            "note": 58,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_7",
+            "note": 54,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_8",
+            "note": 54,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_9",
+            "note": 54,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_10",
+            "note": 58,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_11",
+            "note": 54,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_12",
+            "note": 54,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_13",
+            "note": 54,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_14",
+            "note": 58,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_15",
+            "note": 54,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dk_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_3_6",
+            "note": 48,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_3_10",
+            "note": 48,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_3_4",
+            "note": 50,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_3_0",
+            "note": 54,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_1",
+            "note": 54,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_2",
+            "note": 58,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_3",
+            "note": 54,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_4",
+            "note": 54,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_5",
+            "note": 54,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_6",
+            "note": 58,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_7",
+            "note": 54,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_8",
+            "note": 54,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_9",
+            "note": 54,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_10",
+            "note": 58,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_11",
+            "note": 54,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "fill_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "fill_3_13",
+            "note": 50,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.83
+          },
+          {
+            "id": "fill_3_14",
+            "note": 50,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.91
+          },
+          {
+            "id": "fill_3_15",
+            "note": 50,
+            "step": 63,
+            "duration": 1,
+            "velocity": 0.99
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_chorus_1788845950242",
+      "name": "Cinematic Story Prologue - Chorus (Theme B)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "lead_0_0",
+            "note": 81,
+            "step": 0,
+            "duration": 6,
+            "velocity": 0.98
+          },
+          {
+            "id": "lead_0_10",
+            "note": 93,
+            "step": 10,
+            "duration": 6,
+            "velocity": 1
+          },
+          {
+            "id": "lead_1_5",
+            "note": 91,
+            "step": 21,
+            "duration": 4.800000000000001,
+            "velocity": 0.88
+          },
+          {
+            "id": "lead_2_0",
+            "note": 98,
+            "step": 32,
+            "duration": 4.800000000000001,
+            "velocity": 1
+          },
+          {
+            "id": "lead_2_8",
+            "note": 94,
+            "step": 40,
+            "duration": 5.6000000000000005,
+            "velocity": 1
+          },
+          {
+            "id": "lead_3_2",
+            "note": 92,
+            "step": 50,
+            "duration": 5.6000000000000005,
+            "velocity": 0.9299999999999999
+          },
+          {
+            "id": "lead_3_10",
+            "note": 98,
+            "step": 58,
+            "duration": 4,
+            "velocity": 0.98
+          }
+        ],
+        "ch_harm_gb": [
+          {
+            "id": "arp_0_0",
+            "note": 81,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_1",
+            "note": 84,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_2",
+            "note": 88,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_3",
+            "note": 84,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_4",
+            "note": 81,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_5",
+            "note": 84,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_6",
+            "note": 88,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_7",
+            "note": 84,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_8",
+            "note": 81,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_9",
+            "note": 84,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_10",
+            "note": 88,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_11",
+            "note": 84,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_12",
+            "note": 81,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_13",
+            "note": 84,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_14",
+            "note": 88,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_15",
+            "note": 84,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_0",
+            "note": 89,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_1",
+            "note": 93,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_2",
+            "note": 96,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_3",
+            "note": 100,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_4",
+            "note": 96,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_5",
+            "note": 93,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_6",
+            "note": 89,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_7",
+            "note": 93,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_8",
+            "note": 96,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_9",
+            "note": 100,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_10",
+            "note": 96,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_11",
+            "note": 93,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_12",
+            "note": 89,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_13",
+            "note": 93,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_14",
+            "note": 96,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_15",
+            "note": 100,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_0",
+            "note": 86,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_1",
+            "note": 89,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_2",
+            "note": 93,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_3",
+            "note": 89,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_4",
+            "note": 86,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_5",
+            "note": 89,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_6",
+            "note": 93,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_7",
+            "note": 89,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_8",
+            "note": 86,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_9",
+            "note": 89,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_10",
+            "note": 93,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_11",
+            "note": 89,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_12",
+            "note": 86,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_13",
+            "note": 89,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_14",
+            "note": 93,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_15",
+            "note": 89,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_0",
+            "note": 88,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_1",
+            "note": 92,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_2",
+            "note": 95,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_3",
+            "note": 98,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_4",
+            "note": 95,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_5",
+            "note": 92,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_6",
+            "note": 88,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_7",
+            "note": 92,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_8",
+            "note": 95,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_9",
+            "note": 98,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_10",
+            "note": 95,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_11",
+            "note": 92,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_12",
+            "note": 88,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_13",
+            "note": 92,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_14",
+            "note": 95,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_15",
+            "note": 98,
+            "step": 63,
+            "duration": 1,
+            "velocity": 0.7
+          }
+        ],
+        "ch_bass_gb": [
+          {
+            "id": "bass_0_0",
+            "note": 45,
+            "step": 0,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_0_2",
+            "note": 52,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_0_4",
+            "note": 57,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_0_6",
+            "note": 52,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_0_8",
+            "note": 45,
+            "step": 8,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_0_10",
+            "note": 52,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_0_12",
+            "note": 57,
+            "step": 12,
+            "duration": 3.5,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_1_0",
+            "note": 53,
+            "step": 16,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_1_2",
+            "note": 60,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_1_4",
+            "note": 65,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_1_6",
+            "note": 60,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_1_8",
+            "note": 53,
+            "step": 24,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_1_10",
+            "note": 60,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_1_12",
+            "note": 65,
+            "step": 28,
+            "duration": 3.5,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_2_0",
+            "note": 50,
+            "step": 32,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_2_2",
+            "note": 57,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_2_4",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_2_6",
+            "note": 57,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_2_8",
+            "note": 50,
+            "step": 40,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_2_10",
+            "note": 57,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_2_12",
+            "note": 62,
+            "step": 44,
+            "duration": 3.5,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_3_0",
+            "note": 52,
+            "step": 48,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_3_2",
+            "note": 59,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_3_4",
+            "note": 64,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_3_6",
+            "note": 59,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_3_8",
+            "note": 52,
+            "step": 56,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_3_10",
+            "note": 59,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_3_12",
+            "note": 64,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 0.96
+          }
+        ],
+        "ch_drums_gb": [
+          {
+            "id": "dk_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_0_6",
+            "note": 48,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_0_10",
+            "note": 48,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_0_4",
+            "note": 50,
+            "step": 4,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_0_12",
+            "note": 50,
+            "step": 12,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_0_0",
+            "note": 54,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_1",
+            "note": 54,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_2",
+            "note": 58,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_3",
+            "note": 54,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_4",
+            "note": 54,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_5",
+            "note": 54,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_6",
+            "note": 58,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_7",
+            "note": 54,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_8",
+            "note": 54,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_9",
+            "note": 54,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_10",
+            "note": 58,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_11",
+            "note": 54,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_12",
+            "note": 54,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_13",
+            "note": 54,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_14",
+            "note": 58,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_15",
+            "note": 54,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dk_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_1_6",
+            "note": 48,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_1_10",
+            "note": 48,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_1_4",
+            "note": 50,
+            "step": 20,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_1_12",
+            "note": 50,
+            "step": 28,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_1_0",
+            "note": 54,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_1",
+            "note": 54,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_2",
+            "note": 58,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_3",
+            "note": 54,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_4",
+            "note": 54,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_5",
+            "note": 54,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_6",
+            "note": 58,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_7",
+            "note": 54,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_8",
+            "note": 54,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_9",
+            "note": 54,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_10",
+            "note": 58,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_11",
+            "note": 54,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_12",
+            "note": 54,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_13",
+            "note": 54,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_14",
+            "note": 58,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_15",
+            "note": 54,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dk_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_2_6",
+            "note": 48,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_2_10",
+            "note": 48,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_2_4",
+            "note": 50,
+            "step": 36,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_2_12",
+            "note": 50,
+            "step": 44,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_2_0",
+            "note": 54,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_1",
+            "note": 54,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_2",
+            "note": 58,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_3",
+            "note": 54,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_4",
+            "note": 54,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_5",
+            "note": 54,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_6",
+            "note": 58,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_7",
+            "note": 54,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_8",
+            "note": 54,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_9",
+            "note": 54,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_10",
+            "note": 58,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_11",
+            "note": 54,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_12",
+            "note": 54,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_13",
+            "note": 54,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_14",
+            "note": 58,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_15",
+            "note": 54,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dk_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_3_6",
+            "note": 48,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_3_10",
+            "note": 48,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_3_4",
+            "note": 50,
+            "step": 52,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_3_0",
+            "note": 54,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_1",
+            "note": 54,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_2",
+            "note": 58,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_3",
+            "note": 54,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_4",
+            "note": 54,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_5",
+            "note": 54,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_6",
+            "note": 58,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_7",
+            "note": 54,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_8",
+            "note": 54,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_9",
+            "note": 54,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_10",
+            "note": 58,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_11",
+            "note": 54,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "fill_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "fill_3_13",
+            "note": 50,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.88
+          },
+          {
+            "id": "fill_3_14",
+            "note": 50,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.9600000000000001
+          },
+          {
+            "id": "fill_3_15",
+            "note": 50,
+            "step": 63,
+            "duration": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_bridge_1788845950242",
+      "name": "Cinematic Story Prologue - Bridge (Breakdown)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "lead_0_0",
+            "note": 69,
+            "step": 0,
+            "duration": 7.199999999999999,
+            "velocity": 0.738
+          },
+          {
+            "id": "lead_0_10",
+            "note": 81,
+            "step": 10,
+            "duration": 7.199999999999999,
+            "velocity": 0.7789999999999999
+          },
+          {
+            "id": "lead_1_5",
+            "note": 79,
+            "step": 21,
+            "duration": 5.760000000000001,
+            "velocity": 0.656
+          },
+          {
+            "id": "lead_2_0",
+            "note": 86,
+            "step": 32,
+            "duration": 5.760000000000001,
+            "velocity": 0.7789999999999999
+          },
+          {
+            "id": "lead_2_8",
+            "note": 82,
+            "step": 40,
+            "duration": 6.720000000000001,
+            "velocity": 0.7789999999999999
+          },
+          {
+            "id": "lead_3_2",
+            "note": 80,
+            "step": 50,
+            "duration": 6.720000000000001,
+            "velocity": 0.697
+          },
+          {
+            "id": "lead_3_10",
+            "note": 86,
+            "step": 58,
+            "duration": 4.8,
+            "velocity": 0.738
+          }
+        ],
+        "ch_harm_gb": [
+          {
+            "id": "arp_0_0",
+            "note": 69,
+            "step": 0,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_4",
+            "note": 72,
+            "step": 4,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_8",
+            "note": 76,
+            "step": 8,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_12",
+            "note": 69,
+            "step": 12,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_0",
+            "note": 77,
+            "step": 16,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_4",
+            "note": 81,
+            "step": 20,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_8",
+            "note": 84,
+            "step": 24,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_12",
+            "note": 88,
+            "step": 28,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_0",
+            "note": 74,
+            "step": 32,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_4",
+            "note": 77,
+            "step": 36,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_8",
+            "note": 81,
+            "step": 40,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_12",
+            "note": 74,
+            "step": 44,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_0",
+            "note": 76,
+            "step": 48,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_4",
+            "note": 80,
+            "step": 52,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_8",
+            "note": 83,
+            "step": 56,
+            "duration": 3.8,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_12",
+            "note": 86,
+            "step": 60,
+            "duration": 3.8,
+            "velocity": 0.6
+          }
+        ],
+        "ch_bass_gb": [
+          {
+            "id": "bass_0_0",
+            "note": 45,
+            "step": 0,
+            "duration": 15.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "bass_1_0",
+            "note": 53,
+            "step": 16,
+            "duration": 15.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "bass_2_0",
+            "note": 50,
+            "step": 32,
+            "duration": 15.5,
+            "velocity": 0.75
+          },
+          {
+            "id": "bass_3_0",
+            "note": 52,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.75
+          }
+        ],
+        "ch_drums_gb": [
+          {
+            "id": "dk_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "ds_0_8",
+            "note": 50,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "dh_0_0",
+            "note": 54,
+            "step": 0,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_0_4",
+            "note": 54,
+            "step": 4,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_0_8",
+            "note": 54,
+            "step": 8,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_0_12",
+            "note": 54,
+            "step": 12,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dk_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "ds_1_8",
+            "note": 50,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "dh_1_0",
+            "note": 54,
+            "step": 16,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_1_4",
+            "note": 54,
+            "step": 20,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_1_8",
+            "note": 54,
+            "step": 24,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_1_12",
+            "note": 54,
+            "step": 28,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dk_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "ds_2_8",
+            "note": 50,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "dh_2_0",
+            "note": 54,
+            "step": 32,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_2_4",
+            "note": 54,
+            "step": 36,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_2_8",
+            "note": 54,
+            "step": 40,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_2_12",
+            "note": 54,
+            "step": 44,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dk_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "ds_3_8",
+            "note": 50,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "dh_3_0",
+            "note": 54,
+            "step": 48,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_3_4",
+            "note": 54,
+            "step": 52,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_3_8",
+            "note": 54,
+            "step": 56,
+            "duration": 1.5,
+            "velocity": 0.5
+          },
+          {
+            "id": "dh_3_12",
+            "note": 54,
+            "step": 60,
+            "duration": 1.5,
+            "velocity": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_chorus_reprise_1788845950242",
+      "name": "Cinematic Story Prologue - Chorus (Climax)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "lead_0_0",
+            "note": 81,
+            "step": 0,
+            "duration": 6,
+            "velocity": 0.98
+          },
+          {
+            "id": "lead_0_10",
+            "note": 93,
+            "step": 10,
+            "duration": 6,
+            "velocity": 1
+          },
+          {
+            "id": "lead_1_5",
+            "note": 91,
+            "step": 21,
+            "duration": 4.800000000000001,
+            "velocity": 0.88
+          },
+          {
+            "id": "lead_2_0",
+            "note": 98,
+            "step": 32,
+            "duration": 4.800000000000001,
+            "velocity": 1
+          },
+          {
+            "id": "lead_2_8",
+            "note": 94,
+            "step": 40,
+            "duration": 5.6000000000000005,
+            "velocity": 1
+          },
+          {
+            "id": "lead_3_2",
+            "note": 92,
+            "step": 50,
+            "duration": 5.6000000000000005,
+            "velocity": 0.9299999999999999
+          },
+          {
+            "id": "lead_3_10",
+            "note": 98,
+            "step": 58,
+            "duration": 4,
+            "velocity": 0.98
+          }
+        ],
+        "ch_harm_gb": [
+          {
+            "id": "arp_0_0",
+            "note": 81,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_1",
+            "note": 84,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_2",
+            "note": 88,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_3",
+            "note": 84,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_4",
+            "note": 81,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_5",
+            "note": 84,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_6",
+            "note": 88,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_7",
+            "note": 84,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_8",
+            "note": 81,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_9",
+            "note": 84,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_10",
+            "note": 88,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_11",
+            "note": 84,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_12",
+            "note": 81,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_0_13",
+            "note": 84,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_14",
+            "note": 88,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_0_15",
+            "note": 84,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_0",
+            "note": 89,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_1",
+            "note": 93,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_2",
+            "note": 96,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_3",
+            "note": 100,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_4",
+            "note": 96,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_5",
+            "note": 93,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_6",
+            "note": 89,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_7",
+            "note": 93,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_8",
+            "note": 96,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_9",
+            "note": 100,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_10",
+            "note": 96,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_11",
+            "note": 93,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_12",
+            "note": 89,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_1_13",
+            "note": 93,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_14",
+            "note": 96,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_1_15",
+            "note": 100,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_0",
+            "note": 86,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_1",
+            "note": 89,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_2",
+            "note": 93,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_3",
+            "note": 89,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_4",
+            "note": 86,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_5",
+            "note": 89,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_6",
+            "note": 93,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_7",
+            "note": 89,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_8",
+            "note": 86,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_9",
+            "note": 89,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_10",
+            "note": 93,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_11",
+            "note": 89,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_12",
+            "note": 86,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_2_13",
+            "note": 89,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_14",
+            "note": 93,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_2_15",
+            "note": 89,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_0",
+            "note": 88,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_1",
+            "note": 92,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_2",
+            "note": 95,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_3",
+            "note": 98,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_4",
+            "note": 95,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_5",
+            "note": 92,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_6",
+            "note": 88,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_7",
+            "note": 92,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_8",
+            "note": 95,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_9",
+            "note": 98,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_10",
+            "note": 95,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_11",
+            "note": 92,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_12",
+            "note": 88,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "arp_3_13",
+            "note": 92,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_14",
+            "note": 95,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.7
+          },
+          {
+            "id": "arp_3_15",
+            "note": 98,
+            "step": 63,
+            "duration": 1,
+            "velocity": 0.7
+          }
+        ],
+        "ch_bass_gb": [
+          {
+            "id": "bass_0_0",
+            "note": 45,
+            "step": 0,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_0_2",
+            "note": 52,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_0_4",
+            "note": 57,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_0_6",
+            "note": 52,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_0_8",
+            "note": 45,
+            "step": 8,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_0_10",
+            "note": 52,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_0_12",
+            "note": 57,
+            "step": 12,
+            "duration": 3.5,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_1_0",
+            "note": 53,
+            "step": 16,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_1_2",
+            "note": 60,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_1_4",
+            "note": 65,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_1_6",
+            "note": 60,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_1_8",
+            "note": 53,
+            "step": 24,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_1_10",
+            "note": 60,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_1_12",
+            "note": 65,
+            "step": 28,
+            "duration": 3.5,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_2_0",
+            "note": 50,
+            "step": 32,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_2_2",
+            "note": 57,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_2_4",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_2_6",
+            "note": 57,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_2_8",
+            "note": 50,
+            "step": 40,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_2_10",
+            "note": 57,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_2_12",
+            "note": 62,
+            "step": 44,
+            "duration": 3.5,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_3_0",
+            "note": 52,
+            "step": 48,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_3_2",
+            "note": 59,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_3_4",
+            "note": 64,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.96
+          },
+          {
+            "id": "bass_3_6",
+            "note": 59,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_3_8",
+            "note": 52,
+            "step": 56,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "bass_3_10",
+            "note": 59,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.9099999999999999
+          },
+          {
+            "id": "bass_3_12",
+            "note": 64,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 0.96
+          }
+        ],
+        "ch_drums_gb": [
+          {
+            "id": "dk_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_0_6",
+            "note": 48,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_0_10",
+            "note": 48,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_0_4",
+            "note": 50,
+            "step": 4,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_0_12",
+            "note": 50,
+            "step": 12,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_0_0",
+            "note": 54,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_1",
+            "note": 54,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_2",
+            "note": 58,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_3",
+            "note": 54,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_4",
+            "note": 54,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_5",
+            "note": 54,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_6",
+            "note": 58,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_7",
+            "note": 54,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_8",
+            "note": 54,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_9",
+            "note": 54,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_10",
+            "note": 58,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_11",
+            "note": 54,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_12",
+            "note": 54,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_13",
+            "note": 54,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_0_14",
+            "note": 58,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_0_15",
+            "note": 54,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dk_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_1_6",
+            "note": 48,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_1_10",
+            "note": 48,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_1_4",
+            "note": 50,
+            "step": 20,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_1_12",
+            "note": 50,
+            "step": 28,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_1_0",
+            "note": 54,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_1",
+            "note": 54,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_2",
+            "note": 58,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_3",
+            "note": 54,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_4",
+            "note": 54,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_5",
+            "note": 54,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_6",
+            "note": 58,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_7",
+            "note": 54,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_8",
+            "note": 54,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_9",
+            "note": 54,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_10",
+            "note": 58,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_11",
+            "note": 54,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_12",
+            "note": 54,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_13",
+            "note": 54,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_1_14",
+            "note": 58,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_1_15",
+            "note": 54,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dk_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_2_6",
+            "note": 48,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_2_10",
+            "note": 48,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_2_4",
+            "note": 50,
+            "step": 36,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_2_12",
+            "note": 50,
+            "step": 44,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_2_0",
+            "note": 54,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_1",
+            "note": 54,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_2",
+            "note": 58,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_3",
+            "note": 54,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_4",
+            "note": 54,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_5",
+            "note": 54,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_6",
+            "note": 58,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_7",
+            "note": 54,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_8",
+            "note": 54,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_9",
+            "note": 54,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_10",
+            "note": 58,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_11",
+            "note": 54,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_12",
+            "note": 54,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_13",
+            "note": 54,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_2_14",
+            "note": 58,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_2_15",
+            "note": 54,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dk_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dk_3_6",
+            "note": 48,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "dk_3_10",
+            "note": 48,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.9500000000000001
+          },
+          {
+            "id": "ds_3_4",
+            "note": 50,
+            "step": 52,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "ds_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 2,
+            "velocity": 1
+          },
+          {
+            "id": "dh_3_0",
+            "note": 54,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_1",
+            "note": 54,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_2",
+            "note": 58,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_3",
+            "note": 54,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_4",
+            "note": 54,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_5",
+            "note": 54,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_6",
+            "note": 58,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_7",
+            "note": 54,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_8",
+            "note": 54,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_9",
+            "note": 54,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "dh_3_10",
+            "note": 58,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.9
+          },
+          {
+            "id": "dh_3_11",
+            "note": 54,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.7000000000000001
+          },
+          {
+            "id": "fill_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "fill_3_13",
+            "note": 50,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.88
+          },
+          {
+            "id": "fill_3_14",
+            "note": 50,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.9600000000000001
+          },
+          {
+            "id": "fill_3_15",
+            "note": 50,
+            "step": 63,
+            "duration": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_outro_1788845950242",
+      "name": "Cinematic Story Prologue - Outro (Cadence)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "lead_0_0",
+            "note": 69,
+            "step": 0,
+            "duration": 6,
+            "velocity": 0.9
+          },
+          {
+            "id": "lead_0_10",
+            "note": 81,
+            "step": 10,
+            "duration": 6,
+            "velocity": 0.95
+          },
+          {
+            "id": "lead_1_5",
+            "note": 79,
+            "step": 21,
+            "duration": 4.800000000000001,
+            "velocity": 0.8
+          },
+          {
+            "id": "lead_2_0",
+            "note": 86,
+            "step": 32,
+            "duration": 4.800000000000001,
+            "velocity": 0.95
+          },
+          {
+            "id": "lead_2_8",
+            "note": 82,
+            "step": 40,
+            "duration": 5.6000000000000005,
+            "velocity": 0.95
+          },
+          {
+            "id": "lead_3_2",
+            "note": 80,
+            "step": 50,
+            "duration": 5.6000000000000005,
+            "velocity": 0.85
+          },
+          {
+            "id": "lead_3_10",
+            "note": 86,
+            "step": 58,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "outro_cadence_final",
+            "note": 69,
+            "step": 60,
+            "duration": 4,
+            "velocity": 1
+          }
+        ],
+        "ch_harm_gb": [
+          {
+            "id": "arp_0_0",
+            "note": 69,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_1",
+            "note": 72,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_2",
+            "note": 76,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_3",
+            "note": 72,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_4",
+            "note": 69,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_5",
+            "note": 72,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_6",
+            "note": 76,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_7",
+            "note": 72,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_8",
+            "note": 69,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_9",
+            "note": 72,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_10",
+            "note": 76,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_11",
+            "note": 72,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_12",
+            "note": 69,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_0_13",
+            "note": 72,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_14",
+            "note": 76,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_0_15",
+            "note": 72,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_0",
+            "note": 77,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_1",
+            "note": 81,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_2",
+            "note": 84,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_3",
+            "note": 88,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_4",
+            "note": 84,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_5",
+            "note": 81,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_6",
+            "note": 77,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_7",
+            "note": 81,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_8",
+            "note": 84,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_9",
+            "note": 88,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_10",
+            "note": 84,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_11",
+            "note": 81,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_12",
+            "note": 77,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_1_13",
+            "note": 81,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_14",
+            "note": 84,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_1_15",
+            "note": 88,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_0",
+            "note": 74,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_1",
+            "note": 77,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_2",
+            "note": 81,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_3",
+            "note": 77,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_4",
+            "note": 74,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_5",
+            "note": 77,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_6",
+            "note": 81,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_7",
+            "note": 77,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_8",
+            "note": 74,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_9",
+            "note": 77,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_10",
+            "note": 81,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_11",
+            "note": 77,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_12",
+            "note": 74,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_2_13",
+            "note": 77,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_14",
+            "note": 81,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_2_15",
+            "note": 77,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_0",
+            "note": 76,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_1",
+            "note": 80,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_2",
+            "note": 83,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_3",
+            "note": 86,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_4",
+            "note": 83,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_5",
+            "note": 80,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_6",
+            "note": 76,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_7",
+            "note": 80,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_8",
+            "note": 83,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_9",
+            "note": 86,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_10",
+            "note": 83,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_11",
+            "note": 80,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_12",
+            "note": 76,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "arp_3_13",
+            "note": 80,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_14",
+            "note": 83,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "arp_3_15",
+            "note": 86,
+            "step": 63,
+            "duration": 1,
+            "velocity": 0.6
+          }
+        ],
+        "ch_bass_gb": [
+          {
+            "id": "bass_0_0",
+            "note": 45,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_0_2",
+            "note": 52,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_0_4",
+            "note": 57,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_0_6",
+            "note": 52,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_0_8",
+            "note": 45,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_0_10",
+            "note": 52,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_0_12",
+            "note": 57,
+            "step": 12,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_1_0",
+            "note": 53,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_1_2",
+            "note": 60,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_1_4",
+            "note": 65,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_1_6",
+            "note": 60,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_1_8",
+            "note": 53,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_1_10",
+            "note": 60,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_1_12",
+            "note": 65,
+            "step": 28,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_2_0",
+            "note": 50,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_2_2",
+            "note": 57,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_2_4",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_2_6",
+            "note": 57,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_2_8",
+            "note": 50,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_2_10",
+            "note": 57,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_2_12",
+            "note": 62,
+            "step": 44,
+            "duration": 3.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_3_0",
+            "note": 52,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_3_2",
+            "note": 59,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_3_4",
+            "note": 64,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "bass_3_6",
+            "note": 59,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_3_8",
+            "note": 52,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "bass_3_10",
+            "note": 59,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "bass_3_12",
+            "note": 64,
+            "step": 60,
+            "duration": 3.5,
+            "velocity": 0.9
+          }
+        ],
+        "ch_drums_gb": [
+          {
+            "id": "dk_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_0_6",
+            "note": 48,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_0_10",
+            "note": 48,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_0_4",
+            "note": 50,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_0_12",
+            "note": 50,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_0_0",
+            "note": 54,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_1",
+            "note": 54,
+            "step": 1,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_2",
+            "note": 58,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_3",
+            "note": 54,
+            "step": 3,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_4",
+            "note": 54,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_5",
+            "note": 54,
+            "step": 5,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_6",
+            "note": 58,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_7",
+            "note": 54,
+            "step": 7,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_8",
+            "note": 54,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_9",
+            "note": 54,
+            "step": 9,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_10",
+            "note": 58,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_11",
+            "note": 54,
+            "step": 11,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_12",
+            "note": 54,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_13",
+            "note": 54,
+            "step": 13,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_0_14",
+            "note": 58,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_0_15",
+            "note": 54,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dk_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_1_6",
+            "note": 48,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_1_10",
+            "note": 48,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_1_4",
+            "note": 50,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_1_12",
+            "note": 50,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_1_0",
+            "note": 54,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_1",
+            "note": 54,
+            "step": 17,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_2",
+            "note": 58,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_3",
+            "note": 54,
+            "step": 19,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_4",
+            "note": 54,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_5",
+            "note": 54,
+            "step": 21,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_6",
+            "note": 58,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_7",
+            "note": 54,
+            "step": 23,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_8",
+            "note": 54,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_9",
+            "note": 54,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_10",
+            "note": 58,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_11",
+            "note": 54,
+            "step": 27,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_12",
+            "note": 54,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_13",
+            "note": 54,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_1_14",
+            "note": 58,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_1_15",
+            "note": 54,
+            "step": 31,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dk_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_2_6",
+            "note": 48,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_2_10",
+            "note": 48,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_2_4",
+            "note": 50,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_2_12",
+            "note": 50,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_2_0",
+            "note": 54,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_1",
+            "note": 54,
+            "step": 33,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_2",
+            "note": 58,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_3",
+            "note": 54,
+            "step": 35,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_4",
+            "note": 54,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_5",
+            "note": 54,
+            "step": 37,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_6",
+            "note": 58,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_7",
+            "note": 54,
+            "step": 39,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_8",
+            "note": 54,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_9",
+            "note": 54,
+            "step": 41,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_10",
+            "note": 58,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_11",
+            "note": 54,
+            "step": 43,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_12",
+            "note": 54,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_13",
+            "note": 54,
+            "step": 45,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_2_14",
+            "note": 58,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_2_15",
+            "note": 54,
+            "step": 47,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dk_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dk_3_6",
+            "note": 48,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "dk_3_10",
+            "note": 48,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "ds_3_4",
+            "note": 50,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "ds_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "dh_3_0",
+            "note": 54,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_1",
+            "note": 54,
+            "step": 49,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_2",
+            "note": 58,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_3",
+            "note": 54,
+            "step": 51,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_4",
+            "note": 54,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_5",
+            "note": 54,
+            "step": 53,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_6",
+            "note": 58,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_7",
+            "note": 54,
+            "step": 55,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_8",
+            "note": 54,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_9",
+            "note": 54,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "dh_3_10",
+            "note": 58,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.85
+          },
+          {
+            "id": "dh_3_11",
+            "note": 54,
+            "step": 59,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "fill_3_12",
+            "note": 50,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.75
+          },
+          {
+            "id": "fill_3_13",
+            "note": 50,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.83
+          },
+          {
+            "id": "fill_3_14",
+            "note": 50,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.91
+          },
+          {
+            "id": "fill_3_15",
+            "note": 50,
+            "step": 63,
+            "duration": 1,
+            "velocity": 0.99
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_1",
+      "name": "Track 1 (Lead)",
+      "color": "#38bdf8",
+      "volume": 0.85,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_2",
+      "name": "Track 2 (Arp)",
+      "color": "#818cf8",
+      "volume": 0.75,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_3",
+      "name": "Track 3 (Bass)",
+      "color": "#34d399",
+      "volume": 0.9,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_4",
+      "name": "Track 4 (Drums)",
+      "color": "#fbbf24",
+      "volume": 0.8,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_5",
+      "name": "Track 5 (Accompany)",
+      "color": "#f472b6",
+      "volume": 0.8,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_6",
+      "name": "Track 6 (FX)",
+      "color": "#c084fc",
+      "volume": 0.75,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    }
+  ],
+  "timelineClips": [
+    {
+      "id": "clip_1",
+      "trackIndex": 0,
+      "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_1",
+      "name": "Pattern 1",
+      "color": "#4f46e5",
+      "muted": false
+    },
+    {
+      "id": "clip_1788845950242_intro_0",
+      "trackIndex": 0,
+      "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_intro_1788845950242",
+      "name": "Intro",
+      "color": "#f59e0b",
+      "muted": false
+    },
+    {
+      "id": "clip_1788845950242_verse_0",
+      "trackIndex": 0,
+      "startStep": 64,
+      "lengthSteps": 64,
+      "patternId": "pat_verse_1788845950242",
+      "name": "Verse (Theme A)",
+      "color": "#6366f1",
+      "muted": false
+    },
+    {
+      "id": "clip_1788845950242_chorus_0",
+      "trackIndex": 0,
+      "startStep": 128,
+      "lengthSteps": 64,
+      "patternId": "pat_chorus_1788845950242",
+      "name": "Chorus (Theme B)",
+      "color": "#ec4899",
+      "muted": false
+    },
+    {
+      "id": "clip_1788845950242_bridge_0",
+      "trackIndex": 0,
+      "startStep": 192,
+      "lengthSteps": 64,
+      "patternId": "pat_bridge_1788845950242",
+      "name": "Bridge (Breakdown)",
+      "color": "#8b5cf6",
+      "muted": false
+    },
+    {
+      "id": "clip_1788845950242_chorus_reprise_0",
+      "trackIndex": 0,
+      "startStep": 256,
+      "lengthSteps": 64,
+      "patternId": "pat_chorus_reprise_1788845950242",
+      "name": "Chorus (Climax)",
+      "color": "#ec4899",
+      "muted": false
+    },
+    {
+      "id": "clip_1788845950242_outro_0",
+      "trackIndex": 0,
+      "startStep": 320,
+      "lengthSteps": 64,
+      "patternId": "pat_outro_1788845950242",
+      "name": "Outro (Cadence)",
+      "color": "#10b981",
+      "muted": false
+    }
+  ],
+  "dsp": {
+    "enabled": true,
+    "resampleRate": 22050,
+    "bitDepth": 12,
+    "reverbEnabled": true,
+    "reverbDecay": 3.2,
+    "reverbWet": 0.42,
+    "filterCutoff": 14000,
+    "filterResonance": 1.2
+  },
+  "loopStartStep": 0,
+  "loopLengthSteps": 384,
+  "scaleRoot": 9,
+  "scaleMode": "minor"
+}

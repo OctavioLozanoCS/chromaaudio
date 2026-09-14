@@ -1,0 +1,2799 @@
+{
+  "version": "1.0.0",
+  "name": "The Whispering Canopy (Idyllia Woods)",
+  "bpm": 112,
+  "snapGrid": 1,
+  "activePatternId": "pat_winding_trail_1789276672526",
+  "channels": [
+    {
+      "id": "ch_forest_pipe",
+      "name": "🪈 Forest Reed Whistle",
+      "color": "#38bdf8",
+      "type": "soundfont",
+      "preset": "gm_flute",
+      "volume": 0.82,
+      "pan": -0.12,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.015,
+      "decay": 0.18,
+      "sustain": 0.75,
+      "release": 0.18
+    },
+    {
+      "id": "ch_nylon_rhythm",
+      "name": "🎸 Nylon Trail Guitar",
+      "color": "#fbbf24",
+      "type": "soundfont",
+      "preset": "gm_acoustic_guitar_nylon",
+      "volume": 0.74,
+      "pan": 0.22,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.006,
+      "decay": 0.45,
+      "sustain": 0.2,
+      "release": 0.25
+    },
+    {
+      "id": "ch_woodblock_marimba",
+      "name": "🪵 Bouncing Woodblock / Marimba",
+      "color": "#34d399",
+      "type": "chip_synth",
+      "preset": "triangle",
+      "volume": 0.68,
+      "pan": -0.2,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.004,
+      "decay": 0.14,
+      "sustain": 0.08,
+      "release": 0.12
+    },
+    {
+      "id": "ch_bouncing_bass",
+      "name": "🔊 GSC Bouncing Pulse Bass",
+      "color": "#a78bfa",
+      "type": "chip_synth",
+      "preset": "pulse_50",
+      "volume": 0.78,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": -1,
+      "attack": 0.005,
+      "decay": 0.22,
+      "sustain": 0.6,
+      "release": 0.14
+    },
+    {
+      "id": "ch_forest_drums",
+      "name": "🥁 Crisp Forest Percussion",
+      "color": "#f59e0b",
+      "type": "chip_synth",
+      "preset": "noise",
+      "volume": 0.46,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.003,
+      "decay": 0.09,
+      "sustain": 0.02,
+      "release": 0.05
+    },
+    {
+      "id": "ch_glade_chimes",
+      "name": "✨ Glade Folklore Chimes",
+      "color": "#c084fc",
+      "type": "soundfont",
+      "preset": "gm_music_box",
+      "volume": 0.58,
+      "pan": 0.25,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 0.9,
+      "sustain": 0.15,
+      "release": 0.5
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pat_forest_gate_1789278147248",
+      "name": "Idyllia Woods - 0. Forest Gate (Intro)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_forest_pipe": [
+          {
+            "id": "in_pipe_0",
+            "note": 69,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_pipe_1",
+            "note": 71,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.78
+          },
+          {
+            "id": "in_pipe_2",
+            "note": 72,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.82
+          },
+          {
+            "id": "in_pipe_3",
+            "note": 74,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.85
+          }
+        ],
+        "ch_nylon_rhythm": [
+          {
+            "id": "in_gtr_0",
+            "note": 57,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_1",
+            "note": 64,
+            "step": 4,
+            "duration": 4,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_gtr_2",
+            "note": 69,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "in_gtr_3",
+            "note": 71,
+            "step": 12,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "in_gtr_4",
+            "note": 54,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_5",
+            "note": 62,
+            "step": 20,
+            "duration": 4,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_gtr_6",
+            "note": 69,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "in_gtr_7",
+            "note": 72,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_8",
+            "note": 52,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "in_gtr_9",
+            "note": 59,
+            "step": 36,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "in_gtr_10",
+            "note": 64,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_gtr_11",
+            "note": 67,
+            "step": 44,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_gtr_12",
+            "note": 57,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_gtr_13",
+            "note": 64,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "in_gtr_14",
+            "note": 69,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_gtr_15",
+            "note": 71,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.78
+          }
+        ],
+        "ch_woodblock_marimba": [
+          {
+            "id": "in_wb_0",
+            "note": 74,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "in_wb_1",
+            "note": 79,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "in_wb_2",
+            "note": 74,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.48
+          },
+          {
+            "id": "in_wb_3",
+            "note": 74,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.55
+          },
+          {
+            "id": "in_wb_4",
+            "note": 79,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.5
+          },
+          {
+            "id": "in_wb_5",
+            "note": 74,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.58
+          },
+          {
+            "id": "in_wb_6",
+            "note": 79,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "in_wb_7",
+            "note": 74,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_wb_8",
+            "note": 79,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.55
+          },
+          {
+            "id": "in_wb_9",
+            "note": 74,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_wb_10",
+            "note": 79,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.6
+          }
+        ],
+        "ch_bouncing_bass": [
+          {
+            "id": "in_bass_0",
+            "note": 45,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_bass_1",
+            "note": 45,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_bass_2",
+            "note": 45,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_bass_3",
+            "note": 52,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_bass_4",
+            "note": 55,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.82
+          }
+        ],
+        "ch_forest_drums": [
+          {
+            "id": "in_hat_32",
+            "note": 74,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_36",
+            "note": 74,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_40",
+            "note": 74,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_44",
+            "note": 74,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_48",
+            "note": 74,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_52",
+            "note": 74,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_hat_56",
+            "note": 74,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.38
+          },
+          {
+            "id": "in_snare_fill_1",
+            "note": 62,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_snare_fill_2",
+            "note": 62,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_snare_fill_3",
+            "note": 62,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.82
+          }
+        ],
+        "ch_glade_chimes": [
+          {
+            "id": "in_chime_0",
+            "note": 81,
+            "step": 0,
+            "duration": 8,
+            "velocity": 0.55
+          },
+          {
+            "id": "in_chime_1",
+            "note": 78,
+            "step": 16,
+            "duration": 8,
+            "velocity": 0.58
+          },
+          {
+            "id": "in_chime_2",
+            "note": 88,
+            "step": 32,
+            "duration": 8,
+            "velocity": 0.6
+          },
+          {
+            "id": "in_chime_3",
+            "note": 81,
+            "step": 48,
+            "duration": 8,
+            "velocity": 0.62
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_winding_trail_1789276672526",
+      "name": "Idyllia Woods - 1. The Winding Trail (March)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_forest_pipe": [
+          {
+            "id": "p1_pipe_0",
+            "note": 76,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_pipe_1",
+            "note": 74,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_pipe_2",
+            "note": 76,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_pipe_3",
+            "note": 79,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_pipe_4",
+            "note": 76,
+            "step": 12,
+            "duration": 4,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_pipe_5",
+            "note": 78,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_pipe_6",
+            "note": 76,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_pipe_7",
+            "note": 74,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_pipe_8",
+            "note": 71,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_pipe_9",
+            "note": 69,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_pipe_10",
+            "note": 72,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_pipe_11",
+            "note": 74,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_pipe_12",
+            "note": 76,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_pipe_13",
+            "note": 78,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_pipe_14",
+            "note": 79,
+            "step": 44,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "p1_pipe_bridge_1",
+            "note": 81,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.88
+          },
+          {
+            "id": "p1_pipe_bridge_2",
+            "note": 79,
+            "step": 52,
+            "duration": 4,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_pipe_bridge_3",
+            "note": 76,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_pipe_bridge_4",
+            "note": 74,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.82
+          }
+        ],
+        "ch_nylon_rhythm": [
+          {
+            "id": "p1_gtr_0_0_0",
+            "note": 57,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_0_1",
+            "note": 60,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_0_2",
+            "note": 64,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_1_0",
+            "note": 57,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_0_1_1",
+            "note": 60,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_0_1_2",
+            "note": 64,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_0_2_0",
+            "note": 57,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_2_1",
+            "note": 60,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_2_2",
+            "note": 64,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_0_3_0",
+            "note": 57,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_0_3_1",
+            "note": 60,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_0_3_2",
+            "note": 64,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_1_0_0",
+            "note": 54,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_0_1",
+            "note": 57,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_0_2",
+            "note": 62,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_1_0",
+            "note": 54,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_1_1_1",
+            "note": 57,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_1_1_2",
+            "note": 62,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_1_2_0",
+            "note": 54,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_2_1",
+            "note": 57,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_2_2",
+            "note": 62,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_1_3_0",
+            "note": 54,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_1_3_1",
+            "note": 57,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_1_3_2",
+            "note": 62,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_2_0_0",
+            "note": 55,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_0_1",
+            "note": 59,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_0_2",
+            "note": 64,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_1_0",
+            "note": 55,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_2_1_1",
+            "note": 59,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_2_1_2",
+            "note": 64,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_2_2_0",
+            "note": 55,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_2_1",
+            "note": 59,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_2_2",
+            "note": 64,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_2_3_0",
+            "note": 55,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_2_3_1",
+            "note": 59,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_2_3_2",
+            "note": 64,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_3_0_0",
+            "note": 57,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_0_1",
+            "note": 60,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_0_2",
+            "note": 64,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_1_0",
+            "note": 57,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_3_1_1",
+            "note": 60,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_3_1_2",
+            "note": 64,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_3_2_0",
+            "note": 57,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_2_1",
+            "note": 60,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_2_2",
+            "note": 64,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_gtr_3_3_0",
+            "note": 57,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_3_3_1",
+            "note": 60,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_gtr_3_3_2",
+            "note": 64,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.72
+          }
+        ],
+        "ch_woodblock_marimba": [
+          {
+            "id": "p1_wb_0",
+            "note": 74,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_2",
+            "note": 79,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_4",
+            "note": 74,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_6",
+            "note": 79,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_8",
+            "note": 74,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_10",
+            "note": 79,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_12",
+            "note": 74,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_14",
+            "note": 79,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_16",
+            "note": 74,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_18",
+            "note": 79,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_20",
+            "note": 74,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_22",
+            "note": 79,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_24",
+            "note": 74,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_26",
+            "note": 79,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_28",
+            "note": 74,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_30",
+            "note": 79,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_32",
+            "note": 74,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_34",
+            "note": 79,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_36",
+            "note": 74,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_38",
+            "note": 79,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_40",
+            "note": 74,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_42",
+            "note": 79,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_44",
+            "note": 74,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_46",
+            "note": 79,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_48",
+            "note": 74,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_50",
+            "note": 79,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_52",
+            "note": 74,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_54",
+            "note": 79,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_56",
+            "note": 74,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_58",
+            "note": 79,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.52
+          },
+          {
+            "id": "p1_wb_60",
+            "note": 74,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_wb_62",
+            "note": 79,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.52
+          }
+        ],
+        "ch_bouncing_bass": [
+          {
+            "id": "p1_bass_0",
+            "note": 45,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_1",
+            "note": 57,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_bass_2",
+            "note": 45,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_bass_3",
+            "note": 52,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_bass_4",
+            "note": 38,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_5",
+            "note": 50,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_bass_6",
+            "note": 38,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_bass_7",
+            "note": 47,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_bass_8",
+            "note": 40,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_9",
+            "note": 52,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p1_bass_10",
+            "note": 43,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p1_bass_11",
+            "note": 55,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_bass_bridge_1",
+            "note": 45,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "p1_bass_bridge_2",
+            "note": 43,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_bass_bridge_3",
+            "note": 40,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_bass_bridge_4",
+            "note": 45,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.82
+          }
+        ],
+        "ch_forest_drums": [
+          {
+            "id": "p1_snare_0_0",
+            "note": 62,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_snare_0_1",
+            "note": 62,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_kick_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_kick_0_1",
+            "note": 48,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_kick_0_2",
+            "note": 48,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_hat_0_2",
+            "note": 74,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_0_6",
+            "note": 74,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_0_14",
+            "note": 74,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_snare_1_0",
+            "note": 62,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_snare_1_1",
+            "note": 62,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_kick_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_kick_1_1",
+            "note": 48,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_kick_1_2",
+            "note": 48,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_hat_1_2",
+            "note": 74,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_1_6",
+            "note": 74,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_1_14",
+            "note": 74,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_snare_2_0",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_snare_2_1",
+            "note": 62,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_kick_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_kick_2_1",
+            "note": 48,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_kick_2_2",
+            "note": 48,
+            "step": 42,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_hat_2_2",
+            "note": 74,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_2_6",
+            "note": 74,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_2_14",
+            "note": 74,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_snare_3_0",
+            "note": 62,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p1_snare_3_1",
+            "note": 62,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p1_kick_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p1_kick_3_1",
+            "note": 48,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "p1_kick_3_2",
+            "note": 48,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_hat_3_2",
+            "note": 74,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_3_6",
+            "note": 74,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.42
+          },
+          {
+            "id": "p1_hat_3_14",
+            "note": 74,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.42
+          }
+        ],
+        "ch_glade_chimes": [
+          {
+            "id": "p1_chime_0",
+            "note": 81,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.6
+          },
+          {
+            "id": "p1_chime_1",
+            "note": 88,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.58
+          },
+          {
+            "id": "p1_chime_2",
+            "note": 78,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "p1_chime_3",
+            "note": 83,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.55
+          },
+          {
+            "id": "p1_chime_4",
+            "note": 79,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.6
+          },
+          {
+            "id": "p1_chime_5",
+            "note": 86,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.58
+          },
+          {
+            "id": "p1_chime_6",
+            "note": 88,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.65
+          },
+          {
+            "id": "p1_chime_7",
+            "note": 81,
+            "step": 56,
+            "duration": 6,
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_canopy_hook_1789276672526",
+      "name": "Idyllia Woods - 2. Heart of the Canopy (Hook)",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_forest_pipe": [
+          {
+            "id": "p2_pipe_0",
+            "note": 74,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.7744
+          },
+          {
+            "id": "p2_pipe_1",
+            "note": 78,
+            "step": 2,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_pipe_2",
+            "note": 79,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_pipe_3",
+            "note": 81,
+            "step": 8,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_pipe_4",
+            "note": 78,
+            "step": 12,
+            "duration": 3,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_pipe_5",
+            "note": 74,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_pipe_6",
+            "note": 71,
+            "step": 18,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_pipe_7",
+            "note": 69,
+            "step": 20,
+            "duration": 4,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_pipe_8",
+            "note": 71,
+            "step": 26,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_pipe_9",
+            "note": 74,
+            "step": 28,
+            "duration": 4,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_pipe_10",
+            "note": 74,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_pipe_11",
+            "note": 78,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.92
+          },
+          {
+            "id": "p2_pipe_12",
+            "note": 79,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.94
+          },
+          {
+            "id": "p2_pipe_13",
+            "note": 81,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_pipe_14",
+            "note": 83,
+            "step": 44,
+            "duration": 3,
+            "velocity": 0.92
+          },
+          {
+            "id": "p2_pipe_15",
+            "note": 81,
+            "step": 48,
+            "duration": 4,
+            "velocity": 0.9
+          },
+          {
+            "id": "p2_pipe_16",
+            "note": 78,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_pipe_17",
+            "note": 76,
+            "step": 56,
+            "duration": 4,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_pipe_18",
+            "note": 69,
+            "step": 60,
+            "duration": 4,
+            "velocity": 0.85
+          }
+        ],
+        "ch_nylon_rhythm": [
+          {
+            "id": "p2_gtr_0_0_0",
+            "note": 62,
+            "step": 0,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_0_1",
+            "note": 69,
+            "step": 0,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_0_2",
+            "note": 74,
+            "step": 0,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_1_0",
+            "note": 62,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_1_1",
+            "note": 69,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_1_2",
+            "note": 74,
+            "step": 4,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_2_0",
+            "note": 62,
+            "step": 8,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_2_1",
+            "note": 69,
+            "step": 8,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_2_2",
+            "note": 74,
+            "step": 8,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_0_3_0",
+            "note": 62,
+            "step": 12,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_3_1",
+            "note": 69,
+            "step": 12,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_0_3_2",
+            "note": 74,
+            "step": 12,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_0_0",
+            "note": 57,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_0_1",
+            "note": 64,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_0_2",
+            "note": 69,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_1_0",
+            "note": 57,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_1_1",
+            "note": 64,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_1_2",
+            "note": 69,
+            "step": 20,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_2_0",
+            "note": 57,
+            "step": 24,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_2_1",
+            "note": 64,
+            "step": 24,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_2_2",
+            "note": 69,
+            "step": 24,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_1_3_0",
+            "note": 57,
+            "step": 28,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_3_1",
+            "note": 64,
+            "step": 28,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_1_3_2",
+            "note": 69,
+            "step": 28,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_0_0",
+            "note": 64,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_0_1",
+            "note": 67,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_0_2",
+            "note": 71,
+            "step": 32,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_1_0",
+            "note": 64,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_1_1",
+            "note": 67,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_1_2",
+            "note": 71,
+            "step": 36,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_2_0",
+            "note": 64,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_2_1",
+            "note": 67,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_2_2",
+            "note": 71,
+            "step": 40,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_2_3_0",
+            "note": 64,
+            "step": 44,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_3_1",
+            "note": 67,
+            "step": 44,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_2_3_2",
+            "note": 71,
+            "step": 44,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_0_0",
+            "note": 57,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_0_1",
+            "note": 62,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_0_2",
+            "note": 69,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_1_0",
+            "note": 57,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_1_1",
+            "note": 62,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_1_2",
+            "note": 69,
+            "step": 52,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_2_0",
+            "note": 57,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_2_1",
+            "note": 62,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_2_2",
+            "note": 69,
+            "step": 56,
+            "duration": 3,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_gtr_3_3_0",
+            "note": 57,
+            "step": 60,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_3_1",
+            "note": 62,
+            "step": 60,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_gtr_3_3_2",
+            "note": 69,
+            "step": 60,
+            "duration": 3,
+            "velocity": 0.65
+          }
+        ],
+        "ch_woodblock_marimba": [
+          {
+            "id": "p2_wb_solo_0",
+            "note": 81,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_wb_solo_1",
+            "note": 78,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p2_wb_solo_2",
+            "note": 76,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "p2_wb_solo_3",
+            "note": 71,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_wb_solo_4",
+            "note": 86,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_wb_solo_5",
+            "note": 81,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.72
+          },
+          {
+            "id": "p2_wb_solo_6",
+            "note": 74,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.7
+          },
+          {
+            "id": "p2_wb_bg_0",
+            "note": 69,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_4",
+            "note": 69,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_8",
+            "note": 69,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_12",
+            "note": 69,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_16",
+            "note": 69,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_20",
+            "note": 69,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_24",
+            "note": 69,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_28",
+            "note": 69,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_32",
+            "note": 69,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_36",
+            "note": 69,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_40",
+            "note": 69,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_44",
+            "note": 69,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_48",
+            "note": 69,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_52",
+            "note": 69,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_56",
+            "note": 69,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_wb_bg_60",
+            "note": 69,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.45
+          }
+        ],
+        "ch_bouncing_bass": [
+          {
+            "id": "p2_bass_0",
+            "note": 50,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_bass_1",
+            "note": 62,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_bass_2",
+            "note": 50,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_bass_3",
+            "note": 57,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_bass_4",
+            "note": 43,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_5",
+            "note": 55,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_bass_6",
+            "note": 45,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_7",
+            "note": 52,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_bass_8",
+            "note": 50,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_bass_9",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_bass_10",
+            "note": 52,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_11",
+            "note": 59,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.78
+          },
+          {
+            "id": "p2_bass_12",
+            "note": 42,
+            "step": 48,
+            "duration": 3,
+            "velocity": 0.88
+          },
+          {
+            "id": "p2_bass_13",
+            "note": 45,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_bass_14",
+            "note": 47,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "p2_bass_15",
+            "note": 45,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.8
+          }
+        ],
+        "ch_forest_drums": [
+          {
+            "id": "p2_snare_0_0",
+            "note": 62,
+            "step": 4,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_snare_0_1",
+            "note": 62,
+            "step": 12,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_kick_0_0",
+            "note": 48,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_0_1",
+            "note": 48,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_0_2",
+            "note": 48,
+            "step": 8,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_0_3",
+            "note": 48,
+            "step": 14,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_hat_0_2",
+            "note": 74,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_0_6",
+            "note": 74,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_0_10",
+            "note": 74,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_0_14",
+            "note": 74,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_snare_1_0",
+            "note": 62,
+            "step": 20,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_snare_1_1",
+            "note": 62,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_kick_1_0",
+            "note": 48,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_1_1",
+            "note": 48,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_1_2",
+            "note": 48,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_1_3",
+            "note": 48,
+            "step": 30,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_hat_1_2",
+            "note": 74,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_1_6",
+            "note": 74,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_1_10",
+            "note": 74,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_1_14",
+            "note": 74,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_snare_2_0",
+            "note": 62,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_snare_2_1",
+            "note": 62,
+            "step": 44,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_kick_2_0",
+            "note": 48,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_2_1",
+            "note": 48,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_2_2",
+            "note": 48,
+            "step": 40,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_2_3",
+            "note": 48,
+            "step": 46,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_hat_2_2",
+            "note": 74,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_2_6",
+            "note": 74,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_2_10",
+            "note": 74,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_2_14",
+            "note": 74,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_snare_3_0",
+            "note": 62,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "p2_snare_3_1",
+            "note": 62,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.82
+          },
+          {
+            "id": "p2_kick_3_0",
+            "note": 48,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_3_1",
+            "note": 48,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_3_2",
+            "note": 48,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_kick_3_3",
+            "note": 48,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.75
+          },
+          {
+            "id": "p2_hat_3_2",
+            "note": 74,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_3_6",
+            "note": 74,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_3_10",
+            "note": 74,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.45
+          },
+          {
+            "id": "p2_hat_3_14",
+            "note": 74,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.45
+          }
+        ],
+        "ch_glade_chimes": [
+          {
+            "id": "p2_chime_0",
+            "note": 86,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "p2_chime_1",
+            "note": 93,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_chime_2",
+            "note": 81,
+            "step": 16,
+            "duration": 4,
+            "velocity": 0.58
+          },
+          {
+            "id": "p2_chime_3",
+            "note": 86,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.62
+          },
+          {
+            "id": "p2_chime_4",
+            "note": 88,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_chime_5",
+            "note": 93,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.68
+          },
+          {
+            "id": "p2_chime_6",
+            "note": 86,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.65
+          },
+          {
+            "id": "p2_chime_7",
+            "note": 81,
+            "step": 56,
+            "duration": 6,
+            "velocity": 0.6
+          }
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_pipe",
+      "name": "Track 1 (Forest Whistle)",
+      "color": "#38bdf8",
+      "volume": 0.85,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_gtr",
+      "name": "Track 2 (Trail Guitar)",
+      "color": "#fbbf24",
+      "volume": 0.78,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_marimba",
+      "name": "Track 3 (Woodblock Steps)",
+      "color": "#34d399",
+      "volume": 0.72,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_bass",
+      "name": "Track 4 (GSC Pulse Bass)",
+      "color": "#a78bfa",
+      "volume": 0.82,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_drums",
+      "name": "Track 5 (Forest Drums)",
+      "color": "#f59e0b",
+      "volume": 0.6,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_chimes",
+      "name": "Track 6 (Glade Chimes)",
+      "color": "#c084fc",
+      "volume": 0.62,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    }
+  ],
+  "timelineClips": [
+    {
+      "id": "clip_1789278147248_intro",
+      "trackIndex": 0,
+      "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_forest_gate_1789278147248",
+      "name": "0. Forest Gate (Intro)",
+      "color": "#818cf8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789278147248_trail_1",
+      "trackIndex": 0,
+      "startStep": 64,
+      "lengthSteps": 64,
+      "patternId": "pat_winding_trail_1789276672526",
+      "name": "1. The Winding Trail",
+      "color": "#38bdf8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789278147248_canopy_1",
+      "trackIndex": 0,
+      "startStep": 128,
+      "lengthSteps": 64,
+      "patternId": "pat_canopy_hook_1789276672526",
+      "name": "2. Heart of the Canopy",
+      "color": "#34d399",
+      "muted": false
+    },
+    {
+      "id": "clip_1789278147248_trail_2",
+      "trackIndex": 0,
+      "startStep": 192,
+      "lengthSteps": 64,
+      "patternId": "pat_winding_trail_1789276672526",
+      "name": "1. The Winding Trail (Reprise)",
+      "color": "#38bdf8",
+      "muted": false
+    },
+    {
+      "id": "clip_1789278147248_canopy_2",
+      "trackIndex": 0,
+      "startStep": 256,
+      "lengthSteps": 64,
+      "patternId": "pat_canopy_hook_1789276672526",
+      "name": "2. Heart of the Canopy (Reprise)",
+      "color": "#34d399",
+      "muted": false
+    }
+  ],
+  "dsp": {
+    "enabled": true,
+    "resampleRate": 22050,
+    "bitDepth": 12,
+    "reverbEnabled": true,
+    "reverbDecay": 1.8,
+    "reverbWet": 0.22,
+    "filterCutoff": 16500,
+    "filterResonance": 0.7
+  },
+  "loopStartStep": 64,
+  "loopLengthSteps": 256,
+  "scaleRoot": 9,
+  "scaleMode": "dorian"
+}

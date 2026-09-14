@@ -1,0 +1,1411 @@
+{
+  "version": "1.0.0",
+  "name": "Alone in a Monochrome Home",
+  "bpm": 100,
+  "snapGrid": 1,
+  "activePatternId": "pat_1788488127589",
+  "channels": [
+    {
+      "id": "ch_lead_gb",
+      "name": "👾 GB Pulse Lead",
+      "color": "#38bdf8",
+      "type": "fm_synth",
+      "preset": "fm_dark_drone",
+      "volume": 0.7,
+      "pan": -0.15,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.005,
+      "decay": 0.12,
+      "sustain": 0.65,
+      "release": 0.15
+    },
+    {
+      "id": "ch_harm_gb",
+      "name": "⚡ GB Pulse Arp",
+      "color": "#818cf8",
+      "type": "fm_synth",
+      "preset": "fm_metallic_growl",
+      "volume": 0.6,
+      "pan": 0.2,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.01,
+      "decay": 0.15,
+      "sustain": 0.5,
+      "release": 0.2
+    },
+    {
+      "id": "ch_bass_gb",
+      "name": "🔊 4-Bit Wave Bass",
+      "color": "#34d399",
+      "type": "fm_synth",
+      "preset": "fm_solid_bass",
+      "volume": 0.7,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": -1,
+      "attack": 0.005,
+      "decay": 0.2,
+      "sustain": 0.7,
+      "release": 0.1
+    },
+    {
+      "id": "ch_drums_gb",
+      "name": "🥁 LFSR Noise Perc",
+      "color": "#fbbf24",
+      "type": "chip_synth",
+      "preset": "noise",
+      "volume": 0.6,
+      "pan": 0,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.002,
+      "decay": 0.12,
+      "sustain": 0.1,
+      "release": 0.08
+    },
+    {
+      "id": "ch_piano_sf",
+      "name": "🎹 GBA Grand Piano",
+      "color": "#f472b6",
+      "type": "soundfont",
+      "preset": "gm_grand_piano",
+      "volume": 0.7,
+      "pan": -0.1,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.01,
+      "decay": 0.8,
+      "sustain": 0.3,
+      "release": 0.2
+    },
+    {
+      "id": "ch_strings_sf",
+      "name": "🎻 Touhou Strings",
+      "color": "#c084fc",
+      "type": "soundfont",
+      "preset": "gm_retro_choir",
+      "volume": 0.65,
+      "pan": 0.15,
+      "mute": false,
+      "solo": false,
+      "octaveOffset": 0,
+      "attack": 0.08,
+      "decay": 0.5,
+      "sustain": 0.85,
+      "release": 0.4
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pat_1",
+      "name": "Loop",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "note_1788486617764_qkax_0",
+            "note": 62,
+            "step": 16,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486617764_rnnq_1",
+            "note": 65,
+            "step": 8,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486617764_w420_2",
+            "note": 68,
+            "step": 0,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486661212_p44g_0",
+            "note": 72,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486675667_gjcq_0",
+            "note": 74,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486679651_mktr_0",
+            "note": 72,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486684540_y91j_1",
+            "note": 75,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486693251_tagj_0",
+            "note": 77,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486703179_p5s7_0",
+            "note": 78,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486729035_862y_0",
+            "note": 65,
+            "step": 32,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486738883_4juj_0",
+            "note": 69,
+            "step": 40,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486759803_pvkd_0",
+            "note": 60,
+            "step": 48,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486816771_s7en_0",
+            "note": 66,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486820794_f60o_0",
+            "note": 69,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486829563_51to_0",
+            "note": 72,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486836291_lnu4_0",
+            "note": 66,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486837227_k10j_0",
+            "note": 69,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486840307_svgl_0",
+            "note": 73,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.8
+          }
+        ],
+        "ch_drums_gb": [
+          {
+            "id": "note_1788486872619_stvs_0",
+            "note": 69,
+            "step": 0,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486881603_lfoi_0",
+            "note": 71,
+            "step": 4,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486884891_pqef_0",
+            "note": 72,
+            "step": 8,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486892458_bx89_0",
+            "note": 71,
+            "step": 12,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486910450_u3fs_0",
+            "note": 65,
+            "step": 16,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486925275_7fj4_0",
+            "note": 74,
+            "step": 32,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486937866_kd4i_0",
+            "note": 72,
+            "step": 36,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486940938_646e_0",
+            "note": 71,
+            "step": 40,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486962914_gcce_0",
+            "note": 72,
+            "step": 44,
+            "duration": 4,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486994818_o3kd_0",
+            "note": 62,
+            "step": 48,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487032778_apij_0",
+            "note": 55,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487037418_1q1n_0",
+            "note": 55,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487039170_uxrl_0",
+            "note": 55,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487041153_nrqi_0",
+            "note": 55,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487046946_yjum_0",
+            "note": 55,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487047602_dcws_0",
+            "note": 55,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487050354_f0zu_0",
+            "note": 55,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487055018_cpqm_0",
+            "note": 55,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487065202_8zc3_0",
+            "note": 55,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487069642_p24q_0",
+            "note": 55,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487072770_tew8_0",
+            "note": 55,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487073514_tcpc_0",
+            "note": 55,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487074210_wte5_0",
+            "note": 55,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487077394_fmds_0",
+            "note": 55,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487095617_hsuz_0",
+            "note": 55,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.8
+          }
+        ],
+        "ch_harm_gb": [
+          {
+            "id": "note_1788487299817_qqh2_0",
+            "note": 68,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487365577_wh5e_0",
+            "note": 65,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487367096_mt49_0",
+            "note": 62,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487384280_fo2n_0",
+            "note": 65,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487385080_j2g2_0",
+            "note": 65,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487395696_ohru_0",
+            "note": 65,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487400769_n8v9_0",
+            "note": 62,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487425736_n2de_0",
+            "note": 68,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487428480_9tgm_0",
+            "note": 60,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487442585_i5hr_0",
+            "note": 65,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487448560_bj00_0",
+            "note": 62,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487451328_7pap_0",
+            "note": 60,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487458993_0oi9_0",
+            "note": 62,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487460321_jqoz_0",
+            "note": 62,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487461489_t4hv_0",
+            "note": 62,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487465184_gpex_0",
+            "note": 62,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487469009_iviq_0",
+            "note": 65,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487493104_yxhi_0",
+            "note": 62,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487496104_1fox_0",
+            "note": 60,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487498864_pa9s_0",
+            "note": 57,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487506080_i2fr_0",
+            "note": 62,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487506872_bqwi_0",
+            "note": 60,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487511128_gg4z_0",
+            "note": 55,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487528280_o5ch_0",
+            "note": 62,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487532224_m1um_0",
+            "note": 60,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487533368_p15j_0",
+            "note": 57,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487541808_qopz_0",
+            "note": 62,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487544040_ygs4_0",
+            "note": 60,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487548544_7nsf_0",
+            "note": 65,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487555296_bddu_0",
+            "note": 62,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487557424_u07i_0",
+            "note": 60,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487564512_cpai_0",
+            "note": 57,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          }
+        ],
+        "ch_strings_sf": [
+          {
+            "id": "note_1788487879414_8yjv_0",
+            "note": 31,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487880790_6i2s_0",
+            "note": 31,
+            "step": 3,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487884175_d2k6_0",
+            "note": 29,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487904206_lobh_0",
+            "note": 29,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487909983_izg0_0",
+            "note": 26,
+            "step": 13,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487912702_eay9_0",
+            "note": 26,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487915335_a0m4_0",
+            "note": 29,
+            "step": 19,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487916670_zpe4_0",
+            "note": 29,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487918367_i9j5_0",
+            "note": 31,
+            "step": 25,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487920008_8pzs_0",
+            "note": 31,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_1788488127589",
+      "name": "Mellow Loop",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "note_1788486617764_qkax_0",
+            "note": 62,
+            "step": 16,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486617764_rnnq_1",
+            "note": 65,
+            "step": 8,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486617764_w420_2",
+            "note": 68,
+            "step": 0,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486661212_p44g_0",
+            "note": 72,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486675667_gjcq_0",
+            "note": 74,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486679651_mktr_0",
+            "note": 72,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486684540_y91j_1",
+            "note": 75,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486693251_tagj_0",
+            "note": 77,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486703179_p5s7_0",
+            "note": 78,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486729035_862y_0",
+            "note": 65,
+            "step": 32,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486738883_4juj_0",
+            "note": 69,
+            "step": 40,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486759803_pvkd_0",
+            "note": 60,
+            "step": 48,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486816771_s7en_0",
+            "note": 66,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486820794_f60o_0",
+            "note": 69,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486829563_51to_0",
+            "note": 72,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486836291_lnu4_0",
+            "note": 66,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486837227_k10j_0",
+            "note": 69,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486840307_svgl_0",
+            "note": 73,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.8
+          }
+        ],
+        "ch_drums_gb": [],
+        "ch_harm_gb": [
+          {
+            "id": "note_1788487299817_qqh2_0",
+            "note": 68,
+            "step": 0,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487365577_wh5e_0",
+            "note": 65,
+            "step": 2,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487367096_mt49_0",
+            "note": 62,
+            "step": 4,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487384280_fo2n_0",
+            "note": 65,
+            "step": 8,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487385080_j2g2_0",
+            "note": 65,
+            "step": 10,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487395696_ohru_0",
+            "note": 65,
+            "step": 6,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487400769_n8v9_0",
+            "note": 62,
+            "step": 12,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487425736_n2de_0",
+            "note": 68,
+            "step": 14,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487428480_9tgm_0",
+            "note": 60,
+            "step": 15,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487442585_i5hr_0",
+            "note": 65,
+            "step": 16,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487448560_bj00_0",
+            "note": 62,
+            "step": 18,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487451328_7pap_0",
+            "note": 60,
+            "step": 20,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487458993_0oi9_0",
+            "note": 62,
+            "step": 22,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487460321_jqoz_0",
+            "note": 62,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487461489_t4hv_0",
+            "note": 62,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487465184_gpex_0",
+            "note": 62,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487469009_iviq_0",
+            "note": 65,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487493104_yxhi_0",
+            "note": 62,
+            "step": 32,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487496104_1fox_0",
+            "note": 60,
+            "step": 34,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487498864_pa9s_0",
+            "note": 57,
+            "step": 36,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487506080_i2fr_0",
+            "note": 62,
+            "step": 38,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487506872_bqwi_0",
+            "note": 60,
+            "step": 40,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487511128_gg4z_0",
+            "note": 55,
+            "step": 42,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487528280_o5ch_0",
+            "note": 62,
+            "step": 44,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487532224_m1um_0",
+            "note": 60,
+            "step": 46,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487533368_p15j_0",
+            "note": 57,
+            "step": 48,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487541808_qopz_0",
+            "note": 62,
+            "step": 50,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487544040_ygs4_0",
+            "note": 60,
+            "step": 52,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487548544_7nsf_0",
+            "note": 65,
+            "step": 54,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487555296_bddu_0",
+            "note": 62,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487557424_u07i_0",
+            "note": 60,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487564512_cpai_0",
+            "note": 57,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          }
+        ],
+        "ch_strings_sf": [
+          {
+            "id": "note_1788487879414_8yjv_0",
+            "note": 31,
+            "step": 0,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487880790_6i2s_0",
+            "note": 31,
+            "step": 3,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487884175_d2k6_0",
+            "note": 29,
+            "step": 6,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487904206_lobh_0",
+            "note": 29,
+            "step": 10,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487909983_izg0_0",
+            "note": 26,
+            "step": 13,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487912702_eay9_0",
+            "note": 26,
+            "step": 16,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487915335_a0m4_0",
+            "note": 29,
+            "step": 19,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487916670_zpe4_0",
+            "note": 29,
+            "step": 22,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487918367_i9j5_0",
+            "note": 31,
+            "step": 25,
+            "duration": 2,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788487920008_8pzs_0",
+            "note": 31,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "pat_1788488223605",
+      "name": "Intro",
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_lead_gb": [
+          {
+            "id": "note_1788486617764_qkax_0",
+            "note": 62,
+            "step": 16,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486617764_rnnq_1",
+            "note": 65,
+            "step": 8,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486617764_w420_2",
+            "note": 68,
+            "step": 0,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486661212_p44g_0",
+            "note": 72,
+            "step": 24,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486675667_gjcq_0",
+            "note": 74,
+            "step": 25,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486679651_mktr_0",
+            "note": 72,
+            "step": 28,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486684540_y91j_1",
+            "note": 75,
+            "step": 29,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486693251_tagj_0",
+            "note": 77,
+            "step": 26,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486703179_p5s7_0",
+            "note": 78,
+            "step": 30,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486729035_862y_0",
+            "note": 65,
+            "step": 32,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486738883_4juj_0",
+            "note": 69,
+            "step": 40,
+            "duration": 8,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486759803_pvkd_0",
+            "note": 60,
+            "step": 48,
+            "duration": 16,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486816771_s7en_0",
+            "note": 66,
+            "step": 56,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486820794_f60o_0",
+            "note": 69,
+            "step": 57,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486829563_51to_0",
+            "note": 72,
+            "step": 58,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486836291_lnu4_0",
+            "note": 66,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486837227_k10j_0",
+            "note": 69,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.8
+          },
+          {
+            "id": "note_1788486840307_svgl_0",
+            "note": 73,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.8
+          }
+        ],
+        "ch_drums_gb": [],
+        "ch_harm_gb": [],
+        "ch_strings_sf": []
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_1",
+      "name": "Track 1 (Lead)",
+      "color": "#38bdf8",
+      "volume": 0.85,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_2",
+      "name": "Track 2 (Arp)",
+      "color": "#818cf8",
+      "volume": 0.75,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_3",
+      "name": "Track 3 (Bass)",
+      "color": "#34d399",
+      "volume": 0.9,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_4",
+      "name": "Track 4 (Drums)",
+      "color": "#fbbf24",
+      "volume": 0.8,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_5",
+      "name": "Track 5 (Accompany)",
+      "color": "#f472b6",
+      "volume": 0.8,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    },
+    {
+      "id": "trk_6",
+      "name": "Track 6 (FX)",
+      "color": "#c084fc",
+      "volume": 0.75,
+      "pan": 0,
+      "mute": false,
+      "solo": false
+    }
+  ],
+  "timelineClips": [
+    {
+      "id": "clip_1788488270244_ko3i",
+      "trackIndex": 0,
+      "startStep": 0,
+      "lengthSteps": 64,
+      "patternId": "pat_1788488223605",
+      "name": "Intro",
+      "color": "#4f46e5",
+      "muted": false
+    },
+    {
+      "id": "clip_1788488471611_su7h",
+      "trackIndex": 0,
+      "startStep": 64,
+      "lengthSteps": 64,
+      "patternId": "pat_1788488127589",
+      "name": "Mellow Loop",
+      "color": "#4f46e5",
+      "muted": false
+    },
+    {
+      "id": "clip_1788488553060_gbdw",
+      "trackIndex": 0,
+      "startStep": 128,
+      "lengthSteps": 64,
+      "patternId": "pat_1",
+      "name": "Loop",
+      "color": "#4f46e5",
+      "muted": false
+    },
+    {
+      "id": "clip_1788488599084_z0xh",
+      "trackIndex": 0,
+      "startStep": 192,
+      "lengthSteps": 64,
+      "patternId": "pat_1",
+      "name": "Loop",
+      "color": "#4f46e5",
+      "muted": false
+    },
+    {
+      "id": "clip_1788488608835_ao8b",
+      "trackIndex": 0,
+      "startStep": 256,
+      "lengthSteps": 64,
+      "patternId": "pat_1788488127589",
+      "name": "Mellow Loop",
+      "color": "#4f46e5",
+      "muted": false
+    }
+  ],
+  "dsp": {
+    "enabled": false,
+    "resampleRate": 18157,
+    "bitDepth": 8,
+    "reverbEnabled": true,
+    "reverbDecay": 1.2,
+    "reverbWet": 0.2,
+    "filterCutoff": 18000,
+    "filterResonance": 1
+  },
+  "loopStartStep": 64,
+  "loopLengthSteps": 256,
+  "scaleRoot": 2,
+  "scaleMode": "phrygian"
+}
