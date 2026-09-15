@@ -106,8 +106,66 @@
     {
       "id": "pat_rose_intro",
       "name": "1. The Rose in the Teeth (Intro)",
-      "steps": 64,
-      "notes": {
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_bandoneon": [
+          {
+            "id": "in_ban_32",
+            "note": 69,
+            "step": 32,
+            "duration": 7,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_ban_40",
+            "note": 67,
+            "step": 40,
+            "duration": 7,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_ban_48",
+            "note": 65,
+            "step": 48,
+            "duration": 6,
+            "velocity": 0.8
+          },
+          {
+            "id": "in_ban_54",
+            "note": 64,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "in_ban_pose_60",
+            "note": 68,
+            "step": 60,
+            "duration": 1,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_ban_pose_61",
+            "note": 69,
+            "step": 61,
+            "duration": 1,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_ban_pose_62",
+            "note": 71,
+            "step": 62,
+            "duration": 1,
+            "velocity": 0.95
+          },
+          {
+            "id": "in_ban_pose_63",
+            "note": 72,
+            "step": 63,
+            "duration": 1,
+            "velocity": 1
+          }
+        ],
         "ch_nylon_guitar": [
           {
             "id": "in_gt1_0_n0",
@@ -943,6 +1001,136 @@
             "velocity": 0.9
           }
         ],
+        "ch_pizz_strings": [
+          {
+            "id": "in_pz_34",
+            "note": 69,
+            "step": 34,
+            "duration": 1.2,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_pz_38",
+            "note": 69,
+            "step": 38,
+            "duration": 1.2,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_pz_42",
+            "note": 67,
+            "step": 42,
+            "duration": 1.2,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_pz_46",
+            "note": 67,
+            "step": 46,
+            "duration": 1.2,
+            "velocity": 0.65
+          },
+          {
+            "id": "in_pz_50",
+            "note": 65,
+            "step": 50,
+            "duration": 1.2,
+            "velocity": 0.7
+          },
+          {
+            "id": "in_pz_54",
+            "note": 64,
+            "step": 54,
+            "duration": 1.2,
+            "velocity": 0.75
+          },
+          {
+            "id": "in_pz_56",
+            "note": 64,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.9
+          }
+        ],
+        "ch_tango_bass": [
+          {
+            "id": "in_bs3_bs_32_0",
+            "note": 45,
+            "step": 32,
+            "duration": 2.8,
+            "velocity": 0.87
+          },
+          {
+            "id": "in_bs3_bs_32_6",
+            "note": 45,
+            "step": 38,
+            "duration": 1.6,
+            "velocity": 0.72
+          },
+          {
+            "id": "in_bs3_bs_32_8",
+            "note": 52,
+            "step": 40,
+            "duration": 2.8,
+            "velocity": 0.82
+          },
+          {
+            "id": "in_bs3_bs_32_12",
+            "note": 52,
+            "step": 44,
+            "duration": 1.6,
+            "velocity": 0.74
+          },
+          {
+            "id": "in_bs3_bs_32_14",
+            "note": 55,
+            "step": 46,
+            "duration": 1.6,
+            "velocity": 0.7699999999999999
+          },
+          {
+            "id": "in_bs4_bs_48_0",
+            "note": 41,
+            "step": 48,
+            "duration": 2.8,
+            "velocity": 0.89
+          },
+          {
+            "id": "in_bs4_bs_48_6",
+            "note": 41,
+            "step": 54,
+            "duration": 1.6,
+            "velocity": 0.74
+          },
+          {
+            "id": "in_bs4_bs_48_8",
+            "note": 48,
+            "step": 56,
+            "duration": 2.8,
+            "velocity": 0.84
+          },
+          {
+            "id": "in_bs4_bs_48_12",
+            "note": 48,
+            "step": 60,
+            "duration": 1.6,
+            "velocity": 0.76
+          },
+          {
+            "id": "in_bs4_bs_48_14",
+            "note": 40,
+            "step": 62,
+            "duration": 1.6,
+            "velocity": 0.7899999999999999
+          },
+          {
+            "id": "in_bs_hit_56",
+            "note": 40,
+            "step": 56,
+            "duration": 3.5,
+            "velocity": 0.92
+          }
+        ],
         "ch_castanets_perc": [
           {
             "id": "in_cas2_cas_16",
@@ -1141,201 +1329,14 @@
             "velocity": 0.85
           }
         ],
-        "ch_tango_bass": [
-          {
-            "id": "in_bs3_bs_32_0",
-            "note": 45,
-            "step": 32,
-            "duration": 2.8,
-            "velocity": 0.87
-          },
-          {
-            "id": "in_bs3_bs_32_6",
-            "note": 45,
-            "step": 38,
-            "duration": 1.6,
-            "velocity": 0.72
-          },
-          {
-            "id": "in_bs3_bs_32_8",
-            "note": 52,
-            "step": 40,
-            "duration": 2.8,
-            "velocity": 0.82
-          },
-          {
-            "id": "in_bs3_bs_32_12",
-            "note": 52,
-            "step": 44,
-            "duration": 1.6,
-            "velocity": 0.74
-          },
-          {
-            "id": "in_bs3_bs_32_14",
-            "note": 55,
-            "step": 46,
-            "duration": 1.6,
-            "velocity": 0.7699999999999999
-          },
-          {
-            "id": "in_bs4_bs_48_0",
-            "note": 41,
-            "step": 48,
-            "duration": 2.8,
-            "velocity": 0.89
-          },
-          {
-            "id": "in_bs4_bs_48_6",
-            "note": 41,
-            "step": 54,
-            "duration": 1.6,
-            "velocity": 0.74
-          },
-          {
-            "id": "in_bs4_bs_48_8",
-            "note": 48,
-            "step": 56,
-            "duration": 2.8,
-            "velocity": 0.84
-          },
-          {
-            "id": "in_bs4_bs_48_12",
-            "note": 48,
-            "step": 60,
-            "duration": 1.6,
-            "velocity": 0.76
-          },
-          {
-            "id": "in_bs4_bs_48_14",
-            "note": 40,
-            "step": 62,
-            "duration": 1.6,
-            "velocity": 0.7899999999999999
-          },
-          {
-            "id": "in_bs_hit_56",
-            "note": 40,
-            "step": 56,
-            "duration": 3.5,
-            "velocity": 0.92
-          }
-        ],
-        "ch_bandoneon": [
-          {
-            "id": "in_ban_32",
-            "note": 69,
-            "step": 32,
-            "duration": 7,
-            "velocity": 0.75
-          },
-          {
-            "id": "in_ban_40",
-            "note": 67,
-            "step": 40,
-            "duration": 7,
-            "velocity": 0.75
-          },
-          {
-            "id": "in_ban_48",
-            "note": 65,
-            "step": 48,
-            "duration": 6,
-            "velocity": 0.8
-          },
-          {
-            "id": "in_ban_54",
-            "note": 64,
-            "step": 54,
-            "duration": 2,
-            "velocity": 0.85
-          },
-          {
-            "id": "in_ban_pose_60",
-            "note": 68,
-            "step": 60,
-            "duration": 1,
-            "velocity": 0.95
-          },
-          {
-            "id": "in_ban_pose_61",
-            "note": 69,
-            "step": 61,
-            "duration": 1,
-            "velocity": 0.95
-          },
-          {
-            "id": "in_ban_pose_62",
-            "note": 71,
-            "step": 62,
-            "duration": 1,
-            "velocity": 0.95
-          },
-          {
-            "id": "in_ban_pose_63",
-            "note": 72,
-            "step": 63,
-            "duration": 1,
-            "velocity": 1
-          }
-        ],
-        "ch_pizz_strings": [
-          {
-            "id": "in_pz_34",
-            "note": 69,
-            "step": 34,
-            "duration": 1.2,
-            "velocity": 0.65
-          },
-          {
-            "id": "in_pz_38",
-            "note": 69,
-            "step": 38,
-            "duration": 1.2,
-            "velocity": 0.65
-          },
-          {
-            "id": "in_pz_42",
-            "note": 67,
-            "step": 42,
-            "duration": 1.2,
-            "velocity": 0.65
-          },
-          {
-            "id": "in_pz_46",
-            "note": 67,
-            "step": 46,
-            "duration": 1.2,
-            "velocity": 0.65
-          },
-          {
-            "id": "in_pz_50",
-            "note": 65,
-            "step": 50,
-            "duration": 1.2,
-            "velocity": 0.7
-          },
-          {
-            "id": "in_pz_54",
-            "note": 64,
-            "step": 54,
-            "duration": 1.2,
-            "velocity": 0.75
-          },
-          {
-            "id": "in_pz_56",
-            "note": 64,
-            "step": 56,
-            "duration": 2,
-            "velocity": 0.9
-          }
-        ]
+        "ch_romantic_strings": []
       }
     },
     {
       "id": "pat_theme_a",
       "name": "2. Wooing with All My Might (Theme A)",
-      "steps": 64,
-      "notes": {
+      "lengthSteps": 64,
+      "notesByChannel": {
         "ch_bandoneon": [
           {
             "id": "a_ban_0",
@@ -2103,6 +2104,113 @@
             "velocity": 0.92
           }
         ],
+        "ch_pizz_strings": [
+          {
+            "id": "a_pz_0",
+            "note": 69,
+            "step": 0,
+            "duration": 1.2,
+            "velocity": 0.75
+          },
+          {
+            "id": "a_pz_6",
+            "note": 69,
+            "step": 6,
+            "duration": 1.2,
+            "velocity": 0.72
+          },
+          {
+            "id": "a_pz_8",
+            "note": 72,
+            "step": 8,
+            "duration": 1.2,
+            "velocity": 0.75
+          },
+          {
+            "id": "a_pz_14",
+            "note": 69,
+            "step": 14,
+            "duration": 1.2,
+            "velocity": 0.7
+          },
+          {
+            "id": "a_pz_16",
+            "note": 70,
+            "step": 16,
+            "duration": 1.2,
+            "velocity": 0.75
+          },
+          {
+            "id": "a_pz_22",
+            "note": 70,
+            "step": 22,
+            "duration": 1.2,
+            "velocity": 0.72
+          },
+          {
+            "id": "a_pz_24",
+            "note": 74,
+            "step": 24,
+            "duration": 1.2,
+            "velocity": 0.75
+          },
+          {
+            "id": "a_pz_30",
+            "note": 70,
+            "step": 30,
+            "duration": 1.2,
+            "velocity": 0.7
+          },
+          {
+            "id": "a_pz_32",
+            "note": 68,
+            "step": 32,
+            "duration": 1.2,
+            "velocity": 0.78
+          },
+          {
+            "id": "a_pz_38",
+            "note": 68,
+            "step": 38,
+            "duration": 1.2,
+            "velocity": 0.75
+          },
+          {
+            "id": "a_pz_40",
+            "note": 71,
+            "step": 40,
+            "duration": 1.2,
+            "velocity": 0.78
+          },
+          {
+            "id": "a_pz_46",
+            "note": 68,
+            "step": 46,
+            "duration": 1.2,
+            "velocity": 0.72
+          },
+          {
+            "id": "a_pz_48",
+            "note": 69,
+            "step": 48,
+            "duration": 1.2,
+            "velocity": 0.8
+          },
+          {
+            "id": "a_pz_56",
+            "note": 68,
+            "step": 56,
+            "duration": 2.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "a_pz_60",
+            "note": 64,
+            "step": 60,
+            "duration": 2.5,
+            "velocity": 0.92
+          }
+        ],
         "ch_tango_bass": [
           {
             "id": "a_bs1_bs_0_0",
@@ -2243,113 +2351,6 @@
             "step": 60,
             "duration": 3.5,
             "velocity": 0.95
-          }
-        ],
-        "ch_pizz_strings": [
-          {
-            "id": "a_pz_0",
-            "note": 69,
-            "step": 0,
-            "duration": 1.2,
-            "velocity": 0.75
-          },
-          {
-            "id": "a_pz_6",
-            "note": 69,
-            "step": 6,
-            "duration": 1.2,
-            "velocity": 0.72
-          },
-          {
-            "id": "a_pz_8",
-            "note": 72,
-            "step": 8,
-            "duration": 1.2,
-            "velocity": 0.75
-          },
-          {
-            "id": "a_pz_14",
-            "note": 69,
-            "step": 14,
-            "duration": 1.2,
-            "velocity": 0.7
-          },
-          {
-            "id": "a_pz_16",
-            "note": 70,
-            "step": 16,
-            "duration": 1.2,
-            "velocity": 0.75
-          },
-          {
-            "id": "a_pz_22",
-            "note": 70,
-            "step": 22,
-            "duration": 1.2,
-            "velocity": 0.72
-          },
-          {
-            "id": "a_pz_24",
-            "note": 74,
-            "step": 24,
-            "duration": 1.2,
-            "velocity": 0.75
-          },
-          {
-            "id": "a_pz_30",
-            "note": 70,
-            "step": 30,
-            "duration": 1.2,
-            "velocity": 0.7
-          },
-          {
-            "id": "a_pz_32",
-            "note": 68,
-            "step": 32,
-            "duration": 1.2,
-            "velocity": 0.78
-          },
-          {
-            "id": "a_pz_38",
-            "note": 68,
-            "step": 38,
-            "duration": 1.2,
-            "velocity": 0.75
-          },
-          {
-            "id": "a_pz_40",
-            "note": 71,
-            "step": 40,
-            "duration": 1.2,
-            "velocity": 0.78
-          },
-          {
-            "id": "a_pz_46",
-            "note": 68,
-            "step": 46,
-            "duration": 1.2,
-            "velocity": 0.72
-          },
-          {
-            "id": "a_pz_48",
-            "note": 69,
-            "step": 48,
-            "duration": 1.2,
-            "velocity": 0.8
-          },
-          {
-            "id": "a_pz_56",
-            "note": 68,
-            "step": 56,
-            "duration": 2.5,
-            "velocity": 0.9
-          },
-          {
-            "id": "a_pz_60",
-            "note": 64,
-            "step": 60,
-            "duration": 2.5,
-            "velocity": 0.92
           }
         ],
         "ch_castanets_perc": [
@@ -2577,163 +2578,15 @@
             "duration": 0.5,
             "velocity": 0.378
           }
-        ]
+        ],
+        "ch_romantic_strings": []
       }
     },
     {
       "id": "pat_theme_b",
       "name": "3. Love in Rose-Colored Glasses (Theme B)",
-      "steps": 64,
-      "notes": {
-        "ch_romantic_strings": [
-          {
-            "id": "b_str_0_f",
-            "note": 53,
-            "step": 0,
-            "duration": 15.5,
-            "velocity": 0.8
-          },
-          {
-            "id": "b_str_0_a",
-            "note": 57,
-            "step": 0,
-            "duration": 15.5,
-            "velocity": 0.8
-          },
-          {
-            "id": "b_str_0_c",
-            "note": 60,
-            "step": 0,
-            "duration": 15.5,
-            "velocity": 0.82
-          },
-          {
-            "id": "b_str_0_e",
-            "note": 64,
-            "step": 0,
-            "duration": 15.5,
-            "velocity": 0.84
-          },
-          {
-            "id": "b_str_16_g",
-            "note": 55,
-            "step": 16,
-            "duration": 7.5,
-            "velocity": 0.8
-          },
-          {
-            "id": "b_str_16_b",
-            "note": 59,
-            "step": 16,
-            "duration": 7.5,
-            "velocity": 0.8
-          },
-          {
-            "id": "b_str_16_d",
-            "note": 62,
-            "step": 16,
-            "duration": 7.5,
-            "velocity": 0.82
-          },
-          {
-            "id": "b_str_24_c",
-            "note": 48,
-            "step": 24,
-            "duration": 7.5,
-            "velocity": 0.84
-          },
-          {
-            "id": "b_str_24_e",
-            "note": 52,
-            "step": 24,
-            "duration": 7.5,
-            "velocity": 0.84
-          },
-          {
-            "id": "b_str_24_g",
-            "note": 55,
-            "step": 24,
-            "duration": 7.5,
-            "velocity": 0.86
-          },
-          {
-            "id": "b_str_24_b",
-            "note": 59,
-            "step": 24,
-            "duration": 7.5,
-            "velocity": 0.88
-          },
-          {
-            "id": "b_str_32_d",
-            "note": 50,
-            "step": 32,
-            "duration": 7.5,
-            "velocity": 0.82
-          },
-          {
-            "id": "b_str_32_f",
-            "note": 53,
-            "step": 32,
-            "duration": 7.5,
-            "velocity": 0.82
-          },
-          {
-            "id": "b_str_32_a",
-            "note": 57,
-            "step": 32,
-            "duration": 7.5,
-            "velocity": 0.85
-          },
-          {
-            "id": "b_str_40_b",
-            "note": 47,
-            "step": 40,
-            "duration": 7.5,
-            "velocity": 0.84
-          },
-          {
-            "id": "b_str_40_d",
-            "note": 50,
-            "step": 40,
-            "duration": 7.5,
-            "velocity": 0.84
-          },
-          {
-            "id": "b_str_40_f",
-            "note": 53,
-            "step": 40,
-            "duration": 7.5,
-            "velocity": 0.86
-          },
-          {
-            "id": "b_str_48_e",
-            "note": 52,
-            "step": 48,
-            "duration": 15.5,
-            "velocity": 0.9
-          },
-          {
-            "id": "b_str_48_gs",
-            "note": 56,
-            "step": 48,
-            "duration": 15.5,
-            "velocity": 0.92
-          },
-          {
-            "id": "b_str_48_b",
-            "note": 59,
-            "step": 48,
-            "duration": 15.5,
-            "velocity": 0.9
-          },
-          {
-            "id": "b_str_48_f",
-            "note": 65,
-            "step": 48,
-            "duration": 15.5,
-            "velocity": 0.95
-          }
-        ],
+      "lengthSteps": 64,
+      "notesByChannel": {
         "ch_bandoneon": [
           {
             "id": "b_ban_0",
@@ -3200,6 +3053,7 @@
             "velocity": 0.82
           }
         ],
+        "ch_pizz_strings": [],
         "ch_tango_bass": [
           {
             "id": "b_bs1_bs_0_0",
@@ -3560,14 +3414,263 @@
             "duration": 1.8,
             "velocity": 0.95
           }
+        ],
+        "ch_romantic_strings": [
+          {
+            "id": "b_str_0_f",
+            "note": 53,
+            "step": 0,
+            "duration": 15.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "b_str_0_a",
+            "note": 57,
+            "step": 0,
+            "duration": 15.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "b_str_0_c",
+            "note": 60,
+            "step": 0,
+            "duration": 15.5,
+            "velocity": 0.82
+          },
+          {
+            "id": "b_str_0_e",
+            "note": 64,
+            "step": 0,
+            "duration": 15.5,
+            "velocity": 0.84
+          },
+          {
+            "id": "b_str_16_g",
+            "note": 55,
+            "step": 16,
+            "duration": 7.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "b_str_16_b",
+            "note": 59,
+            "step": 16,
+            "duration": 7.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "b_str_16_d",
+            "note": 62,
+            "step": 16,
+            "duration": 7.5,
+            "velocity": 0.82
+          },
+          {
+            "id": "b_str_24_c",
+            "note": 48,
+            "step": 24,
+            "duration": 7.5,
+            "velocity": 0.84
+          },
+          {
+            "id": "b_str_24_e",
+            "note": 52,
+            "step": 24,
+            "duration": 7.5,
+            "velocity": 0.84
+          },
+          {
+            "id": "b_str_24_g",
+            "note": 55,
+            "step": 24,
+            "duration": 7.5,
+            "velocity": 0.86
+          },
+          {
+            "id": "b_str_24_b",
+            "note": 59,
+            "step": 24,
+            "duration": 7.5,
+            "velocity": 0.88
+          },
+          {
+            "id": "b_str_32_d",
+            "note": 50,
+            "step": 32,
+            "duration": 7.5,
+            "velocity": 0.82
+          },
+          {
+            "id": "b_str_32_f",
+            "note": 53,
+            "step": 32,
+            "duration": 7.5,
+            "velocity": 0.82
+          },
+          {
+            "id": "b_str_32_a",
+            "note": 57,
+            "step": 32,
+            "duration": 7.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "b_str_40_b",
+            "note": 47,
+            "step": 40,
+            "duration": 7.5,
+            "velocity": 0.84
+          },
+          {
+            "id": "b_str_40_d",
+            "note": 50,
+            "step": 40,
+            "duration": 7.5,
+            "velocity": 0.84
+          },
+          {
+            "id": "b_str_40_f",
+            "note": 53,
+            "step": 40,
+            "duration": 7.5,
+            "velocity": 0.86
+          },
+          {
+            "id": "b_str_48_e",
+            "note": 52,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "b_str_48_gs",
+            "note": 56,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.92
+          },
+          {
+            "id": "b_str_48_b",
+            "note": 59,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.9
+          },
+          {
+            "id": "b_str_48_f",
+            "note": 65,
+            "step": 48,
+            "duration": 15.5,
+            "velocity": 0.95
+          }
         ]
       }
     },
     {
       "id": "pat_bridge",
       "name": "4. The Dramatic Pose (Bridge & Cadenza)",
-      "steps": 64,
-      "notes": {
+      "lengthSteps": 64,
+      "notesByChannel": {
+        "ch_bandoneon": [
+          {
+            "id": "br_ban_16",
+            "note": 74,
+            "step": 16,
+            "duration": 3,
+            "velocity": 0.9
+          },
+          {
+            "id": "br_ban_24",
+            "note": 76,
+            "step": 24,
+            "duration": 4,
+            "velocity": 0.95
+          },
+          {
+            "id": "br_ban_28",
+            "note": 76,
+            "step": 28,
+            "duration": 2,
+            "velocity": 0.5
+          },
+          {
+            "id": "br_ban_32",
+            "note": 81,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "br_ban_34",
+            "note": 80,
+            "step": 34,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "br_ban_36",
+            "note": 81,
+            "step": 36,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "br_ban_38",
+            "note": 83,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.98
+          },
+          {
+            "id": "br_ban_40",
+            "note": 84,
+            "step": 40,
+            "duration": 3.5,
+            "velocity": 1
+          },
+          {
+            "id": "br_ban_44",
+            "note": 83,
+            "step": 44,
+            "duration": 1.8,
+            "velocity": 0.92
+          },
+          {
+            "id": "br_ban_46",
+            "note": 81,
+            "step": 46,
+            "duration": 1.8,
+            "velocity": 0.9
+          },
+          {
+            "id": "br_ban_48",
+            "note": 80,
+            "step": 48,
+            "duration": 2.5,
+            "velocity": 0.98
+          },
+          {
+            "id": "br_ban_51",
+            "note": 81,
+            "step": 51,
+            "duration": 2.5,
+            "velocity": 1
+          },
+          {
+            "id": "br_ban_54",
+            "note": 83,
+            "step": 54,
+            "duration": 2.5,
+            "velocity": 1
+          },
+          {
+            "id": "br_ban_58",
+            "note": 84,
+            "step": 58,
+            "duration": 4,
+            "velocity": 1
+          }
+        ],
         "ch_nylon_guitar": [
           {
             "id": "br_gt_0",
@@ -3990,103 +4093,47 @@
             "velocity": 0.86
           }
         ],
-        "ch_bandoneon": [
+        "ch_pizz_strings": [
           {
-            "id": "br_ban_16",
-            "note": 74,
+            "id": "br_pz_16",
+            "note": 62,
             "step": 16,
-            "duration": 3,
-            "velocity": 0.9
-          },
-          {
-            "id": "br_ban_24",
-            "note": 76,
-            "step": 24,
-            "duration": 4,
-            "velocity": 0.95
-          },
-          {
-            "id": "br_ban_28",
-            "note": 76,
-            "step": 28,
             "duration": 2,
-            "velocity": 0.5
-          },
-          {
-            "id": "br_ban_32",
-            "note": 81,
-            "step": 32,
-            "duration": 2,
-            "velocity": 0.95
-          },
-          {
-            "id": "br_ban_34",
-            "note": 80,
-            "step": 34,
-            "duration": 2,
-            "velocity": 0.95
-          },
-          {
-            "id": "br_ban_36",
-            "note": 81,
-            "step": 36,
-            "duration": 2,
-            "velocity": 0.95
-          },
-          {
-            "id": "br_ban_38",
-            "note": 83,
-            "step": 38,
-            "duration": 2,
-            "velocity": 0.98
-          },
-          {
-            "id": "br_ban_40",
-            "note": 84,
-            "step": 40,
-            "duration": 3.5,
-            "velocity": 1
-          },
-          {
-            "id": "br_ban_44",
-            "note": 83,
-            "step": 44,
-            "duration": 1.8,
             "velocity": 0.92
           },
           {
-            "id": "br_ban_46",
-            "note": 81,
-            "step": 46,
-            "duration": 1.8,
+            "id": "br_pz_24",
+            "note": 64,
+            "step": 24,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "br_pz_48",
+            "note": 68,
+            "step": 48,
+            "duration": 1.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "br_pz_52",
+            "note": 71,
+            "step": 52,
+            "duration": 1.5,
             "velocity": 0.9
           },
           {
-            "id": "br_ban_48",
-            "note": 80,
-            "step": 48,
-            "duration": 2.5,
-            "velocity": 0.98
+            "id": "br_pz_56",
+            "note": 74,
+            "step": 56,
+            "duration": 1.5,
+            "velocity": 0.95
           },
           {
-            "id": "br_ban_51",
-            "note": 81,
-            "step": 51,
+            "id": "br_pz_60",
+            "note": 77,
+            "step": 60,
             "duration": 2.5,
-            "velocity": 1
-          },
-          {
-            "id": "br_ban_54",
-            "note": 83,
-            "step": 54,
-            "duration": 2.5,
-            "velocity": 1
-          },
-          {
-            "id": "br_ban_58",
-            "note": 84,
-            "step": 58,
-            "duration": 4,
             "velocity": 1
           }
         ],
@@ -4159,50 +4206,6 @@
             "note": 52,
             "step": 60,
             "duration": 3.5,
-            "velocity": 1
-          }
-        ],
-        "ch_pizz_strings": [
-          {
-            "id": "br_pz_16",
-            "note": 62,
-            "step": 16,
-            "duration": 2,
-            "velocity": 0.92
-          },
-          {
-            "id": "br_pz_24",
-            "note": 64,
-            "step": 24,
-            "duration": 2,
-            "velocity": 0.95
-          },
-          {
-            "id": "br_pz_48",
-            "note": 68,
-            "step": 48,
-            "duration": 1.5,
-            "velocity": 0.85
-          },
-          {
-            "id": "br_pz_52",
-            "note": 71,
-            "step": 52,
-            "duration": 1.5,
-            "velocity": 0.9
-          },
-          {
-            "id": "br_pz_56",
-            "note": 74,
-            "step": 56,
-            "duration": 1.5,
-            "velocity": 0.95
-          },
-          {
-            "id": "br_pz_60",
-            "note": 77,
-            "step": 60,
-            "duration": 2.5,
             "velocity": 1
           }
         ],
@@ -4333,14 +4336,15 @@
             "duration": 0.5,
             "velocity": 0.42
           }
-        ]
+        ],
+        "ch_romantic_strings": []
       }
     },
     {
       "id": "pat_reprise",
       "name": "5. Unwavering Passion (Climax Reprise)",
-      "steps": 64,
-      "notes": {
+      "lengthSteps": 64,
+      "notesByChannel": {
         "ch_bandoneon": [
           {
             "id": "rep_ban_0",
@@ -4530,197 +4534,6 @@
             "step": 62,
             "duration": 2,
             "velocity": 1
-          }
-        ],
-        "ch_romantic_strings": [
-          {
-            "id": "rep_str_0",
-            "note": 76,
-            "step": 0,
-            "duration": 2.5,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_str_3",
-            "note": 81,
-            "step": 3,
-            "duration": 2.5,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_str_6",
-            "note": 80,
-            "step": 6,
-            "duration": 1.8,
-            "velocity": 0.82
-          },
-          {
-            "id": "rep_str_8",
-            "note": 81,
-            "step": 8,
-            "duration": 2.5,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_str_11",
-            "note": 76,
-            "step": 11,
-            "duration": 2.5,
-            "velocity": 0.8
-          },
-          {
-            "id": "rep_str_14",
-            "note": 72,
-            "step": 14,
-            "duration": 1.8,
-            "velocity": 0.78
-          },
-          {
-            "id": "rep_str_16",
-            "note": 74,
-            "step": 16,
-            "duration": 2.5,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_str_19",
-            "note": 77,
-            "step": 19,
-            "duration": 2.5,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_str_22",
-            "note": 76,
-            "step": 22,
-            "duration": 1.8,
-            "velocity": 0.82
-          },
-          {
-            "id": "rep_str_24",
-            "note": 77,
-            "step": 24,
-            "duration": 2.5,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_str_27",
-            "note": 74,
-            "step": 27,
-            "duration": 2.5,
-            "velocity": 0.8
-          },
-          {
-            "id": "rep_str_30",
-            "note": 71,
-            "step": 30,
-            "duration": 1.8,
-            "velocity": 0.78
-          },
-          {
-            "id": "rep_str_32",
-            "note": 68,
-            "step": 32,
-            "duration": 2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_str_34",
-            "note": 71,
-            "step": 34,
-            "duration": 1.8,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_str_36",
-            "note": 74,
-            "step": 36,
-            "duration": 1.8,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_str_38",
-            "note": 77,
-            "step": 38,
-            "duration": 2,
-            "velocity": 0.9
-          },
-          {
-            "id": "rep_str_40",
-            "note": 76,
-            "step": 40,
-            "duration": 3.5,
-            "velocity": 0.92
-          },
-          {
-            "id": "rep_str_44",
-            "note": 74,
-            "step": 44,
-            "duration": 1.8,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_str_46",
-            "note": 72,
-            "step": 46,
-            "duration": 1.8,
-            "velocity": 0.82
-          },
-          {
-            "id": "rep_str_48",
-            "note": 71,
-            "step": 48,
-            "duration": 2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_str_50",
-            "note": 69,
-            "step": 50,
-            "duration": 2,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_str_52",
-            "note": 68,
-            "step": 52,
-            "duration": 2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_str_54",
-            "note": 69,
-            "step": 54,
-            "duration": 2,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_str_56",
-            "note": 71,
-            "step": 56,
-            "duration": 2,
-            "velocity": 0.9
-          },
-          {
-            "id": "rep_str_58",
-            "note": 72,
-            "step": 58,
-            "duration": 2,
-            "velocity": 0.9
-          },
-          {
-            "id": "rep_str_60",
-            "note": 74,
-            "step": 60,
-            "duration": 2,
-            "velocity": 0.92
-          },
-          {
-            "id": "rep_str_62",
-            "note": 76,
-            "step": 62,
-            "duration": 2,
-            "velocity": 0.95
           }
         ],
         "ch_nylon_guitar": [
@@ -5397,6 +5210,113 @@
             "velocity": 0.9
           }
         ],
+        "ch_pizz_strings": [
+          {
+            "id": "rep_pz_0",
+            "note": 69,
+            "step": 0,
+            "duration": 1.2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_pz_6",
+            "note": 69,
+            "step": 6,
+            "duration": 1.2,
+            "velocity": 0.8
+          },
+          {
+            "id": "rep_pz_8",
+            "note": 72,
+            "step": 8,
+            "duration": 1.2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_pz_14",
+            "note": 69,
+            "step": 14,
+            "duration": 1.2,
+            "velocity": 0.8
+          },
+          {
+            "id": "rep_pz_16",
+            "note": 70,
+            "step": 16,
+            "duration": 1.2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_pz_22",
+            "note": 70,
+            "step": 22,
+            "duration": 1.2,
+            "velocity": 0.8
+          },
+          {
+            "id": "rep_pz_24",
+            "note": 74,
+            "step": 24,
+            "duration": 1.2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_pz_30",
+            "note": 70,
+            "step": 30,
+            "duration": 1.2,
+            "velocity": 0.8
+          },
+          {
+            "id": "rep_pz_32",
+            "note": 68,
+            "step": 32,
+            "duration": 1.2,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_pz_38",
+            "note": 68,
+            "step": 38,
+            "duration": 1.2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_pz_40",
+            "note": 71,
+            "step": 40,
+            "duration": 1.2,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_pz_46",
+            "note": 68,
+            "step": 46,
+            "duration": 1.2,
+            "velocity": 0.82
+          },
+          {
+            "id": "rep_pz_48",
+            "note": 69,
+            "step": 48,
+            "duration": 1.2,
+            "velocity": 0.9
+          },
+          {
+            "id": "rep_pz_56",
+            "note": 68,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.95
+          },
+          {
+            "id": "rep_pz_60",
+            "note": 64,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.98
+          }
+        ],
         "ch_tango_bass": [
           {
             "id": "rep_bs1_bs_0_0",
@@ -5537,113 +5457,6 @@
             "step": 62,
             "duration": 1.6,
             "velocity": 0.9299999999999999
-          }
-        ],
-        "ch_pizz_strings": [
-          {
-            "id": "rep_pz_0",
-            "note": 69,
-            "step": 0,
-            "duration": 1.2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_pz_6",
-            "note": 69,
-            "step": 6,
-            "duration": 1.2,
-            "velocity": 0.8
-          },
-          {
-            "id": "rep_pz_8",
-            "note": 72,
-            "step": 8,
-            "duration": 1.2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_pz_14",
-            "note": 69,
-            "step": 14,
-            "duration": 1.2,
-            "velocity": 0.8
-          },
-          {
-            "id": "rep_pz_16",
-            "note": 70,
-            "step": 16,
-            "duration": 1.2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_pz_22",
-            "note": 70,
-            "step": 22,
-            "duration": 1.2,
-            "velocity": 0.8
-          },
-          {
-            "id": "rep_pz_24",
-            "note": 74,
-            "step": 24,
-            "duration": 1.2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_pz_30",
-            "note": 70,
-            "step": 30,
-            "duration": 1.2,
-            "velocity": 0.8
-          },
-          {
-            "id": "rep_pz_32",
-            "note": 68,
-            "step": 32,
-            "duration": 1.2,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_pz_38",
-            "note": 68,
-            "step": 38,
-            "duration": 1.2,
-            "velocity": 0.85
-          },
-          {
-            "id": "rep_pz_40",
-            "note": 71,
-            "step": 40,
-            "duration": 1.2,
-            "velocity": 0.88
-          },
-          {
-            "id": "rep_pz_46",
-            "note": 68,
-            "step": 46,
-            "duration": 1.2,
-            "velocity": 0.82
-          },
-          {
-            "id": "rep_pz_48",
-            "note": 69,
-            "step": 48,
-            "duration": 1.2,
-            "velocity": 0.9
-          },
-          {
-            "id": "rep_pz_56",
-            "note": 68,
-            "step": 56,
-            "duration": 2,
-            "velocity": 0.95
-          },
-          {
-            "id": "rep_pz_60",
-            "note": 64,
-            "step": 60,
-            "duration": 2,
-            "velocity": 0.98
           }
         ],
         "ch_castanets_perc": [
@@ -5871,14 +5684,205 @@
             "duration": 0.5,
             "velocity": 0.45499999999999996
           }
+        ],
+        "ch_romantic_strings": [
+          {
+            "id": "rep_str_0",
+            "note": 76,
+            "step": 0,
+            "duration": 2.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_str_3",
+            "note": 81,
+            "step": 3,
+            "duration": 2.5,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_str_6",
+            "note": 80,
+            "step": 6,
+            "duration": 1.8,
+            "velocity": 0.82
+          },
+          {
+            "id": "rep_str_8",
+            "note": 81,
+            "step": 8,
+            "duration": 2.5,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_str_11",
+            "note": 76,
+            "step": 11,
+            "duration": 2.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "rep_str_14",
+            "note": 72,
+            "step": 14,
+            "duration": 1.8,
+            "velocity": 0.78
+          },
+          {
+            "id": "rep_str_16",
+            "note": 74,
+            "step": 16,
+            "duration": 2.5,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_str_19",
+            "note": 77,
+            "step": 19,
+            "duration": 2.5,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_str_22",
+            "note": 76,
+            "step": 22,
+            "duration": 1.8,
+            "velocity": 0.82
+          },
+          {
+            "id": "rep_str_24",
+            "note": 77,
+            "step": 24,
+            "duration": 2.5,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_str_27",
+            "note": 74,
+            "step": 27,
+            "duration": 2.5,
+            "velocity": 0.8
+          },
+          {
+            "id": "rep_str_30",
+            "note": 71,
+            "step": 30,
+            "duration": 1.8,
+            "velocity": 0.78
+          },
+          {
+            "id": "rep_str_32",
+            "note": 68,
+            "step": 32,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_str_34",
+            "note": 71,
+            "step": 34,
+            "duration": 1.8,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_str_36",
+            "note": 74,
+            "step": 36,
+            "duration": 1.8,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_str_38",
+            "note": 77,
+            "step": 38,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "rep_str_40",
+            "note": 76,
+            "step": 40,
+            "duration": 3.5,
+            "velocity": 0.92
+          },
+          {
+            "id": "rep_str_44",
+            "note": 74,
+            "step": 44,
+            "duration": 1.8,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_str_46",
+            "note": 72,
+            "step": 46,
+            "duration": 1.8,
+            "velocity": 0.82
+          },
+          {
+            "id": "rep_str_48",
+            "note": 71,
+            "step": 48,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_str_50",
+            "note": 69,
+            "step": 50,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_str_52",
+            "note": 68,
+            "step": 52,
+            "duration": 2,
+            "velocity": 0.85
+          },
+          {
+            "id": "rep_str_54",
+            "note": 69,
+            "step": 54,
+            "duration": 2,
+            "velocity": 0.88
+          },
+          {
+            "id": "rep_str_56",
+            "note": 71,
+            "step": 56,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "rep_str_58",
+            "note": 72,
+            "step": 58,
+            "duration": 2,
+            "velocity": 0.9
+          },
+          {
+            "id": "rep_str_60",
+            "note": 74,
+            "step": 60,
+            "duration": 2,
+            "velocity": 0.92
+          },
+          {
+            "id": "rep_str_62",
+            "note": 76,
+            "step": 62,
+            "duration": 2,
+            "velocity": 0.95
+          }
         ]
       }
     },
     {
       "id": "pat_outro",
       "name": "6. Frozen in Pose (Outro)",
-      "steps": 64,
-      "notes": {
+      "lengthSteps": 64,
+      "notesByChannel": {
         "ch_bandoneon": [
           {
             "id": "out_ban_0",
@@ -6366,6 +6370,7 @@
             "velocity": 0.8
           }
         ],
+        "ch_pizz_strings": [],
         "ch_tango_bass": [
           {
             "id": "out_bs_0",
@@ -6415,43 +6420,6 @@
             "step": 48,
             "duration": 14,
             "velocity": 0.9
-          }
-        ],
-        "ch_romantic_strings": [
-          {
-            "id": "out_str_0",
-            "note": 57,
-            "step": 0,
-            "duration": 15,
-            "velocity": 0.7
-          },
-          {
-            "id": "out_str_16",
-            "note": 55,
-            "step": 16,
-            "duration": 15,
-            "velocity": 0.68
-          },
-          {
-            "id": "out_str_32",
-            "note": 53,
-            "step": 32,
-            "duration": 15,
-            "velocity": 0.65
-          },
-          {
-            "id": "out_str_48",
-            "note": 52,
-            "step": 48,
-            "duration": 15,
-            "velocity": 0.75
-          },
-          {
-            "id": "out_str_48_gs",
-            "note": 56,
-            "step": 48,
-            "duration": 15,
-            "velocity": 0.78
           }
         ],
         "ch_castanets_perc": [
@@ -6630,6 +6598,43 @@
             "duration": 2,
             "velocity": 0.95
           }
+        ],
+        "ch_romantic_strings": [
+          {
+            "id": "out_str_0",
+            "note": 57,
+            "step": 0,
+            "duration": 15,
+            "velocity": 0.7
+          },
+          {
+            "id": "out_str_16",
+            "note": 55,
+            "step": 16,
+            "duration": 15,
+            "velocity": 0.68
+          },
+          {
+            "id": "out_str_32",
+            "note": 53,
+            "step": 32,
+            "duration": 15,
+            "velocity": 0.65
+          },
+          {
+            "id": "out_str_48",
+            "note": 52,
+            "step": 48,
+            "duration": 15,
+            "velocity": 0.75
+          },
+          {
+            "id": "out_str_48_gs",
+            "note": 56,
+            "step": 48,
+            "duration": 15,
+            "velocity": 0.78
+          }
         ]
       }
     }
@@ -6692,7 +6697,7 @@
   ],
   "timelineClips": [
     {
-      "id": "clip_1789447010498_intro",
+      "id": "clip_1789447156434_intro",
       "trackIndex": 0,
       "startStep": 0,
       "lengthSteps": 64,
@@ -6702,7 +6707,7 @@
       "muted": false
     },
     {
-      "id": "clip_1789447010498_theme_a",
+      "id": "clip_1789447156434_theme_a",
       "trackIndex": 0,
       "startStep": 64,
       "lengthSteps": 64,
@@ -6712,7 +6717,7 @@
       "muted": false
     },
     {
-      "id": "clip_1789447010498_theme_b",
+      "id": "clip_1789447156434_theme_b",
       "trackIndex": 0,
       "startStep": 128,
       "lengthSteps": 64,
@@ -6722,7 +6727,7 @@
       "muted": false
     },
     {
-      "id": "clip_1789447010498_bridge",
+      "id": "clip_1789447156434_bridge",
       "trackIndex": 0,
       "startStep": 192,
       "lengthSteps": 64,
@@ -6732,7 +6737,7 @@
       "muted": false
     },
     {
-      "id": "clip_1789447010498_reprise",
+      "id": "clip_1789447156434_reprise",
       "trackIndex": 0,
       "startStep": 256,
       "lengthSteps": 64,
@@ -6742,7 +6747,7 @@
       "muted": false
     },
     {
-      "id": "clip_1789447010498_outro",
+      "id": "clip_1789447156434_outro",
       "trackIndex": 0,
       "startStep": 320,
       "lengthSteps": 64,

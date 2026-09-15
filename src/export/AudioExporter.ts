@@ -946,7 +946,8 @@ export class AudioExporter {
     // Ensure all patterns have notesByChannel initialized for every channel
     const channelIds = data.channels.map((c: any) => c.id);
     data.patterns = data.patterns.map((p: any) => {
-      const notesByChannel: Record<string, NoteEvent[]> = { ...(p.notesByChannel || {}) };
+      const rawNotes = p.notesByChannel || p.notes || {};
+      const notesByChannel: Record<string, NoteEvent[]> = { ...rawNotes };
       channelIds.forEach((chId: string) => {
         if (!Array.isArray(notesByChannel[chId])) {
           notesByChannel[chId] = [];
@@ -954,6 +955,7 @@ export class AudioExporter {
       });
       return {
         ...p,
+        lengthSteps: p.lengthSteps || p.steps || 64,
         notesByChannel
       };
     });
